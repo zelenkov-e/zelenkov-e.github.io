@@ -1,0 +1,115 @@
+ @media only screen and (min-width:1100px){  body{   background:url('video/background.mp4');    background-size:cover;    color:white;    overflow-x:hidden;    font-family:'Oswald',sans-serif;    width:100%;    position:absolute;    top:0;    text-align:center; margin:0 auto; max-width: 1300px;}
+  img, 
+  .yslugi{   border-radius:10px;    box-shadow:2px 2px 4px rgba(0,0,0,0.4);    max-width:100%;    border:1px solid orange;    margin-top:2%}
+  .img, 
+  label{   cursor:pointer}
+  .video{   opacity:0.8;    position:fixed;    right:0;    bottom:0;    min-width:100%;    min-height:100%;    width:auto;    height:auto;    z-index:-9999}
+  a{   color:orange;    font-size:120%;    text-decoration:none}
+  h1, 
+  h3, 
+  h2{   color:orange;    font-size:180%}
+  .nav li{   display:inline-block;    margin-left:50px;    font-size:180%}
+  a{   text-decoration:none}
+  #studio{   width:20%;    height:200px;    float:left;    padding-left:150px}
+  #text>p{   text-align:left;    max-width:1200px}
+  .tri-osnovi{   position:absolute;    top:17%;    left:23%}
+  .start{   margin-bottom:30px;    width:150px;    height:150px;    float:left;    text-align:left}
+  .start h3{   margin-bottom:25px}
+  .start img{   margin-bottom:-20px}
+  .start:hover>img{   transform:translateY(-540px);    transition:all 1s}
+  .start p{   width:220px;    margin-top:-20px}
+  .seo{   width:150px;    height:150px;    float:left;    margin-left:100px;    text-align:left}
+  .seo img{   margin-bottom:-20px}
+  .seo:hover>img{   transform:scale(1.4);    transition:all 0.4s}
+  .seo p{   width:220px}
+  .support{   width:70px;    height:70px;    float:left;    margin-left:100px;    text-align:left}
+  .support p{   width:220px}
+  .credo img{   margin-top:38%}
+  .support>img{   margin-bottom:-20px}
+  .support:hover>img{   animation:scaling 0.3s linear infinite}
+  .yslugi{   max-width:1000px;    margin:0 auto}
+  .razrabotkae{   margin-top:-5%;    margin-left:-45%}
+  .tri-napravlenia{   position:relative;    z-index:5;    width:100%;    margin-top:-125px;    margin-left:25%}
+  .l-p{   position:relative;    margin-left:20px;    float:left;    box-shadow:2px 2px 4px rgba(0,0,0,0.4)}
+  .fon1{   border:3px solid orange;    width:200px;    height:150px;    background-image:url("../img/l-pe.jpg");    border-radius:10px 10px 0 0}
+  .yellow{   width:200px;    height:50px;    border:2px solid;    background:#FF0;    border-radius:0 0 10px 10px;    border:3px solid orange}
+  .yellow>p{   display:none}
+  .yellow:hover>p{   display:inline;    border:1px solid #FE0000;    width:120px;    color:red;    font-size:90%}
+  .l-p:hover>.yellow{   transform-origin:bottom;    transform:scaleY(2);    transition:all 0.4s}
+  .l-p:hover h3{   transform:scale(0.5);    transition:all 0.4s}
+  .w-s{   position:relative;    margin-left:20px;    float:left;    box-shadow:2px 2px 4px rgba(0,0,0,0.4)}
+  .fon2{   border:3px solid orange;    width:200px;    height:150px;    background-image:url("../img/w-sitee.jpg");    border-radius:10px 10px 0 0}
+  .blue{   width:200px;    height:50px;    border:2px solid;    background:#6CF;    border-radius:0 0 10px 10px;    border:3px solid orange}
+  .blue>p{   display:none}
+  .blue:hover>p{   display:inline;    border:1px solid #FE0000;    width:120px;    color:red;    font-size:90%}
+  .w-s:hover>.blue{   transform-origin:bottom;    transform:scaleY(2);    transition:all 0.4s}
+  .w-s:hover h3{   transform:scale(0.5);    transition:all 0.4s}
+  .i-m{   position:relative;    margin-left:20px;    float:left;    box-shadow:2px 2px 4px rgba(0,0,0,0.4)}
+  .fon3{   border:3px solid orange;    width:200px;    height:150px;    border-radius:10px 10px 0 0;    background-image:url("../img/i-magazin.jpg")}
+  .green{   width:200px;    height:50px;    border:2px solid;    border-radius:0 0 10px 10px;    background:#0F0;    border:3px solid orange}
+  .green>p{   display:none}
+  .green:hover>p{   display:inline;    border:1px solid #FE0000;    width:120px;    color:red;    font-size:90%}
+  .i-m:hover>.green{   transform-origin:bottom;    transform:scaleY(2);    transition:all 0.4s}
+  .i-m:hover h3{   transform:scale(0.5);    transition:all 0.4s}
+  .pervie-v-poiske{   width:298px;    height:315px;    margin-top:5%;    margin-left:30%;    margin-bottom:10%;    float:left}
+  #google{   width:100%;    margin-top:26%;    margin-left:61%}
+  .fon_g{   border:2px solid orange;    width:100px;    height:104px;    background-image:url("img/google.jpg");    border-radius:10px 10px 0 0}
+  .b{   background:#6CF;    height:30px;    width:100px;    border-radius:0 0 10px 10px;    border:2px solid orange}
+  .b>p{   display:none}
+  .b:hover>p{   display:inline;    border:1px solid #FE0000;    width:120px;    color:red;    font-size:70%}
+  #google:hover>.b{   transform-origin:bottom;    transform:scaleY(2.15);    transition:all 0.4s}
+  #ya{   margin-top:1%;    margin-left:61%;    margin-bottom:1%}
+  .fon_y{   border:2px solid orange;    width:100px;    height:104px;    border-radius:10px 10px 0 0;    background-image:url("img/ya.jpg")}
+  .y{   background:#FF0;    height:30px;    width:100px;    border-radius:0 0 10px 10px;    border:2px solid orange}
+  .y>p{   display:none}
+  .y:hover>p{   display:inline;    border:1px solid #FE0000;    width:120px;    color:red;    font-size:70%}
+  #ya:hover>.y{   transform-origin:bottom;    transform:scaleY(2.15);    transition:all 0.4s}
+  .our-project{   width:97%;    margin-top:2%}
+  .slider{   width:798px;    height:374px;    background-image:url("../img/project-a.jpg");    margin:0 auto;    border:2px solid;    border-radius:20px;    box-shadow:2px 2px 4px rgba(0,0,0,0.4);    border:3px solid orange}
+  input#slader1:checked~div{   background-image:url("../img/project-a.jpg")}
+  input#slader2:checked~div{   background-image:url("../img/project-b.jpg")}
+  input#slader3:checked~div{   background-image:url("../img/project-c.jpg")}
+  input#slader4:checked~div{   background-image:url("../img/project-d.jpg")}
+ .circle-left, 
+ .circle-left1{ width:30px;  height:30px;  border:2px solid orange;  border-radius:15px;  margin:0 auto;  display:inline-block}
+ .circle-right, 
+ .circle-right1{ width:30px;  height:30px;  border:2px solid orange;  border-radius:15px;  margin:0 auto;  display:inline-block}
+ input#slader1, 
+ input#slader2, 
+ input#slader3, 
+ input#slader4{ display:none}
+ .adaptivnost{ width:81%;  margin-left:5%}
+ .adaptivnost img{ float:right}
+ .adaptivnost p{ margin-left:100px}
+ .adaptivnost h3{ margin-left:80px}
+ .trade{ position:relative;  margin-bottom:50px}
+ .trade img{ margin-top:2%}
+ .tri_yslovia{ font-size:75%;  color:white;  position:absolute;  margin-top:-37%;  margin-left:20%}
+ .proga{ margin-left:-125px;  margin-bottom:30px;  width:21%;  height:350px;  float:left;  text-align:left;  margin-left:-60px}
+ .proga h3{ margin-left:55px}
+ .work_process{ font-size:small;  width:21%;  height:350px;  float:left;  text-align:left;  margin-left:10%}
+ .work_process h3{ margin-left:55px}
+ .yslovie{ width:200px;  width:21%;  height:70px;  float:left;  margin-left:10%;  ;  text-align:left}
+ .yslovie h3{ margin-left:55px}
+ .zabota{ width:85%;  margin-right:15%}
+ .zabota img{ float:right;  margin-right:4%}
+ .zabota p{ width:150px;  margin-left:25%}
+ .zabota h3{ margin-left:150px}
+ .svaz p{ margin-top:-65px}
+ .gotov{ color:white;  margin-top:-420px;  margin-left:50px}
+ .gotov h3{ margin-bottom:80px;  margin-left:-55%}
+ .gotov p{ width:200px;  margin-left:15%}
+ .form{ color:white;  margin-top:-17%;  margin-left:50%}
+ input[type=text]{ opacity:0.4;  border:3px solid orange}
+ input[name=stroka]{ width:150px;  margin-bottom:-5px}
+ input[name=stroka_1]{ width:150px;  margin-left:-3px;  margin-bottom:-5px}
+ input[name=stroka_2]{ width:305px;  margin-bottom:-5px}
+ textarea[name=pole]{ opacity:0.4;  margin-top:3px;  border:3px solid orange;  width:300px;  margin-left:12%}
+ input[type=submit]{ background:orange;  position:relative;  top:25px;  left:-83px}
+ .made{ margin-top:12%;  margin-left:45%;  font-size:100%}
+}
+ 
+ @keyframes scaling{ 0%{ transform:scale(1,1)}
+ 100%{ transform:scale(1.1,1.1)}
+}
+ 
