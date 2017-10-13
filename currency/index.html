@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js></script>
+   
+</head>
+
+<body>
+    <div class="conteiner" id = "conteiner">
+        <div class="conteiner_today">
+
+            <p><label class="button1"><input type="checkbox" name = 'currency' id="USD_check" value="USD" />USD</label></p>
+            <p><label class="button2"><input type="checkbox" name = 'currency' id="EUR_check" value="EUR" />EUR</label></p>
+            <p><label class="button3"><input type="checkbox" name = 'currency' id="RUB_check" value="RUB" />RUB</label></p>
+            <input type="submit" id="submit" value="RATE FOR TODAY" onclick="getCurrency()">
+            <input type="button" id="submit_clear_today" value="CLEAR" onclick="clearRes()">
+            <div id="res"></div>
+
+        </div>
+        <div class="conteiner_date">
+            <h2>RATE FOR THE DATE</h2>
+            <select id="select">
+                <option id="USD" value="840" >USD</option>
+                <option id="EUR" value="978" >EUR</option>
+                <option id="RUB" value="643" >RUB</option>
+            </select>
+            <div id="datepicker"></div>
+            <input type="button" id="submit_clear_" value="CLEAR" onclick="clearResult()">
+            <div id="result"></div>
+        </div>
+        <div class="conteiner_Range">
+            <h2>RATE FOR THE PERIOD</h2>
+            <select id="select_range">
+                <option id="USD_range" value="145" >USD</option>
+                <option id="EUR_range" value="292" >EUR</option>
+                <option id="RUB_range" value="298" >RUB</option>
+            </select>
+            <input type="text" class="datepickerFrom" style="width:99%">
+            <input type="text" class="datepickerTo" style="width:99%">
+            <input type="submit" id="button_range" value="RATE FOR THE PERIOD" />
+        </div>
+        <div id="diagram">
+            <canvas id="diagram_bar" width="2000" height="1500"></canvas>
+            <canvas id="diagram_line" width="2000" height="1500"></canvas>
+        </div>
+    </div>
+    <script src="js/rate_check.js"></script>
+    <script src="js/rate_date.js"></script>
+    <script src="js/rate_period.js"></script>
+</body>
+</html>
