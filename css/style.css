@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Forum|Open+Sans+Condensed:300');
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Forum', cursive;
+	background-color: #F5F5F5;
+}
+	.topmenu-main,.footer{
+		background-color: gray;
+		margin:0;
+		padding: 0; 
+		height: 50px;
+	}
+	.topmenu,.footer_menu{
+		background-color: black;
+		margin: 0 auto;
+		height: 50px;
+		width: 967px;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style-type: none;
+	}
+	.topmenu ul li,
+	.footer_menu ul li
+	{
+		display: inline-block;
+		list-style: none;
+		margin: 10px;
+	}
+	.login{
+		float: right;
+	}
+	.sign{
+		float: left;
+		width: 80px;
+		height: 15px;
+	}
+	.content{
+		margin:10px auto;
+		height: 1100px;
+		width: 900px;
+	}
+	.footer{
+		background-color: gray;
+		margin:0;
+		padding: 0; 
+		height: 50px;
+	}
+	.sitebar_left{
+		float: left;
+		height: 983px;
+		width: 200px;
+		padding: 21px;
+		background: #fff;
+	}
+	.sitebar_right{
+		height: 480px;
+		width: 710px;
+		margin-left: 220px;
+		margin-top: 5px;
+	}
+	.sitebar_right_section1 img {
+		float: left;
+		margin: 5px;
+	}
+	.sitebar_left img {
+
+		width: 100%;
+		height: 245PX;
+		background-color: #fff;
+	}
+	.sitebar_right_section1
+	{
+		padding: 2%;
+		margin-top: 5px;
+		width: 95%;
+		height: 245PX;
+		background-color: #fff;
+	}
+	.sitebar_right_section2{
+		padding: 2%;
+		margin-top: 5px;
+		width: 95%;
+		height: 150%;
+		background-color: #fff;
+	}
+	.text_sitebar_right{
+		width: 100%;
+		height: 40%;
+	}
+	p{
+		display: inline;
+	}
+	li.vk :before  {
+		content: "\f189"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.facebook :before {
+		content: "\f082"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.linkedin :before {
+		content: "\f08c"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.phone :before {
+		content: "\f098"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.mail :before {
+		content: "\f199"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.skype :before {
+		content: "\f17e"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.search :before {
+		content: "\f0ed"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	p.git :before {
+		content: "\f09b"; 
+		font-family: "FontAwesome";
+		color:#fff;
+		margin-right: 10px; 
+		font-size: 20px;
+	}
+	li.vk>a,
+	li.facebook>a,
+	li.linkedin>a,
+	li.phone>a,
+	li.mail>a,
+	li.skype>a,
+	p.git>a,
+	li.search>a{
+		text-decoration: none;
+	}
+	li.search>a,
+	p.git>a{
+		color:#fff;
+	}
