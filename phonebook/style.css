@@ -1,0 +1,51 @@
+body{
+  background-image:url('img/backgroundreact.jpg');
+ background-size: cover;
+}
+
+.contacts {
+ width: 300px;
+ margin: 0 auto;
+}
+
+.search-field {
+ width: 95%;
+ padding: 10px;
+ font-size: 16px;
+}
+
+input[type = 'text']{
+  border: 3px solid cyan;
+}
+.contacts-list {
+  padding: 0;
+  width: 100%;
+}
+
+.contact {
+ display: flex;
+ align-items: center;
+ font-family: sans-serif;
+ width: 97%;
+ padding: 5px;
+ border: 4px solid cyan;
+ color: cyan;
+}
+
+
+.contact-image {
+  border-radius: 50%;
+  margin: 5px;
+  border: 4px solid cyan;
+
+}
+
+.contact-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-number {
+  font-size: 22px;
+  color: #fff;
+}
