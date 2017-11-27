@@ -19771,7 +19771,8 @@
 	    _this.submitClear = _this.submitClear.bind(_this);
 	    _this.state = {
 	      class: "off",
-	      text: []
+	      text: [],
+	      className: "showElem"
 	    };
 	    return _this;
 	  }
@@ -19785,25 +19786,19 @@
 	  }, {
 	    key: 'submitAdd',
 	    value: function submitAdd() {
-	      var task = this.refs.task.value;
-	      this.state.text.push(task);
-	      var newArr = this.state.text.map(function (item, index) {
-	        return React.createElement(
-	          'div',
-	          { className: 'showBox' },
-	          item
-	        );
-	      });
-	      this.setState({
-	        text: newArr
-	      });
 
-	      this.state.text = newArr;
+	      this.refs.task.value;
+	      this.state.text.push(this.refs.task.value);
+	      this.setState({
+	        text: this.state.text
+	      });
 	    }
 	  }, {
 	    key: 'submitClear',
 	    value: function submitClear() {
-	      this.setState({ text: '' });
+	      this.setState({
+	        className: "showBoxOff"
+	      });
 	    }
 	  }, {
 	    key: 'render',
@@ -19811,8 +19806,8 @@
 	      return React.createElement(
 	        'div',
 	        { className: 'container' },
-	        React.createElement(Button, {
-	          showForm: this.showForm
+	        React.createElement(Button // компонент Button
+	        , { showForm: this.showForm
 	        }),
 	        React.createElement('hr', null),
 	        React.createElement(
@@ -19834,10 +19829,20 @@
 	          ),
 	          React.createElement(
 	            'div',
+	            { className: this.state.className },
+	            this.state.text.map(function (item, index) {
+	              return React.createElement(
+	                'div',
+	                { className: 'showBox', key: index },
+	                item
+	              );
+	            })
+	          ),
+	          React.createElement(
+	            'div',
 	            { className: 'submit_claer' },
 	            React.createElement('input', { type: 'button', onClick: this.submitClear, value: 'clear' })
-	          ),
-	          this.state.text
+	          )
 	        )
 	      );
 	    }
