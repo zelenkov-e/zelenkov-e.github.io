@@ -1,4 +1,8 @@
-#content div {
+#content .show,
+.task,
+.submit_add,
+.showElem,
+.submit_claer {
   margin-top: 20px;
 }
 .container {
@@ -32,10 +36,13 @@ input[value='clear'] {
 input[type="text"] {
   float: left;
 }
-.showBox{
- height: 21px;
- margin: 10px auto;
+.showElem>.showBox{
+ height: 20px;
+ margin: 2px auto;
  width: 125px;
+}
+.showBoxOff{
+  display: none
 }
 .show,
 .off {
@@ -45,11 +52,9 @@ input[type="text"] {
   top: 50px;
   left: 5px;
   height: 250px;
-  transition: 3s linear all;
+  transition: 1s linear all;
 }
 .off {
   left: -500px;
  }
-ul li {
-  list-style-type: none;
-}
+

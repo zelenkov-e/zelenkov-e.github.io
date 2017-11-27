@@ -11,11 +11,11 @@ class Content extends React.Component {
     this.submitClear = this.submitClear.bind(this)
     this.state = {
       class:"off",
-      text: []
+      text: [],
+      className:"showElem"
     };
   }
 
- 
   showForm(){
     let className = (this.state.class==="off") ? "show": "off";
     this.setState({ class:className});
@@ -23,48 +23,51 @@ class Content extends React.Component {
  
   
   submitAdd() {
-    let task = this.refs.task.value
-    this.state.text.push(task)
-    let newArr = this.state.text.map(function(item,index){
-        return <div className = "showBox">{item}</div>
-          })
-     this.setState({
-      text:newArr
+   
+    this.refs.task.value
+    this.state.text.push( this.refs.task.value)
+    this.setState({
+      text:this.state.text
     })
-
-     this.state.text = newArr
-
  }
+
+
  submitClear(){
-    this.setState({text:''})
+    this.setState({
+      className:"showBoxOff"
+    })
   }
+
 
   render() {
     return (
       <div className = "container">
-          <Button 
+          <Button // компонент Button
           showForm = {this.showForm}
           />
+          
           <hr />
-          <div  
+
+          <div 
           className={this.state.class} 
           >
-         
              <div className="task">
               <input
               ref="task" 
               className="form-control" type="text"  placeholder="Task"/>
             </div>
-      
-            <div className="submit_add">
+           <div className="submit_add">
               <input type = "button" onClick={this.submitAdd} value = "add" />
             </div>
-
-
-            <div className="submit_claer">
+           <div className = {this.state.className}>
+             {this.state.text.map(function(item,index){
+                return  <div className = "showBox" key = {index}>{item}</div>
+             })
+           }
+           </div>
+             <div className="submit_claer">
               <input type = "button" onClick={this.submitClear} value = "clear"/>
-            </div>
-             {this.state.text}
+            </div>         
           </div>
       </div>
     )
