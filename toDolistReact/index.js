@@ -1,9 +1,9 @@
 
 const React = require('react')
-// const ReactDOM = require ('react-dom')
+const ReactDOM = require ('react-dom')
 const Content = require('./js/content.js') 
 
-React.render(
+ReactDOM.render(
   <Content />,
   document.getElementById('content')
   )

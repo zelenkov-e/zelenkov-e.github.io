@@ -29,6 +29,7 @@ class Content extends React.Component {
     this.setState({
       text:this.state.text
     })
+      this.refs.task.value = '';
  }
 
 
