@@ -29,17 +29,13 @@ class FetchDemo extends React.Component {
 
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.axiosCall = this.axiosCall.bind(this)
     this.state = {
       posts: []
     };
   }
 
-
-
-  componentDidMount() {
-
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?id=620127&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba`)
-    .then(res => {
+axiosCall(res){
       this.setState({ 
         posts:res.data,
         country:res.data.sys.country,
@@ -51,26 +47,20 @@ class FetchDemo extends React.Component {
         speed:res.data.wind.speed,
       });
       console.log(res.data);
-     }); 
+     }
+
+
+  componentDidMount() {
+
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?id=620127&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba`)
+    .then(this.axiosCall); 
  }
 
  handleChange(event){
   
     let cityId = event.target.value;
      axios.get(`https://api.openweathermap.org/data/2.5/weather?${cityId}&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba`)
-    .then(res => {
-      this.setState({ 
-        posts:res.data,
-        country:res.data.sys.country,
-        main:res.data.weather[0].main,
-        img:res.data.weather[0].icon,
-        temp:res.data.main.temp,
-        clouds:res.data.clouds.all,
-        pressure:res.data.main.pressure,
-        speed:res.data.wind.speed,
-      });
-      console.log(res.data);
-     });
+    .then(this.axiosCall);
   }
 
 
