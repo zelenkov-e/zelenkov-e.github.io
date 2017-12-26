@@ -62,55 +62,167 @@
 
 	var React = __webpack_require__(28);
 	var ReactDOM = __webpack_require__(38);
-	// const FetchDemo = require('./js/content.js') 
 
-	var FetchDemo = function (_React$Component) {
-	  _inherits(FetchDemo, _React$Component);
+	var Select = function (_React$Component) {
+	  _inherits(Select, _React$Component);
+
+	  function Select() {
+	    _classCallCheck(this, Select);
+
+	    return _possibleConstructorReturn(this, (Select.__proto__ || Object.getPrototypeOf(Select)).apply(this, arguments));
+	  }
+
+	  _createClass(Select, [{
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { className: 'control' },
+	        React.createElement(
+	          'select',
+	          { onChange: this.props.handler },
+	          React.createElement(
+	            'option',
+	            { value: 'id=620127' },
+	            'Vitsyebsk'
+	          ),
+	          React.createElement(
+	            'option',
+	            { value: 'id=625143' },
+	            'Minsk'
+	          ),
+	          React.createElement(
+	            'option',
+	            { value: 'id=627907' },
+	            'Homel'
+	          ),
+	          React.createElement(
+	            'option',
+	            { value: 'id=627904' },
+	            'Hrodna'
+	          ),
+	          React.createElement(
+	            'option',
+	            { value: 'id=629634' },
+	            'Brest'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Select;
+	}(React.Component);
+
+	var FetchDemo = function (_React$Component2) {
+	  _inherits(FetchDemo, _React$Component2);
 
 	  function FetchDemo(props) {
 	    _classCallCheck(this, FetchDemo);
 
-	    var _this = _possibleConstructorReturn(this, (FetchDemo.__proto__ || Object.getPrototypeOf(FetchDemo)).call(this, props));
+	    var _this2 = _possibleConstructorReturn(this, (FetchDemo.__proto__ || Object.getPrototypeOf(FetchDemo)).call(this, props));
 
-	    _this.state = {
+	    _this2.handleChange = _this2.handleChange.bind(_this2);
+	    _this2.state = {
 	      posts: []
 	    };
-	    return _this;
+	    return _this2;
 	  }
 
 	  _createClass(FetchDemo, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var _this2 = this;
+	      var _this3 = this;
 
-	      _axios2.default.get('http://www.reddit.com/r/' + this.props.subreddit + '.json').then(function (res) {
-	        var posts = res.data.data.children.map(function (obj) {
-	          return obj.data;
+	      _axios2.default.get('https://api.openweathermap.org/data/2.5/weather?id=620127&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba').then(function (res) {
+	        _this3.setState({
+	          posts: res.data,
+	          country: res.data.sys.country,
+	          main: res.data.weather[0].main,
+	          img: res.data.weather[0].icon,
+	          temp: res.data.main.temp,
+	          clouds: res.data.clouds.all,
+	          pressure: res.data.main.pressure,
+	          speed: res.data.wind.speed
 	        });
-	        _this2.setState({ posts: posts });
+	        console.log(res.data);
+	      });
+	    }
+	  }, {
+	    key: 'handleChange',
+	    value: function handleChange(event) {
+	      var _this4 = this;
+
+	      var cityId = event.target.value;
+	      _axios2.default.get('https://api.openweathermap.org/data/2.5/weather?' + cityId + '&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba').then(function (res) {
+	        _this4.setState({
+	          posts: res.data,
+	          country: res.data.sys.country,
+	          main: res.data.weather[0].main,
+	          img: res.data.weather[0].icon,
+	          temp: res.data.main.temp,
+	          clouds: res.data.clouds.all,
+	          pressure: res.data.main.pressure,
+	          speed: res.data.wind.speed
+	        });
+	        console.log(res.data);
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var st = this.state;
 	      return React.createElement(
 	        'div',
 	        null,
+	        React.createElement(Select, { handler: this.handleChange }),
 	        React.createElement(
-	          'h1',
+	          'h3',
 	          null,
-	          '/r/' + this.props.subreddit
+	          st.posts.name,
+	          ',',
+	          st.country
+	        ),
+	        React.createElement(
+	          'h4',
+	          null,
+	          st.main
 	        ),
 	        React.createElement(
 	          'ul',
 	          null,
-	          this.state.posts.map(function (post) {
-	            return React.createElement(
-	              'li',
-	              { key: post.id },
-	              post.title
-	            );
-	          })
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement('img', { src: 'http://openweathermap.org/img/w/' + st.img + '.png' })
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            st.temp,
+	            ',C'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            'clouds : ',
+	            st.clouds,
+	            ',%'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            'pressure : ',
+	            st.pressure,
+	            ',hpa'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            'wind : ',
+	            st.speed,
+	            ',m/s'
+	          )
 	        )
 	      );
 	    }
@@ -119,7 +231,7 @@
 	  return FetchDemo;
 	}(React.Component);
 
-	ReactDOM.render(React.createElement(FetchDemo, { subreddit: 'reactjs' }), document.getElementById('content'));
+	ReactDOM.render(React.createElement(FetchDemo, null), document.getElementById('content'));
 
 /***/ }),
 /* 1 */
