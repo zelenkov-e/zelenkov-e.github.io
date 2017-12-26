@@ -73,7 +73,7 @@ axiosCall(res){
       <h3>{st.posts.name},{st.country}</h3>
       <h4>{st.main}</h4>
       <ul>
-      <li><img src = { 'http://openweathermap.org/img/w/'+ st.img +'.png'} /></li>
+      <li><img src = { 'https://openweathermap.org/img/w/'+ st.img +'.png'} /></li>
       <li>{st.temp},C</li>
       <li>clouds : {st.clouds},%</li>
       <li>pressure : {st.pressure},hpa</li>
