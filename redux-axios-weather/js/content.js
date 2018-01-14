@@ -1,59 +1,52 @@
 import React  from 'react';
 import Details  from './details';
-import Button  from './button';
-import axios from 'axios';
+import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
-import { createStore } from "redux";
-import redusers from "../src/reducer/index";
-import setWeatherAction from "../src/action/index";
+import * as pageActions from '../src/action/index';
 
 
-const store = createStore(redusers)
 
 class Content extends React.Component {
 
-  constructor(props){
-    super(props)
-    this.showWeather = this.showWeather.bind(this)
-  }
+ /* {weatherElements} - находиться весь объект от res.data*/
+ /* weatherElements, weatherMain,weatherTemp - 
+ передаем как атрибуты для связи с Detais,
+ и как свойство <Details weatherMain = {weatherMain} - для связи с mapStateToProps */
 
- showWeather(dispatch){
-    // console.log('hi')
-  // }
-
- // componentDidMount(dispatch) {
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?id=620127&units=metric&cnt=5&APPID=1ef962a01bb852fda0e833c7385144ba`)
-    .then(res=>{
-      console.log(res.data)
-        store.dispatch({
-           type:"WEATHER_LIST_SUCCESS",
-           payload:res.data
-           // setWeatherAction
-        })
-
-      }
-    ); 
- }
-
-render() {
-    return(
-      <div>
-          <Button handler= {this.showWeather} />
-          <Details weather = {this.props.weather}/>
-      </div>
-      )
-  }
+ 
+ render(){
+   const {weatherElements} = this.props
+   const {weatherMain} = this.props
+   const {weatherTemp} = this.props
+  
+   const { getWeather } = this.props.pageActions
+      return <div>
+              <Details weatherMain = {weatherMain} 
+              getWeather = {getWeather}
+              weatherElements = {weatherElements} 
+              weatherTemp = {weatherTemp} 
+               />
+              </div>
+       }   
 }
+ 
 
-// const mapStateToProps = function(state) {
- const mapStateToProps = function(store) {
+ const mapStateToProps = function(state) {
   return {
-   weather: store.weatherState.weather
-    // weather: state.weatherState.model
-    // weather: state.weatherState.weather
-  }
+    weatherElements: state.weatherElements.weatherElements,
+    weatherMain: state.weatherMain.main,
+    weatherTemp: state.weatherTemp.temp
+    }
 }
 
 
-export default connect(mapStateToProps) (Content);
+
+// переедаем action - кот меняют состоянме в reducere
+ function mapDispatchToProps(dispatch) {
+  return {
+    pageActions: bindActionCreators(pageActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps) (Content);
 

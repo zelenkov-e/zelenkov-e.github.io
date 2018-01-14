@@ -1,24 +1,35 @@
-// action creater
- // export const selectWeather = (response) =>{
-
-let WEATHER_LIST_SUCCESS = 'WEATHER_LIST_SUCCESS'
-
- export default function setWeatherAction(res) {
- 	
- 	return{
- 		type:"WEATHER_LIST_SUCCESS",
- 		// payload:response.data.name
- 		payload:res.data
- 	}
- }
+import {
+        GET_WEATHER_REQUEST,
+        GET_WEATHER_SUCCESS,
+        URL
+      } from "../constants/info";
+import axios from 'axios';
 
 
 
+export function getWeather(res) {
 
-// export const action = {
- 	
- 	
-//  		type:"WEATHER_LIST_SUCCESS",
-//  		weather:response.data
- 	
-//  }
+
+  return (dispatch) => {
+    dispatch({
+      type: GET_WEATHER_REQUEST
+    })
+
+
+   axios.get(URL)
+      .then(
+      	(res) =>{
+      		return  dispatch({
+            //создаем несколько payload что бы дотянуться до каждого объекта масссива res.data
+	        	type: GET_WEATHER_SUCCESS,
+            payloadElement: res.data,
+            payloadMain: res.data.weather,
+            payloadTemp: res.data.main
+        	})
+
+      	}
+       
+      )
+  }
+}
+
