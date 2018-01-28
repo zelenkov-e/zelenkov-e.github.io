@@ -1,10 +1,10 @@
 const initialState = 
-// [
+[
     {
       id: 2334,
       name: 'Super track'
     }
-//   ];
+  ];
   
 
   export default function tracks(state = initialState){
