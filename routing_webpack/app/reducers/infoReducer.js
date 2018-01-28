@@ -1,10 +1,11 @@
-const initialState = 
-[
-    {
-      id: 2334,
-      name: 'Super track'
-    }
-  ];
+const initialState = 'Super track';
+// const initialState = 
+// [
+//     {
+//       id: 2334,
+//       name: 'Super track'
+//     }
+//   ];
   
 
   export default function tracks(state = initialState){
