@@ -1,8 +1,7 @@
 import React from 'react';
  
-class Home extends React.Component{
+export default class Home extends React.Component{
     render(){
-        return <h2>Главная</h2>;
+        return <h3>home</h3>;
     }
 }
-module.exports = Home;

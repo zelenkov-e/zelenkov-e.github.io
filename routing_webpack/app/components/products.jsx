@@ -1,8 +1,7 @@
 import React from 'react';
  
-class Products extends React.Component{
+export default class Products extends React.Component{
     render(){
-        return <h2>Товары</h2>;
+        return <h3>products</h3>;
     }
 }
-module.exports = Products;

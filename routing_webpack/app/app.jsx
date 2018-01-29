@@ -22,6 +22,7 @@ ReactDOM.render(
      <Router history={newHistory}>
         <div>
            <Nav />
+           <hr />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/products" component={Products} />
