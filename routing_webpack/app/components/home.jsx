@@ -13,6 +13,7 @@ import * as pageActions from '../action/action';
      
     render(){
         const { newsElements } = this.props.news
+    //    console.log(JSON.parse(newsElements))
         return (
             
 
@@ -25,7 +26,7 @@ import * as pageActions from '../action/action';
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    news: state.news 
+    news: state.news
 })
 
 

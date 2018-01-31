@@ -3,7 +3,7 @@ import {
     GET_NEWS_SUCCESS,
     URL
   } from "../constants/infoConstants";
-
+//   import axios from 'axios';
 
 
 // track - выбранный эл списка 
@@ -19,7 +19,7 @@ export default function setTrack(track){
 
 export function getNews() {
 
-// console.log('bye')
+console.log('bye')
 return{
     type: GET_NEWS_SUCCESS,
     payloadNews: 'bye'
@@ -35,7 +35,7 @@ return{
     //         (res) =>{
     //             return  dispatch({
     //               type: GET_NEWS_SUCCESS,
-    //               payloadElement: res.data
+    //               payloadNews: res.data
              
     //           })
   
