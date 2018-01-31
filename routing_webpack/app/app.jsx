@@ -7,12 +7,27 @@ import Products from './components/products.jsx';
 import NotFound from './components/notfound.jsx';
 import Track from './components/tracks.jsx';
 
-import { createStore } from 'redux';
+import { applyMiddleware,createStore } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';//<-- добавили redux-thunk
+
 import { Provider } from 'react-redux';
 import  reducers  from './reducers/combineReducer.js';
 import  createBrowserHistory  from 'history/createBrowserHistory';
 
-const store = createStore(reducers);
+
+ function  configureStore(initialState) {
+	const logger = createLogger()
+	const store = createStore(
+		reducers,
+		initialState,
+		//добавили в applyMiddleware(createLogger()) 
+		applyMiddleware(thunk,logger))// <-- добавили его в цепочку перед logger'ом
+	return store
+
+}
+
+const store = configureStore()
 const newHistory = createBrowserHistory(); 
 
 
