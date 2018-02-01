@@ -3,7 +3,11 @@ import {
     GET_NEWS_SUCCESS,
     URL
   } from "../constants/infoConstants";
+<<<<<<< HEAD
 //   import axios from 'axios';
+=======
+  import axios from 'axios';
+>>>>>>> 50ceb16f686fdeeca50732f995e8f40e7fb5911d
 
 
 // track - выбранный эл списка 
@@ -19,6 +23,7 @@ export default function setTrack(track){
 
 export function getNews() {
 
+<<<<<<< HEAD
 console.log('bye')
 return{
     type: GET_NEWS_SUCCESS,
@@ -43,4 +48,30 @@ return{
          
     //     )
     // }
+=======
+// console.log('bye')
+// return{
+//     type: GET_NEWS_SUCCESS,
+//     payloadNews: 'bye'
+// }
+    return (dispatch) => {
+      dispatch({
+        type: GET_NEWS_REQUEST
+      })
+  
+  
+     axios.get(URL)
+        .then(
+            (res) =>{
+                return  dispatch({
+                  type: GET_NEWS_SUCCESS,
+                  payloadNews: res.data.status
+             
+              })
+  
+            }
+         
+        )
+    }
+>>>>>>> 50ceb16f686fdeeca50732f995e8f40e7fb5911d
   }
