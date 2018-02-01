@@ -12,13 +12,14 @@ import * as pageActions from '../action/action';
         }
      
     render(){
-        const { newsElements } = this.props.news
-    //    console.log(JSON.parse(newsElements))
+        // const { newsElements } = this.props.news
+       console.log(this.props.news.newsElements)
         return (
             
 
             <div>
-               <h3>{newsElements}</h3>
+              <p>{this.props.news.newsElements}</p>  
+               {/* <h3>{newsElements}</h3> */}
             </div>
         )
 
