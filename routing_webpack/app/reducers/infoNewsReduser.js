@@ -6,7 +6,7 @@ import {
 
 
 
-export default function newsInfo(state = [],action){
+export default function newsInfo(state = null,action){
     switch(action.type) {
         case GET_NEWS_REQUEST:
           return state;
@@ -17,7 +17,7 @@ export default function newsInfo(state = [],action){
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                { newsElements:action.payloadNews}
+                {newsElements:action.payloadNews}  
             );
          }
         return state;

@@ -1,0 +1,48 @@
+{
+    "status":"ok",
+    "source":"bbc-news",
+    "sortBy":"top",
+    "articles":
+    [
+            {
+                "author":"BBC News",
+                "title":"Trump to release controversial memo",
+                "description":"Republicans claim the document shows US surveillance was used to unfairly target the Trump campaign.",
+                "url":"http://www.bbc.co.uk/news/world-us-canada-42894292",
+                "urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/1978/production/_99802560_5f66f179-f405-4d53-b620-172ca401e986.jpg",
+                "publishedAt":"2018-01-31T17:02:18Z"
+            },
+            {
+                "author":"BBC News",
+                "title":"Polish Senate passes Holocaust bill",
+                "description":"The vote went ahead despite strong criticism from Israel and concerns from the US.",
+                "url":"http://www.bbc.co.uk/news/world-europe-42898882",
+                "urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/7E11/production/_99837223_gettyimages-51922868.jpg",
+                "publishedAt":"2018-02-01T03:29:08Z"
+            },
+            {
+                "author":"BBC News",
+                "title":"Was Palestinian teenager’s ‘slap’ terrorism?",
+                "description":"Jeremy Bowen speaks to the father of Ahed Tamimi and a member of the Israeli parliament.",
+                "url":"http://www.bbc.co.uk/news/world-middle-east-42884885",
+                "urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/D2B7/production/_99834935_p05wq8zx.jpg",
+                "publishedAt":"2018-01-31T22:08:45Z"
+            },
+            {
+                "author":"BBC Sport",
+                "title":"Winter Olympics 2018: Cas overturns life bans given to Russian athletes",
+                "description":"Twenty-eight Russian athletes who were banned from the Olympics for life have their suspensions overturned by the Court of Arbitration for Sport.",
+                "url":"http://www.bbc.co.uk/sport/winter-olympics/42901377",
+                "urlToImage":"https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/13590/production/_97584297_breaking_news.png",
+                "publishedAt":"2018-02-01T08:20:38Z"
+            },
+                {
+                    "author":"BBC News",
+                    "title":"Rare 'super blue blood moon' arrives",
+                    "description":"Images from around the world as the lunar event dazzles skywatchers.",
+                    "url":"http://www.bbc.co.uk/news/world-42890838",
+                    "urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/D39D/production/_99837145_hullmoon.jpg",
+                    "publishedAt":"2018-02-01T00:23:43Z"
+                    },
+                    {
+            "author":"BBC News","title":"Facebook tweaks prompt fall in user time","description":"Facebook chief executive Mark Zuckerberg said 2017 was a strong but \"hard\" year.","url":"http://www.bbc.co.uk/news/business-42893051","urlToImage":"https://ichef.bbci.co.uk/news/1024/branded_news/71D7/production/_99834192_gettyimages-669889804.jpg","publishedAt":"2018-02-01T00:47:47Z"},{"author":"BBC News","title":"MPs vote to leave Parliament during refit","description":"The Commons would be vacated during a multibillion pound refurbishment - although not before 2025.","url":"http://www.bbc.co.uk/news/uk-politics-42891608","urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/13094/production/_99827977_mediaitem99827976.jpg","publishedAt":"2018-01-31T20:12:49Z"},{"author":"BBC News","title":"Tenth Australia MP ousted over citizenship","description":"David Feeney says he cannot prove he renounced UK citizenship, defying constitutional rules.","url":"http://www.bbc.co.uk/news/world-australia-42897523","urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/1359/production/_99835940_gettyimages-104076222.jpg","publishedAt":"2018-02-01T04:26:58Z"},{"author":"BBC News","title":"Trump renews Syrians' protected status","description":"The US president extends permits for 18 months, but shuts out those who came after August 2016.","url":"http://www.bbc.co.uk/news/world-us-canada-42897134","urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/0D17/production/_99515330_mediaitem99515329.jpg","publishedAt":"2018-02-01T02:21:04Z"},{"author":"BBC News","title":"Blood test finds toxic Alzheimer's proteins","description":"The development is an early step towards a blood test for Alzheimer's disease.","url":"http://www.bbc.co.uk/news/health-42878721","urlToImage":"https://ichef-1.bbci.co.uk/news/1024/branded_news/16A33/production/_99832729_gettyimages-135707831.jpg","publishedAt":"2018-01-31T18:06:25Z"}]}
