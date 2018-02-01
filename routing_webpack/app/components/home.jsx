@@ -12,13 +12,28 @@ import * as pageActions from '../action/action';
         }
      
     render(){
-        const { newsElements } = this.props.news
-    //    console.log(JSON.parse(newsElements))
-        return (
-            
-
+        // console.log( this.props.news.newsElements )
+        console.log( this.props.news.newsElements )
+       return (
             <div>
-               <h3>{newsElements}</h3>
+              
+              {/* {this.props.news.newsElements.map((weather)=>{
+                      return (
+                        <p key = {weather.id}>{weather.main}</p>
+                        )
+                      }
+                    )
+                  } */}
+              
+              
+               {/* вывод {
+                    "status":"ok",
+                    "source":"bbc-news",
+                    "sortBy":"top",
+                    "articles":}  */}
+               {/* <h3>{this.props.news.newsElements}</h3> */}
+            
+            
             </div>
         )
 
