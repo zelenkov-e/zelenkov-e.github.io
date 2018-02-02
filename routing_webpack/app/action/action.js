@@ -30,7 +30,22 @@ export function getNews() {
             (res) =>{
                 return  dispatch({
                   type: GET_NEWS_SUCCESS,
-                  payloadNews: res.data.articles
+                  payloadMain: res.data.articles
+                // payloadMain: [
+                //     {
+                //         "id":804,
+                //         "main":"fog",
+                //         "description":"overcast clouds",
+                //         "icon":"04d"
+                //     },
+               
+                //     {
+                //         "id":805,
+                //         "main":"Clouds",
+                //         "description":"overcast clouds",
+                //         "icon":"04d"
+                //     }
+                // ]
                 
              
               })
