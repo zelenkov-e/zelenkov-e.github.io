@@ -35,7 +35,8 @@ export function getNews() {
             (res) =>{
                 return  dispatch({
                   type: GET_NEWS_SUCCESS,
-                  payloadNews: res.data.status
+                  payloadNews: res.data.articles
+                
              
               })
   

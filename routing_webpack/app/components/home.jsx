@@ -13,29 +13,44 @@ import * as pageActions from '../action/action';
      
     render(){
         // const { newsElements } = this.props.news
-        console.log(this.props.news)
+        console.log(this.props.news.newsElements)
         // console.log(newsElements)
+       
+        // var obj = this.props.news.newsElements;
+        // var key;
+        // console.log(obj)
+        
+               
+        
+        
+
       
        
         return (
             <div>
+                
+               
+
                 {/* {
-                  newsElements.map((news,index)=>{
+                   this.props.news.map((news,index)=>{
                         return(
-                            <p key = {index}>{news.title}</p>
+                            <p key = {index}>{news}</p>
                         )
                     })
-
                 } */}
-                
-              {/* {/* <p>{this.props.news.newsElements.author}</p>   */}
+
+
+
+
+              {/* <p>{(this.props.news.newsElements}</p>  
               {/* <p>{this.props.news.title}</p>   */}
               {/* <p>{this.props.news.description}</p>   */}
-              {/* <p>{newsElements.author}</p>    */}
+              {/* <p>{this.props.news.newsElements}</p>    */}
               {/* <p>{this.props.news.newsElements.description}</p>   */}
-            </div>
-        )
-
+        </div>
+         )
+    //   }
+    
     }
 }
 

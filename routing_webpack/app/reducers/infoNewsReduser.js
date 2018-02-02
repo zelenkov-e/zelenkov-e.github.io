@@ -6,7 +6,7 @@ import {
 
 
 
-export default function newsInfo(state = null,action){
+export default function newsInfo(state =[],action){
     switch(action.type) {
         case GET_NEWS_REQUEST:
           return state;
