@@ -17,7 +17,7 @@ export default function newsInfo(state =[],action){
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {newsElements:action.payloadNews}  
+                { newsElements:action.payloadNews}
             );
          }
         return state;

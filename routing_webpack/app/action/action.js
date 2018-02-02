@@ -19,11 +19,6 @@ export default function setTrack(track){
 
 export function getNews() {
 
-// console.log('bye')
-// return{
-//     type: GET_NEWS_SUCCESS,
-//     payloadNews: 'bye'
-// }
     return (dispatch) => {
       dispatch({
         type: GET_NEWS_REQUEST
