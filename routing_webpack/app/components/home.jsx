@@ -1,6 +1,6 @@
 import React from 'react';
 import News  from './news.jsx';
-import NewsDetails  from './newsDetails.jsx';
+// import NewsDetails  from './newsDetails.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';
@@ -21,8 +21,7 @@ import * as pageActions from '../action/action';
         return (
             <div>
                 <News newsTitle ={newsTitle} />
-                <hr />
-                <h3>Detais</h3>
+                {/* <hr /> */}
                 {/* <NewsDetails newsMain ={newsMain} /> */}
 {/* //------------------------------------------------------------------------------------// */}
                 {/* <p>{(this.props.news.newsElements}</p>  

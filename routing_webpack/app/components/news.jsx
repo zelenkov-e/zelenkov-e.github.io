@@ -2,60 +2,52 @@ import React  from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';
-// import {getNews} from '../action/action';
+import styled from "styled-components";
+
+
+
+const Container = styled.div`
+    width: 350px;
+    height: 200px;
+   
+`;
+const Image = styled.img`
+    width: 350px;
+    height:200px;
+    margin-top:30px;
+  
+`;
+
+
+
 
 class News extends React.Component{
 
-    // componentDidMount() {
-    //     this.props.actions.getNews()
-    // }
- 
+    showList() {
+        
+        return this.props.newsTitle.map((news,id,index,url,At)=>{
+            return (
+                <React.Fragment>
+                    <Image key = {news.url} src = { news.urlToImage } ></Image>
+                    <h4 key  = {news.id}>{news.title}</h4>
+                    <h6 key  = {news.At}>{news.publishedAt}</h6>
+                    <p key  = {news.index}>{news.description}</p>
 
-    
-
-  showList() {
-    
-      return this.props.newsTitle.map((news)=>{
-        return (
-          <li 
-        //   onClick = {() => this.props.actions.getNews(weather) } 
-          key  = {news.url}>{news.title}</li>
-          )
-        }
-      )
-    
-
+                </React.Fragment>
+                )
+            }
+        )
 }
 
 render(){ 
     console.log(this.props.newsTitle)
-    // что б прочитать свойство из <News newsElements />this.props.newsElements
    
     return	(
-            <ul >
+            <Container>
                 {this.showList()}    
-            </ul>
+            </Container>
           )
       }
   }
 
-
-//   const mapStateToProps = (state, ownProps) => ({
-//     weatherMain: state.weatherMain.main
-// })
-
-// function mapDispatchToProps(dispatch) {
-//     return {
-//        actions: bindActionCreators(pageActions, dispatch)
-//     }
-// }
-
-
-//   function mapDispatchToProps(dispatch) {
-//     return 
-//        bindActionCreators({select:getNews}, dispatch)
-    
-// }
-
 export default News;
-// export default connect(mapStateToProps,mapDispatchToProps) (News);
