@@ -15,11 +15,11 @@ class News extends React.Component{
 
   showList() {
     
-      return this.props.weatherMain.map((weather)=>{
+      return this.props.newsTitle.map((news)=>{
         return (
           <li 
-          onClick = {() => this.props.actions.getNews(weather) } 
-          key  = {weather.url}>{weather.title}</li>
+        //   onClick = {() => this.props.actions.getNews(weather) } 
+          key  = {news.url}>{news.title}</li>
           )
         }
       )
@@ -28,27 +28,27 @@ class News extends React.Component{
 }
 
 render(){ 
-    // console.log(this.props.weatherMain)
+    console.log(this.props.newsTitle)
     // что б прочитать свойство из <News newsElements />this.props.newsElements
    
     return	(
             <ul >
                 {this.showList()}    
-          </ul>
+            </ul>
           )
       }
   }
 
 
-  const mapStateToProps = (state, ownProps) => ({
-    weatherMain: state.weatherMain.main
-})
+//   const mapStateToProps = (state, ownProps) => ({
+//     weatherMain: state.weatherMain.main
+// })
 
-function mapDispatchToProps(dispatch) {
-    return {
-       actions: bindActionCreators(pageActions, dispatch)
-    }
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//        actions: bindActionCreators(pageActions, dispatch)
+//     }
+// }
 
 
 //   function mapDispatchToProps(dispatch) {
@@ -57,5 +57,5 @@ function mapDispatchToProps(dispatch) {
     
 // }
 
-// export default News;
-export default connect(mapStateToProps,mapDispatchToProps) (News);
+export default News;
+// export default connect(mapStateToProps,mapDispatchToProps) (News);

@@ -14,15 +14,16 @@ import * as pageActions from '../action/action';
         }
      
     render(){
-        const {weatherMain} = this.props
+        const {newsTitle} = this.props
+        // const {newsMain} = this.props
 
        
         return (
             <div>
-                <News weatherMain ={weatherMain} />
+                <News newsTitle ={newsTitle} />
                 <hr />
                 <h3>Detais</h3>
-                {/* <NewsDetails weatherMain ={weatherMain} /> */}
+                {/* <NewsDetails newsMain ={newsMain} /> */}
 {/* //------------------------------------------------------------------------------------// */}
                 {/* <p>{(this.props.news.newsElements}</p>  
                 {/* <p>{this.props.news.title}</p>   */}
@@ -37,7 +38,8 @@ import * as pageActions from '../action/action';
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    weatherMain: state.weatherMain.main
+    newsTitle: state.newsTitle.newsArticles
+    // newsMain: state.weatherMain.main
 })
 
 

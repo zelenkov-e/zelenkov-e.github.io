@@ -5,10 +5,10 @@ import {
   } from "../constants/infoConstants";
 
   const initialState = {
-    main:[]//нач состояние
+    newsArticles:[]//нач состояние
   }
 
-  const weatherReduserMain = function(state =initialState,action){
+  const newsReducer = function(state =initialState,action){
     switch(action.type) {
         case GET_NEWS_REQUEST:
           return state;
@@ -19,10 +19,10 @@ import {
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {main:action.payloadMain}
+                {newsArticles:action.payloadMain}
             );
          }
         return state;
       }
 
-      export default weatherReduserMain
+      export default newsReducer

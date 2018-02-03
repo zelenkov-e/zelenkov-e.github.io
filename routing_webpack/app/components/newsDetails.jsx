@@ -10,7 +10,7 @@ class NewsDetails extends React.Component{
  
 
 render(){ 
-    console.log(this.props.weatherMain)
+    console.log(this.props.newsMain)
     // console.log('HELLO')
     // что б прочитать свойство из <News newsElements />this.props.newsElements
    
@@ -34,12 +34,12 @@ render(){
   
 
 
-function mapStateToProps(state, ownProps){
-    return {
-        weatherMain: state.weatherMain.main
-    }
+// function mapStateToProps(state, ownProps){
+//     return {
+//         weatherMain: state.weatherMain.main
+//     }
    
-}
+// }
 
 // function mapDispatchToProps(dispatch) {
 //     return {
@@ -54,5 +54,5 @@ function mapStateToProps(state, ownProps){
     
 // }
 
-// export default NewsDetails;
-export default connect(mapStateToProps) (NewsDetails);
+export default NewsDetails;
+// export default connect(mapStateToProps) (NewsDetails);
