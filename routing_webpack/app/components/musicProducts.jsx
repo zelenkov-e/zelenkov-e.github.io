@@ -31,19 +31,31 @@ class MusicProducts extends React.Component{
          
             return (
                 <React.Fragment key={news.url}>
-                 <Image  src = { news.urlToImage } ></Image>
-                 <Title >{news.title}</Title>
-                 <h6>{news.publishedAt}</h6>
-                 <p>{news.description}</p>
-
+                    {/* <Image  src = { news.urlToImage } ></Image>
+                    <Title >{news.title}</Title>
+                    <h6>{news.publishedAt}</h6>
+                    <p>{news.description}</p> */}
                 </React.Fragment>
                 )
             }
         )
+         return this.props.productsSucces.map((news,id)=>{
+         
+             return (
+                 <React.Fragment key={news.url}>
+                    {/* <Image  src = { news.urlToImage } ></Image>
+                    <Title >{news.title}</Title>
+                    <h6>{news.publishedAt}</h6>
+                    <p>{news.description}</p> */}
+                 </React.Fragment>
+                 )
+             }
+         )
 }
 
 render(){ 
     console.log(this.props.productsAttr)
+    console.log(this.props.productsSucces)
    
     return	(
             <Container>

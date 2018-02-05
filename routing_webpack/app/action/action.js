@@ -1,15 +1,13 @@
 import {
   GET_NEWS_REQUEST,
   GET_NEWS_SUCCESS,
+  GET_PRODUCT_REQUEST,
+  GET_PRODUCT_SUCCESS,
+  GET_PRODUCT_SUCCESSFULL,
+  sportURL,
   newsURL
   } from "../constants/infoConstants";
 
-  import {
-  GET_PRODUCT_REQUEST,
-  GET_PRODUCT_SUCCESS,
-  sportURL
-  } from "../constants/infoConstants";
-  
   import axios from 'axios';
 
 
@@ -67,9 +65,14 @@ export function getNews() {
             (res) =>{
                 return  dispatch({
                   type: GET_PRODUCT_SUCCESS,
-                   payloadProduct: res.data.articles
-                  
-              })
+                  payloadProduct: res.data
+              },
+              {
+                type: GET_PRODUCT_SUCCESSFULL,
+                payloadProductSucsess: res.data
+              }
+
+              )
   
             }
          

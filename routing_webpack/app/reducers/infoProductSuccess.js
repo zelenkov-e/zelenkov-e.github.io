@@ -1,29 +1,29 @@
 import {
     GET_PRODUCT_REQUEST,
-    GET_PRODUCT_SUCCESS
+    GET_PRODUCT_SUCCESSFULL
    
   } from "../constants/infoConstants";
 
   const initialState = {
-    productArticles:[]//нач состояние
+    productSucsess:[]//нач состояние
   }
 
-  const productReducer = function(state =initialState,action){
+  const productReducerSuccess = function(state =initialState,action){
     switch(action.type) {
         case GET_PRODUCT_REQUEST:
           return state;
          
         
-        case GET_PRODUCT_SUCCESS:
+        case GET_PRODUCT_SUCCESSFULL:
           return  Object.assign(
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {productArticles:action.payloadProduct.articles}
+                {productSucsess:action.payloadProductSucsess.status}
             );
          }
         return state;
       }
 
       
-      export default productReducer
+      export default productReducerSuccess
