@@ -1,21 +1,51 @@
 import React from 'react';
 import styled from "styled-components";
-// import { ThemeProvider } from 'styled-components';
+import MusicProducts from "./musicProducts.jsx";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as pageActionsProducts from '../action/action';
 
 
-// const Wrapper = styled.div`
-//   color: red;
-// `;
 
 
-export default class Products extends React.Component{
+
+
+class Products extends React.Component{
+
+    componentDidMount() {
+        this.props.productActions.getProducts()
+    }
+    
+    
     render() {
+        const {productsAttr} = this.props
         return (
 
-            <h3>products</h3>
-            //    <Wrapper>
-        //        products
-        //    </Wrapper>
-        );
+            <div>
+                {/* <MusicProducts productsAttr = 'first music product'/> */}
+                <MusicProducts productsAttr = {productsAttr}/>
+            </div>
+                // <h3>products</h3>
+                //    <Wrapper>
+            //        products
+            //    </Wrapper>
+            
+        )
+            
       }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    productsAttr: state.productsTitle.productArticles
+})
+
+
+// переедаем action - кот меняют состоянме в reducere
+const mapDispatchToProps =  (dispatch)=> ({
+    productActions: bindActionCreators(pageActionsProducts, dispatch)
+})
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps) (Products);
+// export default  Products;

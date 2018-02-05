@@ -1,7 +1,4 @@
-import React  from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as pageActions from '../action/action';
+import React from 'react';
 import styled from "styled-components";
 
 
@@ -26,11 +23,11 @@ const Title = styled.h4`
 
 
 
-class News extends React.Component{
+class MusicProducts extends React.Component{
 
     showList() {
         
-        return this.props.newsTitle.map((news,id)=>{
+        return this.props.productsAttr.map((news,id)=>{
          
             return (
                 <React.Fragment key={news.url}>
@@ -46,7 +43,7 @@ class News extends React.Component{
 }
 
 render(){ 
-    console.log(this.props.newsTitle)
+    console.log(this.props.productsAttr)
    
     return	(
             <Container>
@@ -55,5 +52,9 @@ render(){
           )
       }
   }
+   
+   
+   
 
-export default News;
+export default MusicProducts;
+

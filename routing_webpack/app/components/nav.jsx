@@ -33,8 +33,8 @@ export default class Nav extends React.Component{
         return (
          <Container>
             <Wrapper>
-                <Title><Link to="/">home</Link></Title> 
-                <Title><Link to="/products">products</Link></Title>
+                <Title><Link to="/">news</Link></Title> 
+                <Title><Link to="/products">sport</Link></Title>
                 {/* <Link to={`/tracks/${track.id}`}>{track.name}</Link> */}
                 <Title><Link to="/tracks">tracks</Link></Title>
             </Wrapper>

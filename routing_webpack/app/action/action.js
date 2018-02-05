@@ -1,15 +1,21 @@
 import {
-    GET_NEWS_REQUEST,
-    GET_NEWS_SUCCESS,
-    URL
+  GET_NEWS_REQUEST,
+  GET_NEWS_SUCCESS,
+  newsURL
   } from "../constants/infoConstants";
+
+  import {
+  GET_PRODUCT_REQUEST,
+  GET_PRODUCT_SUCCESS,
+  sportURL
+  } from "../constants/infoConstants";
+  
   import axios from 'axios';
 
 
 // track - выбранный эл списка 
 // по клику на кот в деталях отображается подробн инфо
 export default function setTrack(track){
-    // alert(track.author)
     return{
         type: 'SET_TRACK',
         payload: track
@@ -25,29 +31,44 @@ export function getNews() {
       })
   
   
-     axios.get(URL)
+     axios.get(newsURL)
         .then(
             (res) =>{
                 return  dispatch({
                   type: GET_NEWS_SUCCESS,
-                  payloadMain: res.data.articles
-                // payloadMain: [
-                //     {
-                //         "id":804,
-                //         "main":"fog",
-                //         "description":"overcast clouds",
-                //         "icon":"04d"
-                //     },
-               
-                //     {
-                //         "id":805,
-                //         "main":"Clouds",
-                //         "description":"overcast clouds",
-                //         "icon":"04d"
-                //     }
-                // ]
-                
+                  payloadNews: res.data.articles
              
+              })
+  
+            }
+         
+        )
+    }
+  }
+
+
+
+
+  export function getProducts() {
+
+  //   return{
+  //     type: 'GET_PRODUCT_SUCCESS',
+  //     payloadProduct: 'bye'
+  // }
+
+    return (dispatch) => {
+      dispatch({
+        type: GET_PRODUCT_REQUEST
+      })
+  
+  
+     axios.get(sportURL)
+        .then(
+            (res) =>{
+                return  dispatch({
+                  type: GET_PRODUCT_SUCCESS,
+                   payloadProduct: res.data.articles
+                  
               })
   
             }

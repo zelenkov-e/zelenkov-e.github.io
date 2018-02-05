@@ -1,28 +1,29 @@
 import {
-    GET_NEWS_REQUEST,
-    GET_NEWS_SUCCESS
+    GET_PRODUCT_REQUEST,
+    GET_PRODUCT_SUCCESS
    
   } from "../constants/infoConstants";
 
   const initialState = {
-    newsArticles:[]//нач состояние
+    productArticles:[]//нач состояние
   }
 
-  const newsReducer = function(state =initialState,action){
+  const productReducer = function(state =initialState,action){
     switch(action.type) {
-        case GET_NEWS_REQUEST:
+        case GET_PRODUCT_REQUEST:
           return state;
          
         
-        case GET_NEWS_SUCCESS:
+        case GET_PRODUCT_SUCCESS:
           return  Object.assign(
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {newsArticles:action.payloadNews}
+                {productArticles:action.payloadProduct}
             );
          }
         return state;
       }
 
-      export default newsReducer
+      
+      export default productReducer

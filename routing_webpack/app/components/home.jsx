@@ -38,16 +38,14 @@ import * as pageActions from '../action/action';
 
 const mapStateToProps = (state, ownProps) => ({
     newsTitle: state.newsTitle.newsArticles
-    // newsMain: state.weatherMain.main
+   
 })
 
 
 // переедаем action - кот меняют состоянме в reducere
-function mapDispatchToProps(dispatch) {
-    return {
+const mapDispatchToProps =  (dispatch)=> ({
        actions: bindActionCreators(pageActions, dispatch)
-    }
-}
+})
 
 
 
