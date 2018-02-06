@@ -3,7 +3,7 @@ import {
   GET_NEWS_SUCCESS,
   GET_PRODUCT_REQUEST,
   GET_PRODUCT_SUCCESS,
-  GET_PRODUCT_SUCCESSFULL,
+  // GET_PRODUCT_SUCCESSFULL,
   sportURL,
   newsURL
   } from "../constants/infoConstants";
@@ -66,13 +66,8 @@ export function getNews() {
                 return  dispatch({
                   type: GET_PRODUCT_SUCCESS,
                   payloadProduct: res.data
-              },
-              {
-                type: GET_PRODUCT_SUCCESSFULL,
-                payloadProductSucsess: res.data
-              }
-
-              )
+                  // payloadProductSucsess: res.data
+               })
   
             }
          

@@ -13,53 +13,57 @@ const Image = styled.img`
     width: 350px;
     height:200px;
     margin-top:30px;
+    
   
 `;
-const Title = styled.h4`
-   color:red;
+const Titleh4 = styled.h4`
+    color:red;
   
 `;
+
+// const Titleh1 = styled.h1`
+//    color:red;
+  
+// `;
 
 
 
 
 class MusicProducts extends React.Component{
 
-    showList() {
+    
         
-        return this.props.productsAttr.map((news,id)=>{
-         
-            return (
-                <React.Fragment key={news.url}>
-                    {/* <Image  src = { news.urlToImage } ></Image>
-                    <Title >{news.title}</Title>
-                    <h6>{news.publishedAt}</h6>
-                    <p>{news.description}</p> */}
-                </React.Fragment>
-                )
-            }
-        )
-         return this.props.productsSucces.map((news,id)=>{
-         
-             return (
-                 <React.Fragment key={news.url}>
-                    {/* <Image  src = { news.urlToImage } ></Image>
-                    <Title >{news.title}</Title>
-                    <h6>{news.publishedAt}</h6>
-                    <p>{news.description}</p> */}
-                 </React.Fragment>
-                 )
-             }
-         )
-}
+      
+
 
 render(){ 
     console.log(this.props.productsAttr)
-    console.log(this.props.productsSucces)
+    // console.log(this.props.productsSucces)
    
     return	(
             <Container>
-                {this.showList()}    
+
+                
+                {/* <Titleh1>{this.props.productsSucces.status}</Titleh1> */}
+                {/* <Titleh1>{this.props.productsSucces.totalResults}</Titleh1> */}
+
+                  {
+
+                        this.props.productsAttr.map((news,index)=>{
+                                
+                            return (
+                                <React.Fragment key={index}>
+                                    <Image  src = { news.urlToImage } ></Image>
+                                    <Titleh4 >{news.title}</Titleh4>
+                                    <h6>{news.publishedAt}</h6>
+                                    <p>{news.description}</p>
+                                </React.Fragment>
+                                )
+                            }
+                        )
+
+                  }
+                  
             </Container>
           )
       }

@@ -19,14 +19,14 @@ class Products extends React.Component{
     
     render() {
         const {productsAttr} = this.props
-        const {productsSucces} = this.props
+        // const {productsSucces} = this.props
         return (
 
             <div>
                 {/* <MusicProducts productsAttr = 'first music product'/> */}
                 <MusicProducts 
                 productsAttr = {productsAttr} 
-                productsSucces = {productsSucces} 
+                // productsSucces = {productsSucces} 
                 />
             </div>
                 // <h3>products</h3>
@@ -41,7 +41,7 @@ class Products extends React.Component{
 
 const mapStateToProps = (state, ownProps) => ({
     productsAttr: state.productsTitle.productArticles,
-    productsSucces: state.productsSucces.productSucsess
+    // productsSucces: state.productsSucces.productSucsess
 
 })
 

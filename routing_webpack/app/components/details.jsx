@@ -1,5 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import styled from "styled-components";
+
+
+
+
+
+const ContainerDetails = styled.div`
+        width: 250px;
+`;
 
  
 class Details extends React.Component{
@@ -10,12 +19,12 @@ class Details extends React.Component{
             return (<p>select track..</p>)
         }
         return(
-            <div>
+            <ContainerDetails>
                 <h2>{this.props.track.author}</h2>
                 <p>{this.props.track.name}</p>
                 <img src = {this.props.track.img}  />
                 <audio src={this.props.track.audio} controls />
-            </div>
+            </ContainerDetails>
         ) 
     }
 }

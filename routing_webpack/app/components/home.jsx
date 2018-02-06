@@ -4,6 +4,8 @@ import News  from './news.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';
+import styled from "styled-components";
+
 
 
  
@@ -21,18 +23,8 @@ import * as pageActions from '../action/action';
         return (
             <div>
                 <News newsTitle ={newsTitle} />
-                {/* <hr /> */}
-                {/* <NewsDetails newsMain ={newsMain} /> */}
-{/* //------------------------------------------------------------------------------------// */}
-                {/* <p>{(this.props.news.newsElements}</p>  
-                {/* <p>{this.props.news.title}</p>   */}
-                {/* <p>{this.props.news.description}</p>   */}
-                {/* <p>{this.props.news.newsElements}</p>    */}
-                {/* <p>{this.props.news.newsElements.description}</p>   */}
         </div>
          )
-    //   }
-    
     }
 }
 

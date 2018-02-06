@@ -1,6 +1,6 @@
 import {
-    GET_PRODUCT_REQUEST,
-    GET_PRODUCT_SUCCESSFULL
+  GET_PRODUCT_REQUEST,
+  GET_PRODUCT_SUCCESS
    
   } from "../constants/infoConstants";
 
@@ -14,12 +14,12 @@ import {
           return state;
          
         
-        case GET_PRODUCT_SUCCESSFULL:
+        case GET_PRODUCT_SUCCESS:
           return  Object.assign(
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {productSucsess:action.payloadProductSucsess.status}
+                {productSucsess:action.payloadProductSucsess}
             );
          }
         return state;
