@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import SportsProducts from "./sportsProducts.jsx";
+import SportsProducts from "../components/sportsProducts.jsx";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActionsProducts from '../action/action';

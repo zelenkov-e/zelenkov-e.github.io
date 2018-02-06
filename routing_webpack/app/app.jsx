@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import Nav from './components/nav.jsx';
-import Home from './components/home.jsx';
-import Products from './components/products.jsx';
+import Home from './container/home.jsx';
+import Products from './container/products.jsx';
 import NotFound from './components/notfound.jsx';
-import Track from './components/tracks.jsx';
+import Track from './container/tracks.jsx';
 
 import { applyMiddleware,createStore } from 'redux';
 import { createLogger } from 'redux-logger';

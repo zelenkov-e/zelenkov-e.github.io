@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import setTrack from '../action/action';
-import Details from './details.jsx';
+import DetailsTraks from '../components/detailsTraks.jsx';
 import styled from "styled-components";
 
 
@@ -43,7 +43,7 @@ class Track extends React.Component{
                 </ul>
                 <hr />
                 <Title>Details</Title>
-                <Details />
+                <DetailsTraks />
            </div>
        )
     }

@@ -18,7 +18,7 @@ const Image = styled.img`
 
 
 
-class Details extends React.Component{
+class DetailsTraks extends React.Component{
 
    
     render(){
@@ -42,4 +42,4 @@ class Details extends React.Component{
     track: state.active
 })
 
-export default connect(mapStateToProps)(Details);
+export default connect(mapStateToProps)(DetailsTraks);
