@@ -19,7 +19,7 @@ const Image = styled.img`
   
 `;
 const Title = styled.h4`
-   color:red;
+    color:red;
   
 `;
 
@@ -34,11 +34,10 @@ class News extends React.Component{
          
             return (
                 <React.Fragment key={news.url}>
-                 <Image  src = { news.urlToImage } ></Image>
-                 <Title >{news.title}</Title>
-                 <h6>{news.publishedAt}</h6>
-                 <p>{news.description}</p>
-
+                    <Image  src = { news.urlToImage } ></Image>
+                    <Title >{news.title}</Title>
+                    <h6>{news.publishedAt}</h6>
+                    <p>{news.description}</p>
                 </React.Fragment>
                 )
             }

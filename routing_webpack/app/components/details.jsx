@@ -10,7 +10,14 @@ const ContainerDetails = styled.div`
         width: 250px;
 `;
 
- 
+
+const Image = styled.img`
+    width: 300px;
+  
+`;
+
+
+
 class Details extends React.Component{
 
    
@@ -22,7 +29,7 @@ class Details extends React.Component{
             <ContainerDetails>
                 <h2>{this.props.track.author}</h2>
                 <p>{this.props.track.name}</p>
-                <img src = {this.props.track.img}  />
+                <Image src = {this.props.track.img}></Image>
                 <audio src={this.props.track.audio} controls />
             </ContainerDetails>
         ) 

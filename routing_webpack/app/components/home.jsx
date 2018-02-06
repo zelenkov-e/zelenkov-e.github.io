@@ -8,6 +8,13 @@ import styled from "styled-components";
 
 
 
+
+
+const Title = styled.h1`
+    color:red;
+  
+`;
+
  
  class Home extends React.Component{
 
@@ -18,12 +25,13 @@ import styled from "styled-components";
     render(){
         const {newsTitle} = this.props
         // const {newsMain} = this.props
-
+        
        
         return (
             <div>
+                <Title>News</Title>
                 <News newsTitle ={newsTitle} />
-        </div>
+            </div>
          )
     }
 }

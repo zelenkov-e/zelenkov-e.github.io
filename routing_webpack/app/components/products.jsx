@@ -9,6 +9,10 @@ import * as pageActionsProducts from '../action/action';
 
 
 
+const Title = styled.h1`
+    color:red;
+`;
+
 
 class Products extends React.Component{
 
@@ -19,30 +23,20 @@ class Products extends React.Component{
     
     render() {
         const {productsAttr} = this.props
-        // const {productsSucces} = this.props
         return (
 
             <div>
-                {/* <MusicProducts productsAttr = 'first music product'/> */}
-                <MusicProducts 
-                productsAttr = {productsAttr} 
-                // productsSucces = {productsSucces} 
-                />
+                <Title>Sport</Title>
+                <MusicProducts  productsAttr = {productsAttr} />
             </div>
-                // <h3>products</h3>
-                //    <Wrapper>
-            //        products
-            //    </Wrapper>
-            
+             
         )
             
       }
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    productsAttr: state.productsTitle.productArticles,
-    // productsSucces: state.productsSucces.productSucsess
-
+    productsAttr: state.productsTitle.productArticles
 })
 
 
@@ -54,4 +48,3 @@ const mapDispatchToProps =  (dispatch)=> ({
 
 
 export default connect(mapStateToProps,mapDispatchToProps) (Products);
-// export default  Products;

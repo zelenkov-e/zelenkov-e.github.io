@@ -6,16 +6,23 @@ import Details from './details.jsx';
 import styled from "styled-components";
 
 
-const Title = styled.li`
+const Title = styled.h1`
+    color:red; 
+  
+`;
+const Li = styled.li`
     list-style-type: none;
   
 `;
+
+
+
 
 class Track extends React.Component{
    showList(){
     return this.props.track.map((track)=>{
         return (
-                    <Title onClick = {()=> this.props.select(track)} key = {track.id}>{track.name}</Title>
+                    <Li onClick = {()=> this.props.select(track)} key = {track.id}>{track.name}</Li>
             )
     })
    }
@@ -30,12 +37,12 @@ class Track extends React.Component{
        return(
            
            <div>
-               <h3>my tracks</h3>
+               <Title>tracks</Title>
                 <ul>
                     {this.showList()}
                 </ul>
                 <hr />
-                <h3>Details</h3>
+                <Title>Details</Title>
                 <Details />
            </div>
        )
