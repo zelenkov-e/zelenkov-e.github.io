@@ -31,9 +31,7 @@ class Track extends React.Component{
    
    
     render(){
-        // if(!this.props.track){
-        //     return (<p>select phone..</p>)
-        // }
+    
        return(
            
            <div>

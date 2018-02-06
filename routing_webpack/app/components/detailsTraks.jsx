@@ -22,6 +22,7 @@ class DetailsTraks extends React.Component{
 
    
     render(){
+        console.log(this.props.track)
         if(!this.props.track){
             return (<p>select track..</p>)
         }
@@ -39,7 +40,7 @@ class DetailsTraks extends React.Component{
 
   //ownProps - обяз объект для routing
   const mapStateToProps = (state, ownProps) => ({
-    track: state.active
+        track: state.active
 })
 
 export default connect(mapStateToProps)(DetailsTraks);
