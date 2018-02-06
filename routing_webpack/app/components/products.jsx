@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import MusicProducts from "./musicProducts.jsx";
+import SportsProducts from "./sportsProducts.jsx";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActionsProducts from '../action/action';
@@ -27,7 +27,7 @@ class Products extends React.Component{
 
             <div>
                 <Title>Sport</Title>
-                <MusicProducts  productsAttr = {productsAttr} />
+                <SportsProducts  productsAttr = {productsAttr} />
             </div>
              
         )

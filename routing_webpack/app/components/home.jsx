@@ -1,5 +1,5 @@
 import React from 'react';
-import News  from './news.jsx';
+import NewsHome  from './newsHome.jsx';
 // import NewsDetails  from './newsDetails.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -15,6 +15,9 @@ const Title = styled.h1`
   
 `;
 
+
+
+
  
  class Home extends React.Component{
 
@@ -24,13 +27,13 @@ const Title = styled.h1`
      
     render(){
         const {newsTitle} = this.props
-        // const {newsMain} = this.props
+     
         
        
         return (
             <div>
                 <Title>News</Title>
-                <News newsTitle ={newsTitle} />
+                <NewsHome newsTitle ={newsTitle} />
             </div>
          )
     }

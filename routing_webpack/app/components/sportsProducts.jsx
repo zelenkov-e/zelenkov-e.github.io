@@ -21,34 +21,16 @@ const Titleh4 = styled.h4`
   
 `;
 
-// const Titleh1 = styled.h1`
-//    color:red;
-  
-// `;
 
 
+class SportsProducts extends React.Component{
 
-
-class MusicProducts extends React.Component{
-
-    
-        
-      
-
-
-render(){ 
+    render(){ 
     console.log(this.props.productsAttr)
-    // console.log(this.props.productsSucces)
    
     return	(
             <Container>
-
-                
-                {/* <Titleh1>{this.props.productsSucces.status}</Titleh1> */}
-                {/* <Titleh1>{this.props.productsSucces.totalResults}</Titleh1> */}
-
                   {
-
                         this.props.productsAttr.map((news,index)=>{
                                 
                             return (
@@ -61,7 +43,6 @@ render(){
                                 )
                             }
                         )
-
                   }
                   
             </Container>
@@ -72,5 +53,5 @@ render(){
    
    
 
-export default MusicProducts;
+export default SportsProducts;
 

@@ -26,7 +26,7 @@ const Title = styled.h4`
 
 
 
-class News extends React.Component{
+class NewsHome extends React.Component{
 
     showList() {
         
@@ -55,4 +55,4 @@ render(){
       }
   }
 
-export default News;
+export default NewsHome;
