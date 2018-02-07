@@ -1,7 +1,7 @@
 import React  from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as pageActions from '../action/action';
+// import { bindActionCreators } from 'redux';
+// import * as pageActions from '../action/action';
 import styled from "styled-components";
 
 
@@ -23,21 +23,30 @@ const Title = styled.h4`
   
 `;
 
+const Audio = styled.audio`
+    border: 1px solid;
+  
+`;
 
 
 
-class NewsHome extends React.Component{
+
+
+class ArtistMusic extends React.Component{
 
     showList() {
         
-        return this.props.newsTitle.map((news,id)=>{
+        return this.props.musicTitle.map((music,id)=>{
          
             return (
-                <React.Fragment key={news.url}>
-                    <Image  src = { news.urlToImage } ></Image>
+                <React.Fragment key={id}>
+                    {/* <Image  src = { news.urlToImage } ></Image>
                     <Title >{news.title}</Title>
                     <h6>{news.publishedAt}</h6>
-                    <p>{news.description}</p>
+                    <p>{news.description}</p> */}
+                     <Title>{music.artistName}</Title>
+                     <p>{music.name}</p>
+                     <Audio src={music.previewURL} controls></Audio>
                 </React.Fragment>
                 )
             }
@@ -45,7 +54,7 @@ class NewsHome extends React.Component{
 }
 
 render(){ 
-    // console.log(this.props.newsTitle)
+    console.log(this.props.musicTitle)
    
     return	(
             <Container>
@@ -55,4 +64,4 @@ render(){
       }
   }
 
-export default NewsHome;
+export default ArtistMusic;

@@ -37,6 +37,7 @@ export default class Nav extends React.Component{
                 <Title><Link style = {{color:"red"}} to="/">news</Link></Title> 
                 <Title><Link style = {{color:"red"}} to="/products">sport</Link></Title>
                 <Title><Link style = {{color:"red"}} to="/tracks">tracks</Link></Title>
+                <Title><Link style = {{color:"red"}} to="/music">music</Link></Title>
             </Wrapper>
         </Container> 
         )    

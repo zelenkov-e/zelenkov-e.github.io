@@ -4,8 +4,10 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Nav from './components/nav.jsx';
 import Home from './container/home.jsx';
 import Products from './container/products.jsx';
-import NotFound from './components/notfound.jsx';
 import Track from './container/tracks.jsx';
+import Music from './container/music.jsx';
+import NotFound from './components/notfound.jsx';
+
 
 import { applyMiddleware,createStore } from 'redux';
 import { createLogger } from 'redux-logger';
@@ -41,8 +43,8 @@ ReactDOM.render(
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/products" component={Products} />
+                <Route path="/music" component={Music}/>
                 <Route path="/tracks" component={Track}/>
-                {/* <Route path="/tracks/:id" component={Track }/> */}
                 <Route component={NotFound} />
             </Switch>
         </div>

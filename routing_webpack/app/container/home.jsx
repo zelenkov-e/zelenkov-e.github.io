@@ -1,6 +1,5 @@
 import React from 'react';
 import NewsHome  from '../components/newsHome.jsx';
-// import NewsDetails  from './newsDetails.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';

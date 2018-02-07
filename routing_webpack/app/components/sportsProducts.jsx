@@ -26,7 +26,7 @@ const Titleh4 = styled.h4`
 class SportsProducts extends React.Component{
 
     render(){ 
-    console.log(this.props.productsAttr)
+    // console.log(this.props.productsAttr)
    
     return	(
             <Container>
