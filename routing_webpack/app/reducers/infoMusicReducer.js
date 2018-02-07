@@ -19,7 +19,7 @@ import {
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {music:action.payloadtMusic}
+                {music:action.payloadtMusic.tracks}
             );
          }
         return state;

@@ -36,7 +36,7 @@ export function getNews() {
             (res) =>{
                 return  dispatch({
                   type: GET_NEWS_SUCCESS,
-                  payloadNews: res.data.articles
+                  payloadNews: res.data
                   // payloadNews: res.data
              
               })
@@ -86,7 +86,8 @@ export function getNews() {
             (res) =>{
                 return  dispatch({
                   type: GET_MUSIC_SUCCESS,
-                  payloadtMusic: res.data.tracks
+                  // payloadtMusic: res.data.tracks
+                  payloadtMusic: res.data
                })
   
             }

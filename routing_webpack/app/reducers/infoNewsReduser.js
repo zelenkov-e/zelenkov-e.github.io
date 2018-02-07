@@ -19,7 +19,7 @@ import {
                 {}, 
                 state,
                 //кон состояние - массив ajax 
-                {newsArticles:action.payloadNews}
+                {newsArticles:action.payloadNews.articles}
             );
          }
         return state;
