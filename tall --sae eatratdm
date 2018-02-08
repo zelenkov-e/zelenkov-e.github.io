@@ -1,0 +1,367 @@
+[33mcommit f4856cd70f29724b4a2b9ed97654a0e81c0a22ad[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Thu Feb 8 20:01:05 2018 +0200
+
+     new file: .gitignore
+
+[33mcommit 7b6e6b3d071591aa23c695a66ac877ef7098c5c2[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Thu Feb 8 19:50:48 2018 +0200
+
+    renamed react_webpack_typescript/
+
+[33mcommit 233457bc3ee5668c74a5ccb0e2a24913b505730e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Wed Feb 7 16:35:53 2018 +0300
+
+    'added:musicContainer'
+
+[33mcommit edb27dd148b281394154dda0b1c6493cf9b6bb61[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Wed Feb 7 15:16:28 2018 +0300
+
+    'added:musicContainer'
+
+[33mcommit 0a4df30efd95839959aaf84899a535dd6dc85643[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Feb 6 18:14:41 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit a1c9e8edf6a9f0bfc11d3878c224718e5829424a[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Feb 6 15:35:58 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit 25045bd6c99c10d7cad49a631d113b97d081be75[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Feb 6 15:13:45 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit 410d48569553af3ec8e1e3e9d35a5822a685cada[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Feb 6 14:59:13 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit 14e03d43ef27bce9a30043bc9d4539389743ea6f[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Feb 6 12:30:34 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit 5409b3507be28dc04401dcdde925f08b98804ad1[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Mon Feb 5 21:19:14 2018 +0200
+
+    'modified:routing_webpack'
+
+[33mcommit 8eeb7f27ab111949de8370293b2f2ffc91ee2e64[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Mon Feb 5 15:28:53 2018 +0300
+
+    'added:products.jsx,musicProducts.jsx'
+
+[33mcommit b4067e2800eeec773e555d4b751e5124b18e77ed[m
+Author: zelenkov-e <zelenkov5111917@yandex.ru>
+Date:   Sun Feb 4 18:36:45 2018 +0400
+
+    'modified:routing_webpack'
+
+[33mcommit 11c88482632ff0c1332c9428f9af1cdc5636965a[m
+Author: zelenkov-e <zelenkov5111917@yandex.ru>
+Date:   Sun Feb 4 00:41:52 2018 +0400
+
+    'modified:routing_webpack'
+
+[33mcommit ddf8edb681b51f1f11f1239db5061be7d9e8b264[m
+Author: zelenkov-e <zelenkov5111917@yandex.ru>
+Date:   Sat Feb 3 16:49:12 2018 +0400
+
+    'modified:routing_webpack'
+
+[33mcommit ffdca7798d27ad0ae2ac95d620ccea8d282cbba2[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Fri Feb 2 17:10:52 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit cb02cb7cad72f68503db4d6ef7c21e5dc7c72b4c[m
+Merge: d616986 2500e20
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Fri Feb 2 11:48:57 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit d616986ec10336147844bbbba74038e8bae0da44[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Fri Feb 2 11:45:21 2018 +0300
+
+    'modfied:routing_webpack'
+
+[33mcommit 2500e2059a8da63391e98c4d700f9ff9475a0c04[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Thu Feb 1 22:03:30 2018 +0200
+
+    'modified:routing_webpack'
+
+[33mcommit 1cd4b619f2a25460252c85d8b5d444e23c02836a[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Thu Feb 1 20:46:51 2018 +0200
+
+    'routing_webpack'
+
+[33mcommit d98dd9e0c8992b43d8d7a8f3059ecf394fe6c0d0[m
+Merge: 5222fd5 50ceb16
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Thu Feb 1 20:25:11 2018 +0200
+
+    'modified:routing_webpack'
+
+[33mcommit 50ceb16f686fdeeca50732f995e8f40e7fb5911d[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 16:34:52 2018 +0300
+
+    ''
+
+[33mcommit 6fa9684f37a853dcbd3c847a0bf382034a84057f[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 11:44:26 2018 +0300
+
+    ''
+
+[33mcommit 1b0564f04660748077cb0f0e26175ac558cb2350[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:41:52 2018 +0300
+
+    'modified:.gitignore'
+
+[33mcommit 882f2fff83ce1cab050241762d8801dcb19808ca[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:38:03 2018 +0300
+
+    'modified:.gitignore'
+
+[33mcommit 7f149b82293c1a86ce6748ca4982e24ee70cda74[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:31:38 2018 +0300
+
+    'modified:.gitignore'
+
+[33mcommit e65f3cb34907f52c12e5a3cbe86c41054a402bbe[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:17:28 2018 +0300
+
+    'modified:routing_webpack/index.html'
+
+[33mcommit 6072b80a7da431ee8de2a83c42414dbc2f091243[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:14:58 2018 +0300
+
+    'modified:routing_webpack/index.html'
+
+[33mcommit 59f9099c36d83865167c3447772f12cb153372aa[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Feb 1 10:09:06 2018 +0300
+
+    ''
+
+[33mcommit 5222fd59f6807acfeb93c720e206b8ec275aa782[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 31 23:25:28 2018 +0200
+
+    'modified:routing_webpack/'
+
+[33mcommit c33cb39e5b2882b1721c549bc6422da9bac10855[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 31 23:19:35 2018 +0200
+
+    'modified:routing_webpack/'
+
+[33mcommit dcbbd86e2fb9e937dbdcc410d56e6c9e2184b683[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 31 20:52:29 2018 +0200
+
+    'modified:routing_webpack'
+
+[33mcommit fe2092a2f97689738edcdc8682b0ae107f6a7c68[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 31 20:29:03 2018 +0200
+
+    'modified:routing_webpack'
+
+[33mcommit 491f9f80460ebc1ad0848a42eb1a0faa4a788d4d[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Wed Jan 31 18:22:59 2018 +0300
+
+    'modified:routing_webpack'
+
+[33mcommit 73f99415c3cffa4262c3032370e0e7daab4bdcf1[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Wed Jan 31 17:37:49 2018 +0300
+
+    'modified:routing_webpack'
+
+[33mcommit f1aa86b53ecf37aac32cb0375c028cea22801981[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Tue Jan 30 16:28:48 2018 +0300
+
+    'modified:routing_webpack'
+
+[33mcommit 9cba1f71d4e9e18f2b88fdef7c94078d2520db02[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Mon Jan 29 16:49:20 2018 +0300
+
+    routing_webpack/app/action/action.js
+
+[33mcommit b6e9683cabfaf2ee035df1536f8139c4231d2942[m
+Author: zelenkov-e <zelenkov5111917@yandex.ru>
+Date:   Sun Jan 28 12:00:10 2018 +0400
+
+    routing_webpack/app/components/tracks.jsx
+
+[33mcommit 25c03d1a7ad638b05ebed7c5820995c981c80af5[m
+Author: zelenkov-e <zelenkov5111917@yandex.ru>
+Date:   Sun Jan 28 10:47:38 2018 +0400
+
+    app/
+
+[33mcommit e94567044692d7ce089d9482d9d44fe30994c726[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Fri Jan 26 17:12:27 2018 +0300
+
+    routing_webpack/app/app.jsx
+
+[33mcommit 88f524f112cac0fa708bd70bfd640ff72da700cd[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Jan 25 17:41:54 2018 +0300
+
+    added:
+
+[33mcommit 17e623331396651e7ac50fe97f3c9c35d04815a6[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Jan 25 17:40:50 2018 +0300
+
+    modified:
+
+[33mcommit d092f525cbb118638a643e210b1af09db3c6a06c[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Jan 25 13:50:53 2018 +0300
+
+    modified
+
+[33mcommit eaa6eecca1995ee4767b0c181e5dd0636751be62[m
+Author: Yauheni Zeliankou <Yauheni_Zeliankou@epam.com>
+Date:   Thu Jan 25 13:50:12 2018 +0300
+
+    added
+
+[33mcommit 7c854df2480ca8e5b116ecb38f5d9851ebdb8a5e[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Sun Jan 14 23:09:06 2018 +0200
+
+    added
+
+[33mcommit 5ab3952ed8254edcbf3c9769e39e0b1661193cc3[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Sun Jan 14 23:08:07 2018 +0200
+
+    deleted:
+
+[33mcommit 179cf9e9721c8209a076aec19ad30b5d39f47b30[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 3 16:49:18 2018 +0200
+
+    redux-axios-weather/
+
+[33mcommit e097cbed1bb547d45507638e57ed3c9bd8242e42[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Jan 3 16:46:16 2018 +0200
+
+    index.html
+
+[33mcommit c529af9f5155d51956b526b6afad24f33b3ee389[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Dec 27 13:43:25 2017 +0200
+
+    bundle.js
+
+[33mcommit 9e0056202671979c87b9407ea9212d46c1e38f60[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Dec 27 13:43:07 2017 +0200
+
+    bundle.js
+
+[33mcommit 7e70df3136bee71b16841740e42ebc769fb17abf[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Dec 27 13:41:52 2017 +0200
+
+    weatherAxios/bundle.js
+
+[33mcommit 69392b94c58d7ca7720d4e3c932a624f43464115[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Dec 27 13:39:11 2017 +0200
+
+    weatherAxios/index.js
+
+[33mcommit 75c4902c8a616e64fb35e5bde87f47f6110b89a4[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Wed Dec 27 00:20:08 2017 +0200
+
+    modified
+
+[33mcommit ce270e966831ddebf3f1457c44aa567bc8c78831[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 23:57:55 2017 +0200
+
+    deleted:
+
+[33mcommit a6b01dba1d48bf4050b5cd8fa4a99f9af646877f[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 23:13:04 2017 +0200
+
+    modified:
+
+[33mcommit 25c258f03e73818251c075394977c45346590309[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 22:46:27 2017 +0200
+
+    bundle.js
+
+[33mcommit 54e6a4309a2559eecf59f78d78b009c543ef33ec[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 18:58:53 2017 +0200
+
+    index.html
+
+[33mcommit 33f79e9fa03d1224750d3592ce1c9c1a070ea773[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 18:57:46 2017 +0200
+
+    index.html
+
+[33mcommit cd0351af76125d8d76d9a387e345c6a147e9e2e2[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 18:48:30 2017 +0200
+
+    .gitignore
+
+[33mcommit 0b5d983ac510701c0cd9a0b71c5efe42d83a0d54[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 18:34:22 2017 +0200
+
+    deleted
+
+[33mcommit 61e22e367c04b41b0d087841b11a39ea2b114184[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 18:12:22 2017 +0200
+
+    weatherAxios/bundle.js
+
+[33mcommit bb9d8ce025186d81eef4b9c347f03b48c6c1ef21[m
+Author: Zelenkov <zelenkov5111917@yandex.ru>
+Date:   Tue Dec 26 14:44:37 2017 +0200
+
+    deleted:
