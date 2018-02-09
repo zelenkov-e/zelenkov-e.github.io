@@ -5,8 +5,7 @@
   "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint":"eslint index.tsx"
-    
+    "lint": "eslint index.tsx"
   },
   "author": "zelenkov-e",
   "license": "ISC",
@@ -18,7 +17,6 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.4.1",
-    "eslint": "^4.17.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.7.1"
   }
