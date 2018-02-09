@@ -115,7 +115,7 @@ var Hello = /** @class */ (function (_super) {
         return React.createElement("h1", null,
             "Hello  ",
             this.props.name,
-            " and ",
+            "  ",
             this.props.sername,
             "!");
     };
