@@ -1,6 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-// 
+import { Hello } from "./components/Hello";
 
-console.log('index.tsx')
+ReactDOM.render(
+    <Hello name="Zhenya" sername="Zelenkov" />,
+    document.getElementById("example")
+);
