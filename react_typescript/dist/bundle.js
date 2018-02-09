@@ -79,7 +79,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var ReactDOM = __webpack_require__(2);
 var Hello_1 = __webpack_require__(3);
-ReactDOM.render(React.createElement(Hello_1.Hello, { compiler: "TypeScript", framework: "React" }), document.getElementById("example"));
+ReactDOM.render(React.createElement(Hello_1.Hello, { name: "Zhenya", sername: "Zelenkov" }), document.getElementById("example"));
 
 
 /***/ }),
@@ -114,9 +114,9 @@ var Hello = /** @class */ (function (_super) {
     Hello.prototype.render = function () {
         return React.createElement("h1", null,
             "Hello from ",
-            this.props.compiler,
+            this.props.name,
             " and ",
-            this.props.framework,
+            this.props.sername,
             "!");
     };
     return Hello;
