@@ -113,7 +113,7 @@ var Hello = /** @class */ (function (_super) {
     }
     Hello.prototype.render = function () {
         return React.createElement("h1", null,
-            "Hello from ",
+            "Hello  ",
             this.props.name,
             " and ",
             this.props.sername,
