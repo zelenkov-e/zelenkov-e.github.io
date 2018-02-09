@@ -1,7 +1,6 @@
 {
-  "name": "react_typescript",
+  "name": "zelenkov-e",
   "version": "1.0.0",
-  "description": "",
   "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,6 @@
     "eslint": "^4.17.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.7.1"
-  }
+  },
+  "description": ""
 }
