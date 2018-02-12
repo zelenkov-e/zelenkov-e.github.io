@@ -10,12 +10,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
          new CleanWebpackPlugin(['dist']),
          new HtmlWebpackPlugin({
            title: 'Production'
-         })
+         }),
+       
        ],
     //    output: {
     //      filename: '[name].bundle.js',
     //      path: path.resolve(__dirname, 'dist')
-    //    }
+    //    },
 
         output: {
             filename: "bundle.js",
@@ -42,9 +43,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     
     // избежать добавления в итоговый файл всех файлов React
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    },
+    // externals: {
+    //     "react": "React",
+    //     "react-dom": "ReactDOM"
+    // },
 
      };
