@@ -1,9 +1,14 @@
 import React from 'react';
 import NewsHome  from '../components/newsHome.jsx';
+
+import Description  from '../components/description.jsx';
+import { Route, Switch } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';
 import styled from "styled-components";
+
 
 
 
@@ -32,6 +37,11 @@ const Title = styled.h1`
         return (
             <div>
                 <Title>News</Title>
+                {/* <Description /> */}
+                <Switch>
+                    <Route path="/home/description" component={Description} />
+                </Switch>
+               
                 <NewsHome newsTitle ={newsTitle} />
             </div>
          )

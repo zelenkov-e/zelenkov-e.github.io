@@ -1,8 +1,13 @@
 import React  from 'react';
 import { connect } from 'react-redux';
+
+import {Link}  from 'react-router-dom';
+
+
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../action/action';
 import styled from "styled-components";
+
 
 
 
@@ -35,7 +40,7 @@ class NewsHome extends React.Component{
             return (
                 <React.Fragment key={news.url}>
                     <Image  src = { news.urlToImage } ></Image>
-                    <Title >{news.title}</Title>
+                    <Link to =  "/home/description">{news.title}</Link>
                     <h6>{news.publishedAt}</h6>
                     <p>{news.description}</p>
                 </React.Fragment>

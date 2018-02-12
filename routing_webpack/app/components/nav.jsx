@@ -34,7 +34,7 @@ export default class Nav extends React.Component{
         return (
          <Container>
             <Wrapper>
-                <Title><Link style = {{color:"red"}} to="/">news</Link></Title> 
+                <Title><Link style = {{color:"red"}} to="/home">news</Link></Title> 
                 <Title><Link style = {{color:"red"}} to="/products">sport</Link></Title>
                 <Title><Link style = {{color:"red"}} to="/tracks">tracks</Link></Title>
                 <Title><Link style = {{color:"red"}} to="/music">music</Link></Title>
