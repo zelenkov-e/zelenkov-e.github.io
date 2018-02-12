@@ -4,7 +4,8 @@
   "main": "./dist/bundle.js",
   "scripts": {
     "lint": "tslint src/**/*.tsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "zelenkov-e",
   "license": "ISC",
@@ -19,7 +20,9 @@
     "eslint-config-typescript": "^1.0.2",
     "source-map-loader": "^0.2.3",
     "tslint": "^5.9.1",
-    "typescript": "^2.7.1"
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   },
   "description": ""
 }
