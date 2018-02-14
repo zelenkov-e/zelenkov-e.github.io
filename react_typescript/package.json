@@ -4,7 +4,7 @@
   "main": "./dist/bundle.js",
   "scripts": {
     "lint": "tslint src/**/*.tsx",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server -d --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "author": "zelenkov-e",

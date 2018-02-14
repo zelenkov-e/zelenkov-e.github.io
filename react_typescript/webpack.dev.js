@@ -3,7 +3,7 @@
 // const React = require('react');
 
  module.exports = merge(common, {
-   devtool: 'inline-source-map',
+  //  devtool: 'inline-source-map',
    devServer: {
      contentBase: './dist'
    }
