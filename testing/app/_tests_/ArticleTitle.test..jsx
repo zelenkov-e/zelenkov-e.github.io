@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 import React from 'react';
-import ArticleTitle from './ArticleTitle';
+import ArticleTitle from './components/ArticleTitle';
 
 
 test('ArticleTitleTest renders ', () => {
