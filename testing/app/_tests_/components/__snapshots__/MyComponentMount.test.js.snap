@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyComponentMount  allows us to set props 1`] = `"Zhenya"`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyComponent  render my component 1`] = `
+exports[`MyComponentShallow  render my component 1`] = `
 <div>
   <input
     type="text"
