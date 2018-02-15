@@ -1,6 +1,6 @@
 import React  from 'react';
-import List from './list';
-import Details from './details';
+import {connect} from 'react-redux';
+
 
 class Content extends React.Component {
 
@@ -8,7 +8,7 @@ class Content extends React.Component {
 	render() {
 		return (
 		  <div>
-				<h4></h4>
+				<h4>{this.props.element}</h4>
 			</div>
 		);
 	}
@@ -16,24 +16,26 @@ class Content extends React.Component {
 
 
 
-
-export default Content;
-
-
-counterStore.dispatch(add);
-
-
-
-// let matchDispatchToProps = (dispatch)=>{
+// const matchDispatchToProps = (dispatch)=>{
 // 	return bindActionCreators({select:selectPhone},dispatch)
 // }
 
+
+const mapStateProps = (state) => (
+
+   {
+    element: state.reducerAdd
+  }
+)
+
+
+
+
+
+
+// counterStore.dispatch(add);
+
+
+
 // export default connect(mapStateProps,matchDispatchToProps)(Content);
-
-
-// let mapStateProps = (state) => {
-//   return {
-//     phone: state.active
-//   }
-// }
-// export default connect (mapStateProps)(Content);
+export default connect(mapStateProps)(Content);
