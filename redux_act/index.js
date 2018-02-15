@@ -6,14 +6,15 @@ import Content  from './js/content.js';
 
 import { Provider } from "react-redux"
 import { createStore } from "redux"
-import rootReducer from "./src/reducer/index"
+import rootReducer from "./src/reducer/combineReducer"
 
 
-const store = createStore(rootReducer)
+
+const counterStore = createStore(rootReducer)
 
 
 ReactDOM.render(
-	<Provider store={store}>
+	<Provider store={counterStore}>
 		<Content />
 	</Provider>, 
 	document.getElementById('content')
