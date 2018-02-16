@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "file-loader": "^1.1.6",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.5",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "scripts": {
+   "start": "node server.js"
+   },
+  "author": "",
+  "license": "ISC"
+}
