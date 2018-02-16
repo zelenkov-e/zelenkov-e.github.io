@@ -1,9 +1,14 @@
 import React  from 'react';
 import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+// import * as pageActions from '../action/actionCreators';
 
 
 class Content extends React.Component {
-
+  
+//   componentDidMount() {
+//     this.props.actions
+// }
 	
 	render() {
 		return (
@@ -16,9 +21,7 @@ class Content extends React.Component {
 
 
 
-// const matchDispatchToProps = (dispatch)=>{
-// 	return bindActionCreators({select:selectPhone},dispatch)
-// }
+
 
 
 const mapStateProps = (state) => (
@@ -29,7 +32,10 @@ const mapStateProps = (state) => (
 )
 
 
-
+// переедаем action - кот меняют состоянме в reducere
+// const mapDispatchToProps =  (dispatch)=> ({
+//   actions: bindActionCreators(pageActions, dispatch)
+// })
 
 
 

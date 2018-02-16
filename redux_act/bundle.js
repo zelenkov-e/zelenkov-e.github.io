@@ -18238,6 +18238,8 @@
 
 	var _reactRedux = __webpack_require__(28);
 
+	var _redux = __webpack_require__(42);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18245,6 +18247,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// import * as pageActions from '../action/actionCreators';
+
 
 	var Content = function (_React$Component) {
 		_inherits(Content, _React$Component);
@@ -18257,6 +18262,12 @@
 
 		_createClass(Content, [{
 			key: 'render',
+
+
+			//   componentDidMount() {
+			//     this.props.actions
+			// }
+
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
@@ -18273,16 +18284,17 @@
 		return Content;
 	}(_react2.default.Component);
 
-	// const matchDispatchToProps = (dispatch)=>{
-	// 	return bindActionCreators({select:selectPhone},dispatch)
-	// }
-
-
 	var mapStateProps = function mapStateProps(state) {
 		return {
 			element: state.reducerAdd
 		};
 	};
+
+	// переедаем action - кот меняют состоянме в reducere
+	// const mapDispatchToProps =  (dispatch)=> ({
+	//   actions: bindActionCreators(pageActions, dispatch)
+	// })
+
 
 	// counterStore.dispatch(add);
 
@@ -21270,16 +21282,17 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.reducer = undefined;
+	exports.reducer = exports.add = undefined;
 
 	var _reduxAct = __webpack_require__(71);
 
-	var _actionCreators = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \" ../action/actionCreators \""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 	;
+	// import { add } from  ' ../src/action/actionCreators ' ;
+	var add = exports.add = (0, _reduxAct.createAction)('add');
+
 	var reducer = exports.reducer = (0, _reduxAct.createReducer)(function (on) {
-	  on(_actionCreators.add, function (state, payload) {
-	    return state + payload;
+	  on(add, function (state) {
+	    return state + 1;
 	  });
 	}, 0);
 

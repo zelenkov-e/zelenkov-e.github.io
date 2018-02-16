@@ -1,13 +1,13 @@
 import { createAction, createReducer } from 'redux-act';;
-import { add } from  ' ../action/actionCreators ' ;
-
+// import { add } from  ' ../src/action/actionCreators ' ;
+export const add = createAction('add');
 
 
 
 
 
 export const reducer = createReducer(function (on) {
-    on(add, (state, payload) => state + payload);
+    on(add, (state) => state + 1);
   }, 0);
 
 
