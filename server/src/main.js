@@ -1,5 +1,21 @@
+import React  from 'react';
+import ReactDOM  from 'react-dom';
+import { Content }  from './js/content.js'; 
 
-require("file?name=index.html!./index.html");
+ReactDOM.render(
+  <Content />,
+  document.getElementById('content')
+  )
 
-var hello = document.getElementById("hello");
-hello.innerHTML = "Hello World!";
+
+
+
+// const hello = require("file?name=index.html!./index.html");
+
+
+
+
+// var hello = document.getElementById("hello");
+// hello.innerHTML = "Hello World!";
+
+

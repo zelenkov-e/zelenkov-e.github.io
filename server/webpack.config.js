@@ -13,15 +13,26 @@ module.exports = {
 		publicPath: "/",
 		filename: "bundle.js"
 	},
+	module: {
+		loaders: [
+			{ test: /\.js$/, 
+			  exclude: /node_modules/, 
+			  loader: "babel-loader", 
+			  query: 
+			  {
+				presets:['react','es2015']}
+			  }
+			]
+		}
 
 
 	// resolve: {
 	// 	extensions: ['.js']
 	// },
 
-	plugins: [
-		new webpack.optimize.OccurrenceOrderPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
-	]
+	// plugins: [
+	// 	new webpack.optimize.OccurrenceOrderPlugin(),
+	// 	new webpack.HotModuleReplacementPlugin(),
+	// 	new webpack.NoErrorsPlugin()
+	// ]
 };
