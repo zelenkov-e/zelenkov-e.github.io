@@ -1,4 +1,6 @@
 var path = require("path");
+const webpack = require('webpack'); 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var DIST_DIR   = path.join(__dirname, "dist"),
     CLIENT_DIR = path.join(__dirname, "src");
@@ -23,16 +25,17 @@ module.exports = {
 				presets:['react','es2015']}
 			  }
 			]
-		}
+		},
 
 
-	// resolve: {
-	// 	extensions: ['.js']
-	// },
+	resolve: {
+		extensions: ['.js']
+	},
 
-	// plugins: [
-	// 	new webpack.optimize.OccurrenceOrderPlugin(),
-	// 	new webpack.HotModuleReplacementPlugin(),
-	// 	new webpack.NoErrorsPlugin()
-	// ]
+	plugins: [
+		new HtmlWebpackPlugin({ template: 'index.html' }),
+		new webpack.optimize.OccurrenceOrderPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoEmitOnErrorsPlugin()
+	]
 };
