@@ -23,7 +23,8 @@
     "webpack-hot-middleware": "^2.21.0"
   },
   "scripts": {
-    "start": "babel-node server.js"
+    "start": "babel-node server.js",
+    "dev": "webpack && npm start"
   },
   "author": "",
   "license": "ISC"
