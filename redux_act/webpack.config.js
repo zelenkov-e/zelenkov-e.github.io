@@ -9,6 +9,7 @@ var DIST_DIR   = path.join(__dirname, "dist"),
 
 
 module.exports = {
+  devtool:"source-map",
   context: CLIENT_DIR,
 
   entry: ["webpack-hot-middleware/client", "./main"],
@@ -25,8 +26,11 @@ module.exports = {
             loader: "babel-loader", 
             query: 
             {
-              presets:['react','es2015']}
+              presets:['react','es2015']
+              // plugins: ["transform-object-rest-spread"]
+            
             }
+          }
       ]
   },
 

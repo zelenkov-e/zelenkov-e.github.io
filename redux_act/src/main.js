@@ -6,7 +6,7 @@ import Content  from './js/content.js';
 
 import { Provider } from "react-redux"
 import { createStore } from "redux"
-import rootReducer from "./src/reducer/combineReducer"
+import rootReducer from "./reducer/combineReducer"
 
 
 

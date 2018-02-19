@@ -1,14 +1,14 @@
 import React  from 'react';
 import {connect} from 'react-redux';
-// import { bindActionCreators } from 'redux';
-// import * as pageActions from '../action/actionCreators';
+import { bindActionCreators } from 'redux';
+import * as pageActions from '../action/actionCreators';
 
 
 class Content extends React.Component {
   
-//   componentDidMount() {
-//     this.props.actions
-// }
+  componentDidMount() {
+    this.props.actions.getAction()
+}
 	
 	render() {
 		return (
@@ -24,18 +24,17 @@ class Content extends React.Component {
 
 
 
-const mapStateProps = (state) => (
-
-   {
-    element: state.reducerAdd
-  }
-)
+const mapStateProps = (state) => ({
+	// element: state.reducerAdd
+	element: state.reducerAdd
+	
+  })
 
 
 // переедаем action - кот меняют состоянме в reducere
-// const mapDispatchToProps =  (dispatch)=> ({
-//   actions: bindActionCreators(pageActions, dispatch)
-// })
+const mapDispatchToProps =  (dispatch)=> ({
+  actions: bindActionCreators(pageActions, dispatch)
+})
 
 
 
@@ -43,5 +42,5 @@ const mapStateProps = (state) => (
 
 
 
-// export default connect(mapStateProps,matchDispatchToProps)(Content);
-export default connect(mapStateProps)(Content);
+export default connect(mapStateProps,mapDispatchToProps)(Content);
+// export default connect(mapStateProps)(Content);
