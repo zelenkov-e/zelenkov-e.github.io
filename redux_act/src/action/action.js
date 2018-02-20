@@ -3,6 +3,7 @@ import { createAction } from 'redux-act';
 
 
 
+<<<<<<< HEAD
 export const increment = createAction('Increment counter');
 export const decrement = createAction('Decrement counter');
 
@@ -26,4 +27,12 @@ export function incrementIfOdd() {
       }, 1000);
     };
   }
+=======
+ export const increment = createAction('increment');
+
+//  export const decrement = createAction('decrement', (payload) => ({ payload }));
+
+
+
+>>>>>>> 5abeaaf5cf2ad09b44c237a6568ffeb2538a0f28
 
