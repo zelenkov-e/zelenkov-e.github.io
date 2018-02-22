@@ -1,18 +1,18 @@
-var path = require("path");
+const path = require("path");
 
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-var DIST_DIR = path.join(__dirname, "dist"),
-  CLIENT_DIR = path.join(__dirname, "src");
+const DIST_DIR = path.join(__dirname, "dist");
+CLIENT_DIR = path.join(__dirname, "src");
 
 module.exports = {
-  // devtool: " inline-source-map ",
+  devtool: " inline-source-map ",
   context: CLIENT_DIR,
 
   entry: ["webpack-hot-middleware/client", "./main"],
   output: {
-    path: __dirname,
+    path: DIST_DIR,
     publicPath: "/",
     filename: "bundle.js"
   },
@@ -28,17 +28,23 @@ module.exports = {
             presets: ["react", "es2015", "stage-2"]
           }
         }
-        // loader: "babel-loader"
-        // query: {
-        // presets: ["react", "es2015", "transform-object-rest-spread"]
-        //   presets: ["react", "es2015", "stage-2"]
-        // }
+      },
+      {
+        test: /\.tsx?$/,
+        use: {
+          loader: "awesome-typescript-loader"
+        }
+      },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
       }
     ]
   },
 
   resolve: {
-    extensions: [".js"]
+    extensions: [".ts", ".tsx", ".js", ".json"]
   },
 
   plugins: [
