@@ -7,7 +7,7 @@ const DIST_DIR = path.join(__dirname, "dist");
 CLIENT_DIR = path.join(__dirname, "src");
 
 module.exports = {
-  devtool: " inline-source-map ",
+  devtool: "source-map ",
   context: CLIENT_DIR,
 
   entry: ["webpack-hot-middleware/client", "./main"],
