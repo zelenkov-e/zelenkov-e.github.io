@@ -1,21 +1,6 @@
-class User {
- 
-    id: number;
-    name: string;
-    getInfo(): string {
-        return "id:" + this.id + " name:" + this.name;
-    }
-}
+import { Smartphone } from "./mobiles";
 
-let  tom: User = new User();
-    tom.id = 30;
-    tom.name = "Tom";
-    console.log(tom.getInfo());
-    
-    
-let  john: User = new User();
-    john.id = 31;
-    john.name = "john";
-    console.log(john.getInfo());
-    
-    
+let iphone: Smartphone = new Smartphone();
+iphone.company = "apple";
+iphone.model = "iphone 7";
+console.log(iphone.displayInfo());
