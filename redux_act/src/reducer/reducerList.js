@@ -1,36 +1,41 @@
-// const initialState = 1;
+import { createReducer } from "redux-act";
+import { stateTrackList } from "../action/action";
 
-const initialState = [
+export const initialState = [
   {
     id: 1,
-    model: "Apple iPhone 8 256GB",
+    author: "Alexey Sonar – SkyTop Residency 037",
     cost: 2519.0,
-    img:
-      "https://shop.mts.by/upload/resize_cache/iblock/10f/90_180_1/iphone8-spgray-select-2017_AV1.png"
+    imgURL:
+      "http://cdn.promodj.com/afs/d9343adac287c6d06b86da9d482c9bfb12:crop:0x0:1080x1080:75x75:db68a3",
+    audioURL: "http://promodj.com/embed/6540859/cover"
   },
   {
     id: 2,
-    model: "Samsung Galaxy J7 2017 J730FM/DS ",
+    author: "Fonarev - Digital Emotions # 490 ",
     cost: 629.0,
-    img:
-      "https://shop.mts.by/upload/resize_cache/iblock/530/90_180_1/ru-galaxy-j7-2017-sm-j730fzdnser-gold-68977957.jpg"
+    imgURL:
+      "http://cdn.promodj.com/afs/6ebc774ef2c74efdd7927db157728b3e11:resize:75x75:fill:ffffff:f00130",
+    audioURL: "http://promodj.com/embed/6548311/cover"
   },
   {
     id: 3,
-    model: "Huawei P10  ",
+    author: "DENIS A - DAR Sessions Vol.44 ",
     cost: 999.0,
-    img:
-      "https://shop.mts.by/upload/resize_cache/iblock/567/90_180_1/p10%20gold.jpg"
+    imgURL:
+      "http://cdn.promodj.com/afs/0590c52a1fd3381a2303c21fb5044b0811:crop:160x0:640x640:75x75:1bfb87",
+    audioURL: "http://promodj.com/embed/6548311/cover"
   },
   {
     id: 4,
-    model: "Xiaomi Redmi Note 4 32GB ",
+    author: "Fabio Salvati - Euro Dance Mix ",
     cost: 399.9,
-    img:
-      "https://shop.mts.by/upload/resize_cache/iblock/76f/90_180_1/Note4Gray.jpg"
+    imgURL:
+      "http://cdn.promodj.com/afs/2ca82293d1221dc03524f4a932c7030611:crop:0x16:670x670:75x75:602a64",
+    audioURL: "http://promodj.com/embed/6548311/cover"
   }
 ];
 
-let reducerList = (state = initialState) => state;
-
-export default reducerList;
+export const reducerList = createReducer(function(on) {
+  on(stateTrackList, state => state);
+}, initialState);

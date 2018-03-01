@@ -1,10 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
+import styled from "styled-components";
 // import { bindActionCreators } from "redux";
 // import * as pageActions from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
 
+const IMAGE = styled.img`
+  width: 36px;
+`;
+const AUDIO = styled.audio`
+  border: 2px solid;
+`;
+
+const LI = styled.li`
+  color: red;
+  list-style-type: none;
+`;
+
 class ComponentTrackList extends React.Component {
+  showAuthorImg(e) {}
+
   // componentDidMount() {
   //   this.props.actions.increment();
   //   // console.log(this.props);
@@ -13,7 +28,14 @@ class ComponentTrackList extends React.Component {
   render() {
     // return <h3>{this.props.elementTrackList}</h3>;
     return this.props.elementTrackList.map(trackList => {
-      return <li key={trackList.id}>{trackList.model}</li>;
+      return (
+        <React.Fragment key={trackList.id}>
+          <LI onClick={this.showAuthorImg.bind(this)}>{trackList.author}</LI>
+          {/* <p>{trackList.cost}</p> */}
+          <IMAGE src={trackList.imgURL} />
+          <AUDIO src={trackList.audioURL} controls />
+        </React.Fragment>
+      );
     });
   }
 }

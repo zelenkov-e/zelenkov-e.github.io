@@ -35,7 +35,9 @@ class Content extends React.Component {
         <H4>{this.props.element}</H4>
         <Button onClick={() => this.props.actions.increment(1)}>+</Button>
         <Button onClick={() => this.props.actions.decrement(1)}>-</Button>
+        <h3>tracklist</h3>
         <ComponentTrackList />
+        <hr />
       </div>
     );
   }

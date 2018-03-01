@@ -2,7 +2,7 @@
   "name": "redux-act",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "babel-node server.js",
     "dev": "webpack && npm start"
@@ -13,6 +13,7 @@
     "express": "^4.16.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-fragment": "^1.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-act": "^1.7.1",
