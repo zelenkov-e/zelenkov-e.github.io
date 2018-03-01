@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ComponentTrackList from "./js/componentTrackList";
+import AuthorImg from "./js/authorImg";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { rootReducer } from "./reducer/combineReducer";
@@ -20,6 +21,8 @@ ReactDOM.render(
     {/* <Router history={newHistory}> */}
     <div>
       <ComponentTrackList />
+      <hr />
+      <AuthorImg />
       {/* <hr /> */}
     </div>
     {/* <Switch> */}

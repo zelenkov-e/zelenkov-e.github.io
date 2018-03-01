@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import AuthorImg from "./authorImg";
+// import AuthorImg from "./authorImg";
 import styled from "styled-components";
 // import { bindActionCreators } from "redux";
 // import * as pageActions from "../action/action";
@@ -33,8 +33,6 @@ class ComponentTrackList extends React.Component {
           {/* <p>{trackList.cost}</p> */}
           <IMAGE src={trackList.imgURL} />
           <AUDIO src={trackList.audioURL} controls />
-          <hr />
-          <AuthorImg />
         </React.Fragment>
       );
     });
