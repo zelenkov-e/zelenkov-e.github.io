@@ -1,5 +1,5 @@
 import { createReducer } from "redux-act";
-import { stateTrackList } from "../action/action";
+import { getTrackList } from "../action/action";
 
 export const initialState = [
   {
@@ -37,5 +37,5 @@ export const initialState = [
 ];
 
 export const reducerList = createReducer(function(on) {
-  on(stateTrackList, state => state);
+  on(getTrackList, state => state + 1);
 }, initialState);

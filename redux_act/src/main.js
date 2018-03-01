@@ -5,11 +5,11 @@ import AuthorImg from "./js/authorImg";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { rootReducer } from "./reducer/combineReducer";
-// import { AuthorImg } from "./js/authorImg";
-// import { Router, Route, Switch } from "react-router-dom";
-// import createBrowserHistory from "history/createBrowserHistory";
 
-// const newHistory = createBrowserHistory();
+import { Router, Route, Switch } from "react-router-dom";
+import createBrowserHistory from "history/createBrowserHistory";
+
+const newHistory = createBrowserHistory();
 
 const counterStore = createStore(
   rootReducer,
@@ -18,17 +18,18 @@ const counterStore = createStore(
 
 ReactDOM.render(
   <Provider store={counterStore}>
-    {/* <Router history={newHistory}> */}
-    <div>
-      <ComponentTrackList />
-      <hr />
-      <AuthorImg />
-      {/* <hr /> */}
-    </div>
-    {/* <Switch> */}
-    {/* <Route path="/autorImg" component={AuthorImg} /> */}
-    {/* </Switch> */}
-    {/* </Router> */}
+    <Router history={newHistory}>
+      <div>
+        <ComponentTrackList />
+        {/* <Nav /> */}
+        <hr />
+        {/* <AuthorImg /> */}
+        <Switch>
+          {/* <Route path="/" component={ComponentTrackList} /> */}
+          <Route path="/author" component={AuthorImg} />
+        </Switch>
+      </div>
+    </Router>
   </Provider>,
   document.getElementById("content")
 );

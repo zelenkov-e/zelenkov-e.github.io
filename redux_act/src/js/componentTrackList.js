@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
 // import AuthorImg from "./authorImg";
 import styled from "styled-components";
-// import { bindActionCreators } from "redux";
-// import * as pageActions from "../action/action";
+// import { getTrackList } from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
 
 const IMAGE = styled.img`
@@ -20,16 +21,25 @@ const LI = styled.li`
 
 class ComponentTrackList extends React.Component {
   // componentDidMount() {
-  //   this.props.actions.increment();
+  // this.props.getTracks();
   //   // console.log(this.props);
   // }
 
   render() {
-    // return <h3>{this.props.elementTrackList}</h3>;
-    return this.props.elementTrackList.map(trackList => {
+    const { elementTrackList } = this.props;
+
+    // return (
+    // <div>
+    // <h3>{this.props.elementTrackList}</h3>
+    // <button onClick={getTracks}>click</button>
+    // </div>
+    // );
+    return elementTrackList.map(trackList => {
       return (
         <React.Fragment key={trackList.id}>
-          <LI>{trackList.author}</LI>
+          <LI>
+            <Link to="/author">{trackList.author}</Link>
+          </LI>
           {/* <p>{trackList.cost}</p> */}
           <IMAGE src={trackList.imgURL} />
           <AUDIO src={trackList.audioURL} controls />
@@ -45,6 +55,10 @@ const mapStateProps = state => ({
 });
 
 // const mapDispatchToProps = dispatch => ({
+// getTracks() {
+// console.log("hi");
+// dispatch(getTrackList());
+// }
 //   actions: bindActionCreators(pageActions, dispatch)
 // });
 
