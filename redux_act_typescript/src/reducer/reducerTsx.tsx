@@ -1,6 +1,10 @@
 import { createReducer } from "redux-act";
 import { incrementTsx } from "../action/action";
-import { defaultState } from "../action/action";
+// import { defaultState } from "../action/action";
+
+export const defaultState = {
+  count: 0
+};
 
 export const reducerTsx = createReducer<typeof defaultState>({}, defaultState);
 
