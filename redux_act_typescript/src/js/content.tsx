@@ -1,19 +1,17 @@
 // import React from "react";
 import * as React from "react";
-// import * as React-redux from "react-redux";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as pageActionsTsx from "../action/action";
-
 // import { incrementTsx } from "../action/action";
+import * as pageActionsTsx from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
 
-// const pageActionsTsx = incrementTsx require('../action/action');
-
 // interface StateProps {
-//   elementTsx: any;
-//   reducerTsx: any;
-//   actionsTsx: any;
+//   elementTsx?: any;
+//   reducerTsx?: any;
+//   actionsTsx?: any;
+// incrementTsx?: any;
+// incrementTsx: ;
+// actionsTsx: any;
 // }
 
 // interface DispatchProps {
@@ -22,10 +20,12 @@ import * as pageActionsTsx from "../action/action";
 // }
 
 // class Content extends React.Component<StateProps, {}> {
-class Content extends React.Component<any, any> {
+class Content extends React.Component<any> {
+  // class Content extends React.Component {
   // class Content extends React.Component {
   componentDidMount() {
-    this.props.actionsTsx.incrementTsx();
+    // this.props.actionsTsx.incrementTsx();
+    this.props.dispatch(pageActionsTsx.incrementTsx);
   }
 
   render() {
@@ -37,14 +37,19 @@ class Content extends React.Component<any, any> {
   }
 }
 
-const mapStateProps = (state: any) => ({
+const mapStateToProps = (state: any) => ({
+  // const mapStateProps = state => ({
   elementTsx: state.reducerTsx
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
-  actionsTsx: bindActionCreators<{}>(pageActionsTsx, dispatch)
-});
+// const mapDispatchToProps = (dispatch: any) => ({
+//   // const mapDispatchToProps = dispatch => ({
+//   actionsTsx: dispatch(incrementTsx())
+// });
 
-export default connect<any>(mapStateProps, mapDispatchToProps)(Content);
-// export default connect(mapStateProps)(Content);
-// @connect<StateProps, DispatchProps, any>(mapStateToProps, mapDispatchToProps)
+// export default connect(mapStateToProps, mapDispatchToProps)(Content);
+
+// export const ComponentContainer = connect(mapStatetoProps, mapDispatchToProps)(
+//   Content
+// );
+export default connect(mapStateToProps)(Content);
