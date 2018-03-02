@@ -7,7 +7,7 @@ export const initialState = [
     author: "Alexey Sonar – SkyTop Residency 037",
     cost: 2519.0,
     imgURL:
-      "http://cdn.promodj.com/afs/d9343adac287c6d06b86da9d482c9bfb12:crop:0x0:1080x1080:75x75:db68a3",
+      "http://cdn.promodj.com/afs/5156781896b24fe153957faca252dd1712:resize:220x366:same:d66445",
     audioURL: "http://promodj.com/embed/6540859/cover"
   },
   {
@@ -15,7 +15,7 @@ export const initialState = [
     author: "Fonarev - Digital Emotions # 490 ",
     cost: 629.0,
     imgURL:
-      "http://cdn.promodj.com/afs/6ebc774ef2c74efdd7927db157728b3e11:resize:75x75:fill:ffffff:f00130",
+      "http://cdn.promodj.com/afs/38bd0e7240304ca4eef5cfc6de60283411:resize:220x366:same:335735",
     audioURL: "http://promodj.com/embed/6548311/cover"
   },
   {
@@ -23,7 +23,7 @@ export const initialState = [
     author: "DENIS A - DAR Sessions Vol.44 ",
     cost: 999.0,
     imgURL:
-      "http://cdn.promodj.com/afs/0590c52a1fd3381a2303c21fb5044b0811:crop:160x0:640x640:75x75:1bfb87",
+      "https://ic.pics.livejournal.com/djdenis/13280338/1011166/1011166_600.jpg",
     audioURL: "http://promodj.com/embed/6548311/cover"
   },
   {
@@ -31,11 +31,11 @@ export const initialState = [
     author: "Fabio Salvati - Euro Dance Mix ",
     cost: 399.9,
     imgURL:
-      "http://cdn.promodj.com/afs/2ca82293d1221dc03524f4a932c7030611:crop:0x16:670x670:75x75:602a64",
+      "http://cdn.promodj.com/afs/9ae1b2dd997f4f117dc4a72fac66fc3e11:resize:220x366:same:d93188",
     audioURL: "http://promodj.com/embed/6548311/cover"
   }
 ];
 
 export const reducerList = createReducer(function(on) {
-  on(getTrackList, state => state + 1);
+  on(getTrackList, state => state);
 }, initialState);

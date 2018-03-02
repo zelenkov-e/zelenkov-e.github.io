@@ -1,9 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
-// import styled from "styled-components";
-// import { bindActionCreators } from "redux";
+import styled from "styled-components";
+
 // import * as pageActions from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
+// const Details = styled.details`
+//   background: gainsboro;
+// `;
+
+const AUDIO = styled.audio`
+  border: 2px solid red;
+`;
+const IMAGE = styled.img`
+  width: 300px;
+`;
 
 class AuthorImg extends React.Component {
   // componentDidMount() {
@@ -12,22 +22,22 @@ class AuthorImg extends React.Component {
   // }
 
   render() {
-    // return <h3>{this.props.elementAuthorImg}</h3>;
-    return this.props.elementAuthorImg.map(trackList => {
-      return (
-        <React.Fragment key={trackList.id}>
-          {/* <LI onClick={this.showAuthorImg.bind(this)}>{trackList.author}</LI> */}
-          {/* <p>{trackList.cost}</p> */}
-          <img src={trackList.imgURL} />
-          {/* <AUDIO src={trackList.audioURL} controls /> */}
-        </React.Fragment>
-      );
-    });
+    // if (!this.props.elementAuthor.audioURL) {
+    //   return <p>select track..</p>;
+    // }
+    return (
+      <div>
+        <h3>{this.props.elementAuthor}</h3>
+        {/* <IMAGE src={this.props.elementAuthor.imgURL} /> */}
+        {/* <AUDIO src={this.props.elementAuthor.audioURL} controls /> */}
+        {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
+      </div>
+    );
   }
 }
 
 const mapStateProps = state => ({
-  elementAuthorImg: state.reducerTrackList
+  elementAuthor: state.reducerActiveAuthor
   //   element: getStateProps(state)
 });
 
