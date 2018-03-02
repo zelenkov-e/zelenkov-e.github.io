@@ -13,19 +13,24 @@ import { getTrackDetails } from "../action/action";
 //   }
 // }
 // export const defaultState = {
-//   count: 0
+//   count: null
 // };
 
 // export const reducerActive = createReducer({}, defaultState);
 
-// reducerActive.on(action, (state, payload) => ({
+// reducerActive.on(getTrackDetails, (state, payload) => ({
 //   ...state,
-//   count: state.count + payload
+//   count: payload
 // }));
 
 export const reducerActive = createReducer(function(on) {
-  //   on(action, state => state + payload);
-  on(getTrackDetails, state => state + 1);
+    // on(action, state => state + payload);
+  on(getTrackDetails, (state,payload) =>{ 
+  console.log(state+payload.id)
+  // console.log(payload.id)
+  // state + payload.id
+  // payload.id
+});
 }, 0);
 
 // export const reducerActive = createReducer({
