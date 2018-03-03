@@ -10,21 +10,13 @@ import { bindActionCreators } from "redux";
 // import { getTrackList } from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
 
+const COMPONENT = styled.div`
+  width: 328px;
+`;
+
 const IMAGE = styled.img`
   width: 36px;
 `;
-
-const UL = styled.ul`
-  background: gainsboro;
-`;
-
-// const Details = styled.details`
-//   background: gainsboro;
-// `;
-
-// const AUDIO = styled.audio`
-//   border: 2px solid;
-// `;
 
 const LI = styled.li`
   color: red;
@@ -42,11 +34,14 @@ class ComponentTrackList extends React.Component {
     return elementTrackList.map(trackList => {
       return (
         <React.Fragment key={trackList.id}>
-          {/* // <Li onClick = {()=> this.props.select(track)} key = {track.id}>{track.name}</Li> */}
-          <LI>{trackList.author}</LI>
-          <button onClick={() => this.props.select(trackList)}>play</button>
-          <IMAGE src={trackList.imgURL} />
-          {/* <AUDIO src={trackList.audioURL} controls /> */}
+          <div>
+            {/* // <Li onClick = {()=> this.props.select(track)} key = {track.id}>{track.name}</Li> */}
+            <LI>{trackList.author}</LI>
+            <IMAGE src={trackList.imgURL} />
+            <button onClick={() => this.props.select(trackList)}>play</button>
+
+            {/* <AUDIO src={trackList.audioURL} controls /> */}
+          </div>
         </React.Fragment>
       );
     });
@@ -54,14 +49,14 @@ class ComponentTrackList extends React.Component {
 
   render() {
     return (
-      <div className="details">
+      <COMPONENT>
         <h3>tracks</h3>
         <hr />
-        <UL>{this.showList()}</UL>
+        <ul>{this.showList()}</ul>
         <hr />
         <h3>details</h3>
         <AuthorImg />
-      </div>
+      </COMPONENT>
     );
   }
 }

@@ -25,9 +25,9 @@ export const initialState = [
   },
   {
     id: 4,
-    author: "Dj Sveta - Space (2018) ",
+    author: "SVET - SPIRIT Fitness Podcast ",
     imgURL:
-      "http://cdn.promodj.com/afs/a8c928831d3b2a2548afe800781577a412:resize:220x366:same:a90543",
+      "http://cdn.promodj.com/afs/f10dd7b697cf383dd9f4107d3a20ddbc12:resize:220x366:same:a00788",
     audioURL: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
   }
 ];
