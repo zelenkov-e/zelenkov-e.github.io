@@ -71,12 +71,13 @@ const mapStateProps = state => ({
   //   element: getStateProps(state)
 });
 
-// const mapDispatchToProps = dispatch => ({
-// getTracks() {
-// console.log("hi");
-// dispatch(getTrackList());
-// }
-let matchDispatchToProps = dispatch => {
+// const matchDispatchToProps = dispatch => ({
+//   select() {
+//     // console.log("hi");
+//     dispatch(getTrackDetails);
+//   }
+// });
+const matchDispatchToProps = dispatch => {
   return bindActionCreators({ select: getTrackDetails }, dispatch);
 };
 

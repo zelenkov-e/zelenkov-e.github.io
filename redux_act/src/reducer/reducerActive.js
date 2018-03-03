@@ -12,27 +12,19 @@ import { getTrackDetails } from "../action/action";
 //       return state;
 //   }
 // }
-// export const defaultState = {
-//   count: null
-// };
+export const defaultState = {
+  author: [],
+  audio: null
+};
 
-// export const reducerActive = createReducer({}, defaultState);
+export const reducerActive = createReducer({}, defaultState);
 
-// reducerActive.on(getTrackDetails, (state, payload) => ({
-//   ...state,
-//   count: payload
-// }));
-
-export const reducerActive = createReducer(function(on) {
-    // on(action, state => state + payload);
-  on(getTrackDetails, (state,payload) =>{ 
-  console.log(state+payload.id)
-  // console.log(payload.id)
-  // state + payload.id
-  // payload.id
-});
-}, 0);
-
-// export const reducerActive = createReducer({
-//   count: (state, payload) => state + payload
-// });
+reducerActive.on(getTrackDetails, (state, payload) =>
+  // console.log(payload),
+  ({
+    ...state,
+    author: payload.imgURL,
+    // author: payload
+    audio: payload.audioURL
+  })
+);

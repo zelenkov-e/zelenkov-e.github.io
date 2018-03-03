@@ -16,20 +16,16 @@ const IMAGE = styled.img`
 `;
 
 class AuthorImg extends React.Component {
-  // componentDidMount() {
-  //   this.props.actions.increment();
-  //   // console.log(this.props);
-  // }
-
   render() {
-    // if (!this.props.elementAuthor.audioURL) {
-    //   return <p>select track..</p>;
-    // }
+    // console.log(this.props.elementAuthor.author);
+    if (!this.props.elementAuthor.audio) {
+      return <p>select track..</p>;
+    }
     return (
       <div>
-        <h3>{this.props.elementAuthor}</h3>
-        {/* <IMAGE src={this.props.elementAuthor.imgURL} /> */}
-        {/* <AUDIO src={this.props.elementAuthor.audioURL} controls /> */}
+        {/* <h3>{this.props.elementAuthor.count}</h3> */}
+        <IMAGE src={this.props.elementAuthor.author} />
+        <AUDIO src={this.props.elementAuthor.audio} controls />
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
       </div>
     );
@@ -38,12 +34,6 @@ class AuthorImg extends React.Component {
 
 const mapStateProps = state => ({
   elementAuthor: state.reducerActiveAuthor
-  //   element: getStateProps(state)
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   actions: bindActionCreators(pageActions, dispatch)
-// });
-
-// export default connect(mapStateProps, mapDispatchToProps)(Content);
 export default connect(mapStateProps)(AuthorImg);
