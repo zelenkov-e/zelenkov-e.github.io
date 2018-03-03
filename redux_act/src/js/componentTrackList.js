@@ -25,7 +25,7 @@ const LI = styled.li`
 
 class ComponentTrackList extends React.Component {
   // componentDidMount() {
-  // this.props.getTracks();
+  //   this.props.select();
   //   // console.log(this.props);
   // }
   showList() {
@@ -35,12 +35,9 @@ class ComponentTrackList extends React.Component {
       return (
         <React.Fragment key={trackList.id}>
           <div>
-            {/* // <Li onClick = {()=> this.props.select(track)} key = {track.id}>{track.name}</Li> */}
             <LI>{trackList.author}</LI>
             <IMAGE src={trackList.imgURL} />
             <button onClick={() => this.props.select(trackList)}>play</button>
-
-            {/* <AUDIO src={trackList.audioURL} controls /> */}
           </div>
         </React.Fragment>
       );
@@ -68,10 +65,11 @@ const mapStateProps = state => ({
 
 // const matchDispatchToProps = dispatch => ({
 //   select() {
+//     dispatch(getTrackDetails());
 //     // console.log("hi");
-//     dispatch(getTrackDetails);
 //   }
 // });
+
 const matchDispatchToProps = dispatch => {
   return bindActionCreators({ select: getTrackDetails }, dispatch);
 };

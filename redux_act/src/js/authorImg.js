@@ -23,13 +23,13 @@ const IMAGE = styled.img`
 
 class AuthorImg extends React.Component {
   render() {
-    // console.log(this.props.elementAuthor.author);
+    console.log(this.props.elementAuthor.author);
     if (!this.props.elementAuthor.audio) {
       return <p>select track..</p>;
     }
     return (
       <DETAILS>
-        {/* <h3>{this.props.elementAuthor.count}</h3> */}
+        {/* <h3>{this.props.elementAuthor.author}</h3> */}
         <IMAGE src={this.props.elementAuthor.author} />
         <AUDIO src={this.props.elementAuthor.audio} controls />
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
