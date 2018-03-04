@@ -63,16 +63,23 @@ const mapStateProps = state => ({
   //   element: getStateProps(state)
 });
 
+
+const matchDispatchToProps = dispatch => ({
+  select() {
+    dispatch(getTrackDetails());
+    // console.log("hi");
+  }
+});
+
+
 // const matchDispatchToProps = dispatch => ({
-//   select() {
-//     dispatch(getTrackDetails());
-//     // console.log("hi");
-//   }
+//   select:  dispatch(getTrackDetails()) 
 // });
 
-const matchDispatchToProps = dispatch => {
-  return bindActionCreators({ select: getTrackDetails }, dispatch);
-};
+
+// const matchDispatchToProps = dispatch => {
+//   return bindActionCreators({ select: getTrackDetails }, dispatch);
+// };
 
 export default connect(mapStateProps, matchDispatchToProps)(ComponentTrackList);
 // export default connect(mapStateProps)(ComponentTrackList);

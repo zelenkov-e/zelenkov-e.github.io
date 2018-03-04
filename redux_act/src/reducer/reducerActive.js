@@ -12,19 +12,23 @@ import { getTrackDetails } from "../action/action";
 //       return state;
 //   }
 // }
+
 export const defaultState = {
-  author: [],
-  audio: null
+  author: 0,
+  // audio: null
 };
 
 export const reducerActive = createReducer({}, defaultState);
 
 reducerActive.on(getTrackDetails, (state, payload) =>
-  // console.log(payload),
-  ({
+
+  (
+    // console.log(state),
+    console.log(payload),
+    {
     ...state,
-    author: payload.imgURL,
-    // author: payload
-    audio: payload.audioURL
+    // author: payload.imgURL,
+    author: payload.id
+    // audio: payload.audioURL
   })
 );
