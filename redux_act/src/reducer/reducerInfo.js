@@ -2,7 +2,7 @@ import { createReducer } from "redux-act";
 import { getInfo } from "../action/action";
 
 export const defaultState = {
-  info: 1
+  info: 0
   //   audio: null
 };
 

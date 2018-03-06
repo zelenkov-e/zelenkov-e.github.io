@@ -65,12 +65,8 @@ class ComponentTrackList extends React.Component {
         <hr />
         <h3>details</h3>
         <AuthorImg />
-        {/* <button
-        // onClick={this.props.info}
-        >
-          info
-        </button> */}
-        {/* <InfoComponent /> */}
+        {/* <button onClick={this.props.info}>info</button> */}
+        <InfoComponent />
       </COMPONENT>
     );
   }

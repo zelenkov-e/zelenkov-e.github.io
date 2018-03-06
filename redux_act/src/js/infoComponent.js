@@ -14,8 +14,15 @@ class InfoComponent extends React.Component {
   }
 }
 
-const mapStateProps = state => ({
-  elementInfo: state.reducerInfo
+const matchDispatchToProps = dispatch => ({
+  info() {
+    // dispatch(getTrackDetails());
+    console.log("hi");
+  }
 });
 
-export default connect(mapStateProps)(InfoComponent);
+const mapStateProps = state => ({
+  elementInfo: state.reducerInfo.info
+});
+
+export default connect(mapStateProps, matchDispatchToProps)(InfoComponent);
