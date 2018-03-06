@@ -3,6 +3,7 @@ import { createAction } from "redux-act";
 
 export const getTrackList = createAction("stateTrackList");
 export const getTrackDetails = createAction();
+export const getInfo = createAction();
 // console.log(getTrackDetails(1));
 
 // export function getTrackDetails(authorImg) {

@@ -23,7 +23,7 @@ const IMAGE = styled.img`
 
 class AuthorImg extends React.Component {
   render() {
-    console.log(this.props.elementAuthor.author);
+    // console.log(this.props.elementAuthor.author);
     if (!this.props.elementAuthor.audio) {
       return <p>select track..</p>;
     }

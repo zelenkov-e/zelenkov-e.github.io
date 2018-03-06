@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AuthorImg from "./authorImg";
+import InfoComponent from "./infoComponent";
 import styled from "styled-components";
 import { getTrackDetails } from "../action/action";
 // import { action } from "../action/action";
@@ -23,6 +24,14 @@ const LI = styled.li`
   list-style-type: none;
 `;
 
+const COMPONENTSCROLL = styled.div`
+  overflow: scroll;
+  margin: 0 auto;
+  border: 1px solid;
+  width: 256px;
+  height: 117px;
+`;
+
 class ComponentTrackList extends React.Component {
   // componentDidMount() {
   //   this.props.select();
@@ -39,6 +48,7 @@ class ComponentTrackList extends React.Component {
             <IMAGE src={trackList.imgURL} />
             <button onClick={() => this.props.select(trackList)}>play</button>
           </div>
+          <hr />
         </React.Fragment>
       );
     });
@@ -49,10 +59,18 @@ class ComponentTrackList extends React.Component {
       <COMPONENT>
         <h3>tracks</h3>
         <hr />
-        <ul>{this.showList()}</ul>
+        <COMPONENTSCROLL>
+          <ul>{this.showList()}</ul>
+        </COMPONENTSCROLL>
         <hr />
         <h3>details</h3>
         <AuthorImg />
+        {/* <button
+        // onClick={this.props.info}
+        >
+          info
+        </button> */}
+        {/* <InfoComponent /> */}
       </COMPONENT>
     );
   }
