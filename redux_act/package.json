@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "babel-node server.js",
-    "dev": "webpack && npm start"
+    "dev": "webpack && npm start",
+    "test": "jest"
   },
   "author": "zelenkov-e",
   "license": "ISC",
@@ -25,6 +26,13 @@
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
+    "babel-jest": "^22.2.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "jest": "^22.2.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -37,5 +45,13 @@
     "webpack": "^3.11.0",
     "webpack-dev-middleware": "^2.0.5",
     "webpack-hot-middleware": "^2.21.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/test/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
   }
 }
