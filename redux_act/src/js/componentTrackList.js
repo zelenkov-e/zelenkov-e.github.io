@@ -8,6 +8,7 @@ import { getTrackDetails } from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
 import { getInfo } from "../action/action";
+// import { getString } from  "../action/action";
 
 import { bindActionCreators } from "redux";
 // import { getTrackList } from "../action/action";
@@ -48,7 +49,14 @@ class ComponentTrackList extends React.Component {
           <div>
             <LI>{trackList.author}</LI>
             <IMAGE src={trackList.imgURL} />
-            <button onClick={() => this.props.select(trackList)}>play</button>
+            <button
+              onClick={
+                () => this.props.select(trackList)
+                //  this.props.selectString();
+              }
+            >
+              play
+            </button>
             <button onClick={() => this.props.selectInfo(trackList)}>
               info
             </button>
@@ -92,6 +100,10 @@ const matchDispatchToProps = dispatch => ({
     dispatch(getInfo(trackList));
     // console.log("hi");
   }
+  // selectString() {
+  //   dispatch(getString());
+  //   // console.log("hi");
+  // }
 });
 
 // const matchDispatchToProps = dispatch => {

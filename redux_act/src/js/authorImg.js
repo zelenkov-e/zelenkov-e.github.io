@@ -22,16 +22,30 @@ const AUDIO = styled.audio`
 const IMAGE = styled.img`
   width: 268px;
 `;
+const MARQUEE = styled.marquee`
+  width: 263px;
+  height: 50px;
+  border: 2px solid red;
+`;
 
 class AuthorImg extends React.Component {
   render() {
-    // console.log(this.props.elementAuthor.author);
+    const { elementString } = this.props;
+    // console.log(this.props.elementTrackList);
+
     if (!this.props.elementAuthor.audio) {
       return <p>select track..</p>;
     }
+
     return (
       <DETAILS>
-        {/* <h3>{this.props.elementAuthor.author}</h3> */}
+        {/* {elementString.map(string => {
+          return <marquee key={tstring.id}>{string.author}</marquee>;
+          //   console.log(this.props.elementTrackList.author);
+        })} */}
+
+        <MARQUEE>{this.props.elementString.string}</MARQUEE>
+
         <IMAGE src={this.props.elementAuthor.author} />
         <AUDIO src={this.props.elementAuthor.audio} controls />
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
@@ -48,7 +62,8 @@ class AuthorImg extends React.Component {
 }
 
 const mapStateProps = state => ({
-  elementAuthor: state.reducerActiveAuthor
+  elementAuthor: state.reducerActiveAuthor,
+  elementString: state.reducerString
 });
 
 const matchDispatchToProps = dispatch => ({
