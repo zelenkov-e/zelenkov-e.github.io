@@ -1,15 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
+import styled from "styled-components";
+
+const INFO = styled.div`
+  width: 294px;
+  margin: 20px;
+`;
 
 class InfoComponent extends React.Component {
   render() {
     return (
-      <div>
-        <h3>{this.props.elementInfo}</h3>
+      <INFO>
+        <p>{this.props.elementInfo}</p>
         {/* <IMAGE src={this.props.elementAuthor.author} />
         <AUDIO src={this.props.elementAuthor.audio} controls />
         <img src={this.props.elementAuthorImg.audioURL} /> */}
-      </div>
+      </INFO>
     );
   }
 }

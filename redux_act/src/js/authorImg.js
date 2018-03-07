@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import InfoComponent from "./infoComponent";
-import { getInfo } from "../action/action";
+// import InfoComponent from "./infoComponent";
+// import { getInfo } from "../action/action";
 
 // import * as pageActions from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
@@ -12,7 +12,7 @@ import { getInfo } from "../action/action";
 
 const DETAILS = styled.div`
   width: 268px;
-  margin: 0 auto;
+  margin: 20px auto;
 `;
 
 const AUDIO = styled.audio`
@@ -35,14 +35,13 @@ class AuthorImg extends React.Component {
         <IMAGE src={this.props.elementAuthor.author} />
         <AUDIO src={this.props.elementAuthor.audio} controls />
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
-        <button
-        // onClick={this.props.selectInfo()}
-        >
-          info
-        </button>
-        <hr />
-        <h3>information</h3>
-        <InfoComponent />
+        {/* <button */}
+        {/* onClick={this.props.selectInfo()} */}
+        {/* > */}
+        {/* info */}
+        {/* </button> */}
+        {/* <h3>information</h3> */}
+        {/* <InfoComponent /> */}
       </DETAILS>
     );
   }

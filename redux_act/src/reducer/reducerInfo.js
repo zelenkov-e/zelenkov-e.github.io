@@ -2,7 +2,7 @@ import { createReducer } from "redux-act";
 import { getInfo } from "../action/action";
 
 export const defaultState = {
-  info: 0
+  info: []
   //   audio: null
 };
 
@@ -13,8 +13,8 @@ reducerInfo.on(getInfo, (state, payload) =>
   // console.log(payload),
   ({
     ...state,
-    // info: payload.Info
-    info: payload.id
+    info: payload.Info
+    // info: payload.id
     // author: payload
     // audio: payload.audioURL
   })
