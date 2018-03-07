@@ -5,6 +5,7 @@ import AuthorImg from "./authorImg";
 // import InfoComponent from "./infoComponent";
 import styled from "styled-components";
 import { getTrackDetails } from "../action/action";
+import * as pageMusicActions from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
 import { getInfo } from "../action/action";
@@ -41,34 +42,44 @@ const UL = styled.ul`
 `;
 
 class ComponentTrackList extends React.Component {
-  // componentDidMount() {
-  //   this.props.select();
-  //   // console.log(this.props);
-  // }
+  componentDidMount() {
+    this.props.musicActions.getTrackList();
+    // console.log(this.props);
+  }
   showList() {
     const { elementTrackList } = this.props;
+    console.log(elementTrackList.music);
 
-    return elementTrackList.map(trackList => {
+    return elementTrackList.music.map(trackList => {
+      // return elementTrackList.map(trackList => {
       return (
         <React.Fragment key={trackList.id}>
           <div>
-            <LI>{trackList.author}</LI>
-            <IMAGE src={trackList.imgURL} />
-            <button
-              onClick={
-                () => this.props.select(trackList)
-                //  this.props.selectString();
-              }
-            >
-              play
-            </button>
-            <button onClick={() => this.props.selectInfo(trackList)}>
+            <LI>{trackList.artistName}</LI>
+            {/* <IMAGE src={trackList.albums} /> */}
+            <button onClick={() => this.props.select(trackList)}>play</button>
+            {/* <button onClick={() => this.props.selectInfo(trackList)}>
               info
-            </button>
+            </button> */}
           </div>
           <hr />
         </React.Fragment>
       );
+
+      // return elementTrackList.map(trackList => {
+      // return (
+      //   <React.Fragment key={trackList.id}>
+      //     <div>
+      //       <LI>{trackList.author}</LI>
+      //       <IMAGE src={trackList.imgURL} />
+      //       <button onClick={() => this.props.select(trackList)}>play</button>
+      //       <button onClick={() => this.props.selectInfo(trackList)}>
+      //         info
+      //       </button>
+      //     </div>
+      //     <hr />
+      //   </React.Fragment>
+      // );
     });
   }
 
@@ -97,20 +108,27 @@ const mapStateProps = state => ({
 });
 
 const matchDispatchToProps = dispatch => ({
-  select(trackList) {
+  musicActions: bindActionCreators(pageMusicActions, dispatch),
+  select() {
     dispatch(getTrackDetails(trackList));
-    dispatch(getString(trackList));
-    // console.log("hi");
-  },
-  selectInfo(trackList) {
-    dispatch(getInfo(trackList));
-    // console.log("hi");
   }
-  // selectString() {
-  //   dispatch(getString());
-  //   // console.log("hi");
-  // }
 });
+
+// const matchDispatchToProps = dispatch => ({
+//   select(trackList) {
+//     dispatch(getTrackDetails(trackList));
+//     dispatch(getString(trackList));
+//     // console.log("hi");
+//   },
+//   selectInfo(trackList) {
+//     dispatch(getInfo(trackList));
+//     // console.log("hi");
+//   }
+//   // selectString() {
+//   //   dispatch(getString());
+//   //   // console.log("hi");
+//   // }
+// });
 
 // const matchDispatchToProps = dispatch => {
 //   return bindActionCreators({ select: getTrackDetails }, dispatch);
