@@ -11,7 +11,7 @@ reducerString.on(getString, (state, payload) =>
   // console.log(payload),
   ({
     ...state,
-    string: payload
+    string: payload.author
     // author: payload
   })
 );

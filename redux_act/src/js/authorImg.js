@@ -17,14 +17,14 @@ const DETAILS = styled.div`
 
 const AUDIO = styled.audio`
   border: 2px solid red;
-  width: 268px;
+  width: 256px;
 `;
 const IMAGE = styled.img`
-  width: 268px;
+  width: 260px;
 `;
 const MARQUEE = styled.marquee`
-  width: 263px;
-  height: 50px;
+  width: 256px;
+  height: 20px;
   border: 2px solid red;
 `;
 
@@ -40,7 +40,7 @@ class AuthorImg extends React.Component {
     return (
       <DETAILS>
         {/* {elementString.map(string => {
-          return <marquee key={tstring.id}>{string.author}</marquee>;
+          return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
           //   console.log(this.props.elementTrackList.author);
         })} */}
 

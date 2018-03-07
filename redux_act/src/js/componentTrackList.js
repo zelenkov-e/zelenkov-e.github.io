@@ -8,7 +8,7 @@ import { getTrackDetails } from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
 import { getInfo } from "../action/action";
-// import { getString } from  "../action/action";
+import { getString } from "../action/action";
 
 import { bindActionCreators } from "redux";
 // import { getTrackList } from "../action/action";
@@ -28,11 +28,16 @@ const LI = styled.li`
 `;
 
 const COMPONENTSCROLL = styled.div`
-  overflow: scroll;
-  margin: 0 auto;
+  overflow-y: scroll;
+  margin: 20px auto;
   border: 1px solid;
   width: 256px;
   height: 117px;
+`;
+
+const UL = styled.ul`
+  margin: 4px;
+  padding: 12px;
 `;
 
 class ComponentTrackList extends React.Component {
@@ -73,7 +78,7 @@ class ComponentTrackList extends React.Component {
         {/* <h3>tracks</h3> */}
         {/* <hr /> */}
         <COMPONENTSCROLL>
-          <ul>{this.showList()}</ul>
+          <UL>{this.showList()}</UL>
         </COMPONENTSCROLL>
         {/* <hr /> */}
         {/* <h3>details</h3> */}
@@ -94,6 +99,7 @@ const mapStateProps = state => ({
 const matchDispatchToProps = dispatch => ({
   select(trackList) {
     dispatch(getTrackDetails(trackList));
+    dispatch(getString(trackList));
     // console.log("hi");
   },
   selectInfo(trackList) {
