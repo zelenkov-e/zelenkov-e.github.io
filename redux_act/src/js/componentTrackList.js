@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AuthorImg from "./authorImg";
-import InfoComponent from "./infoComponent";
+// import InfoComponent from "./infoComponent";
 import styled from "styled-components";
 import { getTrackDetails } from "../action/action";
 // import { action } from "../action/action";
@@ -66,7 +66,7 @@ class ComponentTrackList extends React.Component {
         <h3>details</h3>
         <AuthorImg />
         {/* <button onClick={this.props.info}>info</button> */}
-        <InfoComponent />
+        {/* <InfoComponent /> */}
       </COMPONENT>
     );
   }

@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import InfoComponent from "./infoComponent";
+import { getInfo } from "../action/action";
 
 // import * as pageActions from "../action/action";
 // import { getStateProps } from "../selectors/selectors";
@@ -33,6 +35,14 @@ class AuthorImg extends React.Component {
         <IMAGE src={this.props.elementAuthor.author} />
         <AUDIO src={this.props.elementAuthor.audio} controls />
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
+        <button
+        // onClick={this.props.selectInfo()}
+        >
+          info
+        </button>
+        <hr />
+        <h3>information</h3>
+        <InfoComponent />
       </DETAILS>
     );
   }
@@ -42,4 +52,13 @@ const mapStateProps = state => ({
   elementAuthor: state.reducerActiveAuthor
 });
 
-export default connect(mapStateProps)(AuthorImg);
+const matchDispatchToProps = dispatch => ({
+  selectInfo() {
+    dispatch(getInfo());
+    // console.log("hi");
+  }
+});
+
+export default connect(mapStateProps, matchDispatchToProps)(AuthorImg);
+
+// export default connect(mapStateProps)(AuthorImg);

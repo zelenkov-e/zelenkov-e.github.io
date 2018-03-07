@@ -6,18 +6,19 @@ export const defaultState = {
   //   audio: null
 };
 
-// export const reducerInfo = createReducer({}, defaultState);
+export const reducerInfo = createReducer({}, defaultState);
 
-// reducerActive.on(getTrackDetails, (state, payload) =>
-// reducerInfo.on(getInfo, state => state);
-// console.log(payload),
-//   ({
-//     ...state,
-//     author: payload.imgInfo
-//     // author: payload
-//     // audio: payload.audioURL
-//   })
-// ;
-export const reducerInfo = createReducer(function(on) {
-  on(getInfo, state => state);
-}, defaultState);
+reducerInfo.on(getInfo, (state, payload) =>
+  // reducerInfo.on(getInfo, state => state);
+  // console.log(payload),
+  ({
+    ...state,
+    // info: payload.Info
+    info: payload.id
+    // author: payload
+    // audio: payload.audioURL
+  })
+);
+// export const reducerInfo = createReducer(function(on) {
+//   on(getInfo, state => state);
+// }, defaultState);
