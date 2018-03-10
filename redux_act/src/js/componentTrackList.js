@@ -56,8 +56,9 @@ class ComponentTrackList extends React.Component {
         <React.Fragment key={trackList.id}>
           <div>
             <LI>{trackList.artistName}</LI>
+            <audio src = {trackList.previewURL} controls />
             {/* <IMAGE src={trackList.albums} /> */}
-            <button onClick={() => this.props.select(trackList)}>play</button>
+            {/* <button onClick={() => this.props.select(trackList)}>play</button> */}
             {/* <button onClick={() => this.props.selectInfo(trackList)}>
               info
             </button> */}

@@ -2,7 +2,7 @@ import { createReducer } from "redux-act";
 import { getString } from "../action/action";
 
 export const defaultState = {
-  string: 0
+  string: []
 };
 
 export const reducerString = createReducer({}, defaultState);
