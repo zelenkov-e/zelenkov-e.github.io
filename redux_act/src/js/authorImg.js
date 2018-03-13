@@ -37,30 +37,31 @@ class AuthorImg extends React.Component {
     // if (!this.props.elementAuthor.audio) {
     //   return <p>select track..</p>;
     // }
-    return elementAuthor.author.map(trackList => {
-      return (
-        <DETAILS>
-          <h3>{trackList.previewURL}</h3>
-          {/* {elementString.map(string => {
+    // return elementAuthor.author.map(trackList => {
+    return (
+      <DETAILS>
+        {/* <h3>{trackList.previewURL}</h3> */}
+        <h3>{elementAuthor.author}</h3>
+        {/* {elementString.map(string => {
             return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
             //   console.log(this.props.elementTrackList.author);
           })} */}
 
-          {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
+        {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
 
-          {/* <IMAGE src={this.props.elementAuthor.author} /> */}
-          {/* <AUDIO src={this.props.elementAuthor.author} controls /> */}
-          {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
-          {/* <button */}
-          {/* onClick={this.props.selectInfo()} */}
-          {/* > */}
-          {/* info */}
-          {/* </button> */}
-          {/* <h3>information</h3> */}
-          {/* <InfoComponent /> */}
-        </DETAILS>
-      );
-    });
+        {/* <IMAGE src={this.props.elementAuthor.author} /> */}
+        {/* <AUDIO src={this.props.elementAuthor.author} controls /> */}
+        {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
+        {/* <button */}
+        {/* onClick={this.props.selectInfo()} */}
+        {/* > */}
+        {/* info */}
+        {/* </button> */}
+        {/* <h3>information</h3> */}
+        {/* <InfoComponent /> */}
+      </DETAILS>
+    );
+    // });
   }
 }
 

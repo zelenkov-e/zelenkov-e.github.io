@@ -5,7 +5,7 @@ import AuthorImg from "./authorImg";
 // import InfoComponent from "./infoComponent";
 import styled from "styled-components";
 import { getTrackList } from "../action/action";
-// import { getTest } from "../action/action";
+import { getTest } from "../action/action";
 import * as pageMusicActions from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
@@ -112,7 +112,7 @@ const matchDispatchToProps = dispatch => ({
   musicActions: bindActionCreators(pageMusicActions, dispatch),
   select(trackList) {
     // dispatch(getTrackList(trackList));
-    dispatch(getTrackList(trackList));
+    dispatch(getTest(trackList));
   }
 });
 
