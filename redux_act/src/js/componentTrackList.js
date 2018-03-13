@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AuthorImg from "./authorImg";
 // import InfoComponent from "./infoComponent";
 import styled from "styled-components";
-import { getTrackDetails } from "../action/action";
+import { getTrackList } from "../action/action";
 import * as pageMusicActions from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
@@ -48,7 +48,7 @@ class ComponentTrackList extends React.Component {
   }
   showList() {
     const { elementTrackList } = this.props;
-    console.log(elementTrackList.music);
+    // console.log(elementTrackList.music);
 
     return elementTrackList.music.map(trackList => {
       // return elementTrackList.map(trackList => {
@@ -56,9 +56,8 @@ class ComponentTrackList extends React.Component {
         <React.Fragment key={trackList.id}>
           <div>
             <LI>{trackList.artistName}</LI>
-            <audio src = {trackList.previewURL} controls />
             {/* <IMAGE src={trackList.albums} /> */}
-            {/* <button onClick={() => this.props.select(trackList)}>play</button> */}
+            <button onClick={() => this.props.select(trackList)}>play</button>
             {/* <button onClick={() => this.props.selectInfo(trackList)}>
               info
             </button> */}
@@ -110,8 +109,8 @@ const mapStateProps = state => ({
 
 const matchDispatchToProps = dispatch => ({
   musicActions: bindActionCreators(pageMusicActions, dispatch),
-  select() {
-    dispatch(getTrackDetails(trackList));
+  select(trackList) {
+    dispatch(getTrackList(trackList));
   }
 });
 

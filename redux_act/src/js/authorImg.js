@@ -31,23 +31,25 @@ const MARQUEE = styled.marquee`
 class AuthorImg extends React.Component {
   render() {
     const { elementString } = this.props;
+    const { elementAuthor } = this.props;
     // console.log(this.props.elementTrackList);
 
-    if (!this.props.elementAuthor.audio) {
-      return <p>select track..</p>;
-    }
+    // if (!elementAuthor.author.previewURL) {
+    //   return <p>select track..</p>;
+    // }
 
     return (
       <DETAILS>
+        <h3>{elementAuthor.author}</h3>
         {/* {elementString.map(string => {
-          return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
-          //   console.log(this.props.elementTrackList.author);
-        })} */}
+            return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
+            //   console.log(this.props.elementTrackList.author);
+          })} */}
 
-        <MARQUEE>{this.props.elementString.string}</MARQUEE>
+        {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
 
-        <IMAGE src={this.props.elementAuthor.author} />
-        <AUDIO src={this.props.elementAuthor.audio} controls />
+        {/* <IMAGE src={this.props.elementAuthor.author} /> */}
+        {/* <audio src={elementAuthor.author.previewURL} controls /> */}
         {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
         {/* <button */}
         {/* onClick={this.props.selectInfo()} */}
@@ -62,17 +64,17 @@ class AuthorImg extends React.Component {
 }
 
 const mapStateProps = state => ({
-  elementAuthor: state.reducerActiveAuthor,
-  elementString: state.reducerString
+  elementAuthor: state.reducerActiveAuthor
+  // elementString: state.reducerString
 });
 
-const matchDispatchToProps = dispatch => ({
-  selectInfo() {
-    dispatch(getInfo());
-    // console.log("hi");
-  }
-});
+// const matchDispatchToProps = dispatch => ({
+//   selectInfo() {
+//     dispatch(getInfo());
+//     // console.log("hi");
+//   }
+// });
 
-export default connect(mapStateProps, matchDispatchToProps)(AuthorImg);
+// export default connect(mapStateProps, matchDispatchToProps)(AuthorImg);
 
-// export default connect(mapStateProps)(AuthorImg);
+export default connect(mapStateProps)(AuthorImg);
