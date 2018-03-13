@@ -5,6 +5,7 @@ import AuthorImg from "./authorImg";
 // import InfoComponent from "./infoComponent";
 import styled from "styled-components";
 import { getTrackList } from "../action/action";
+// import { getTest } from "../action/action";
 import * as pageMusicActions from "../action/action";
 // import { action } from "../action/action";
 import InfoComponent from "./infoComponent";
@@ -96,7 +97,7 @@ class ComponentTrackList extends React.Component {
         <AuthorImg />
         {/* <button onClick={this.props.info}>info</button> */}
         {/* <hr /> */}
-        <InfoComponent />
+        {/* <InfoComponent /> */}
       </COMPONENT>
     );
   }
@@ -110,6 +111,7 @@ const mapStateProps = state => ({
 const matchDispatchToProps = dispatch => ({
   musicActions: bindActionCreators(pageMusicActions, dispatch),
   select(trackList) {
+    // dispatch(getTrackList(trackList));
     dispatch(getTrackList(trackList));
   }
 });

@@ -30,36 +30,37 @@ const MARQUEE = styled.marquee`
 
 class AuthorImg extends React.Component {
   render() {
-    const { elementString } = this.props;
+    // const { elementString } = this.props;
     const { elementAuthor } = this.props;
     // console.log(this.props.elementTrackList);
 
-    // if (!elementAuthor.author.previewURL) {
+    // if (!this.props.elementAuthor.audio) {
     //   return <p>select track..</p>;
     // }
-
-    return (
-      <DETAILS>
-        <h3>{elementAuthor.author}</h3>
-        {/* {elementString.map(string => {
+    return elementAuthor.author.map(trackList => {
+      return (
+        <DETAILS>
+          <h3>{trackList.previewURL}</h3>
+          {/* {elementString.map(string => {
             return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
             //   console.log(this.props.elementTrackList.author);
           })} */}
 
-        {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
+          {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
 
-        {/* <IMAGE src={this.props.elementAuthor.author} /> */}
-        {/* <audio src={elementAuthor.author.previewURL} controls /> */}
-        {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
-        {/* <button */}
-        {/* onClick={this.props.selectInfo()} */}
-        {/* > */}
-        {/* info */}
-        {/* </button> */}
-        {/* <h3>information</h3> */}
-        {/* <InfoComponent /> */}
-      </DETAILS>
-    );
+          {/* <IMAGE src={this.props.elementAuthor.author} /> */}
+          {/* <AUDIO src={this.props.elementAuthor.author} controls /> */}
+          {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
+          {/* <button */}
+          {/* onClick={this.props.selectInfo()} */}
+          {/* > */}
+          {/* info */}
+          {/* </button> */}
+          {/* <h3>information</h3> */}
+          {/* <InfoComponent /> */}
+        </DETAILS>
+      );
+    });
   }
 }
 

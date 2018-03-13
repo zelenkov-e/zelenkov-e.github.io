@@ -7,6 +7,9 @@ const musicURL =
 export const getTrackDetails = createAction();
 export const getInfo = createAction("info");
 export const getString = createAction("string");
+export const getTest = createAction("getTest", id => ({
+  id: 2
+}));
 
 export const getMusicList = createAction("GET_MUSIC_SUCCESS");
 
