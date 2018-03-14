@@ -4,25 +4,25 @@ import axios from "axios";
 const musicURL =
   "https://api.napster.com/v2.1/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm";
 
-export const getTrackDetails = createAction();
-export const getInfo = createAction("info");
-export const getString = createAction("string");
-// export const getTest = createAction("getTest", id => ({
-//   id: 2
-// }));
-
-export const getMusicList = createAction("GET_MUSIC_SUCCESS");
+export const getMusicList = createAction("GET_MUSIC_LIST");
+export const getMusicActive = createAction("GET_MUSIC_ACTIVE");
 
 export function getTrackList() {
   return dispatch => {
     axios.get(musicURL).then(res => {
-    //   return dispatch(getMusicList(res.data));
-      return dispatch({
-        type: "GET_MUSIC_SUCCESS",
-        payload:res.data
-        },
-        
-    );
+      return dispatch(getMusicList(res.data));
+    });
+  };
+}
+export function getTrackActive(id) {
+  return dispatch => {
+    axios.get(musicURL).then(res => {
+      const result = res.data.tracks.filter(item => item.id === id);
+      return dispatch(
+        getMusicActive({
+          tracks: result
+        })
+      );
     });
   };
 }

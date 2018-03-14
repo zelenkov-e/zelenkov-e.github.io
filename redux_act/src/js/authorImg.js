@@ -1,14 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
-// import InfoComponent from "./infoComponent";
-// import { getInfo } from "../action/action";
-
-// import * as pageActions from "../action/action";
-// import { getStateProps } from "../selectors/selectors";
-// const Details = styled.details`
-//   background: gainsboro;
-// `;
+import styled, { keyframes }  from "styled-components";
+import { getInfo } from "../action/action";
 
 const DETAILS = styled.div`
   width: 268px;
@@ -18,65 +11,72 @@ const DETAILS = styled.div`
 const AUDIO = styled.audio`
   border: 2px solid red;
   width: 256px;
+  margin-top: 15px;
 `;
 const IMAGE = styled.img`
   width: 260px;
 `;
-const MARQUEE = styled.marquee`
+
+
+const TRANSFORM = keyframes`
+  from{
+    transform: translate(0, 0);
+  }
+  to{
+    transform: translate(-100%, 0);
+  }
+` ;
+
+
+
+const DIVMARQUEE = styled.div`
   width: 256px;
-  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
   border: 2px solid red;
 `;
+const SPAN = styled.span`
+  color:#212121;
+  display:inline-block;
+  padding-left:100%;
+  animation: ${TRANSFORM} 10s infinite linear;
+  `;    
+
+
 
 class AuthorImg extends React.Component {
   render() {
-    // const { elementString } = this.props;
-    const { elementAuthor } = this.props;
-    // console.log(this.props.elementTrackList);
+    const { elementString } = this.props;
+    const { elementActiveTrack } = this.props;
+    return elementActiveTrack.activeTrack.map(trackList => {
+      if (!trackList.previewURL) {
+        return <p>select another track ..</p>;
+      }
 
-    // if (!this.props.elementAuthor.audio) {
-    //   return <p>select track..</p>;
-    // }
-    // return elementAuthor.author.map(trackList => {
-    return (
-      <DETAILS>
-        {/* <h3>{trackList.previewURL}</h3> */}
-        {/* <h3>{elementAuthor.author}</h3> */}
-        {/* {elementString.map(string => {
-            return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
-            //   console.log(this.props.elementTrackList.author);
-          })} */}
-
-        {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
-
-        {/* <IMAGE src={this.props.elementAuthor.author} /> */}
-        {/* <AUDIO src={this.props.elementAuthor.author} controls /> */}
-        {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
-        {/* <button */}
-        {/* onClick={this.props.selectInfo()} */}
-        {/* > */}
-        {/* info */}
-        {/* </button> */}
-        {/* <h3>information</h3> */}
-        {/* <InfoComponent /> */}
-      </DETAILS>
-    );
-    // });
+      return (
+        <React.Fragment key={trackList.id}>
+          <DETAILS>
+            <p>{trackList.artistName}</p>
+            {elementString.string.map(string => {
+              return (
+                <DIVMARQUEE key={string.id}>
+                <SPAN>  
+                  {string.artistName} "{string.name}"
+                </SPAN>
+                </DIVMARQUEE>
+              );
+            })}
+            <AUDIO key={trackList.id} src={trackList.previewURL} controls />
+          </DETAILS>
+        </React.Fragment>
+      );
+    });
   }
 }
 
 const mapStateProps = state => ({
-  elementAuthor: state.reducerActiveAuthor
-  // elementString: state.reducerString
+  elementActiveTrack: state.reducerActiveAuthor,
+  elementString: state.reducerString
 });
-
-// const matchDispatchToProps = dispatch => ({
-//   selectInfo() {
-//     dispatch(getInfo());
-//     // console.log("hi");
-//   }
-// });
-
-// export default connect(mapStateProps, matchDispatchToProps)(AuthorImg);
 
 export default connect(mapStateProps)(AuthorImg);
