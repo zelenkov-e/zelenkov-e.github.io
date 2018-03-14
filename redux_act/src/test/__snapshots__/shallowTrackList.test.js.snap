@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentTrackList  render my component 1`] = `
+<ComponentTrackList
+  elementTrackList={
+    Array [
+      Object {
+        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+        "author": "Alexey Sonar – SkyTop Residency 037",
+        "id": 1,
+        "imgURL": "http://cdn.promodj.com/afs/5156781896b24fe153957faca252dd1712:resize:220x366:same:d66445",
+      },
+      Object {
+        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+        "author": "Fonarev - Digital Emotions # 490 ",
+        "id": 2,
+        "imgURL": "http://cdn.promodj.com/afs/38bd0e7240304ca4eef5cfc6de60283411:resize:220x366:same:335735",
+      },
+      Object {
+        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+        "author": "DENIS A - DAR Sessions Vol.44 ",
+        "id": 3,
+        "imgURL": "https://ic.pics.livejournal.com/djdenis/13280338/1011166/1011166_600.jpg",
+      },
+      Object {
+        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+        "author": "SVET - SPIRIT Fitness Podcast ",
+        "id": 4,
+        "imgURL": "http://cdn.promodj.com/afs/f10dd7b697cf383dd9f4107d3a20ddbc12:resize:220x366:same:a00788",
+      },
+    ]
+  }
+  select={[Function]}
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
+/>
+`;

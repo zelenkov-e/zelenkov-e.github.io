@@ -1,34 +1,28 @@
 import { createReducer } from "redux-act";
-import { getTrackDetails } from "../action/action";
-// import { action } from "../action/action";
-// import { createAction } from "redux-act";
-
-// export default function(state = [], action) {
-//   switch (action.type) {
-//     case "SET_AUTHOR":
-//       return action.payload;
-//       break;
-//     default:
-//       return state;
-//   }
-// }
+import { getTest } from "../action/action";
+import { getMusicList } from "../action/action";
 
 export const defaultState = {
-  author: 0,
+  // author: 0
+  author: []
   // audio: null
 };
 
 export const reducerActive = createReducer({}, defaultState);
 
-reducerActive.on(getTrackDetails, (state, payload) =>
-
-  (
-    // console.log(state),
-    console.log(payload),
+reducerActive.on(
+  // getTest,
+  // getTrackList,
+  getMusicList,
+  // getTest,
+  (state, payload) => (
+    // console.log(payload.id),
+    console.log(payload.tracks),
     {
-    ...state,
-    // author: payload.imgURL,
-    author: payload.id
-    // audio: payload.audioURL
-  })
+      ...state,
+      author: payload.tracks
+      // author: payload.id
+      // audio: payload.audioURL
+    }
+  )
 );

@@ -1,18 +1,28 @@
-//action creater
 import { createAction } from "redux-act";
+import axios from "axios";
 
-export const getTrackList = createAction("stateTrackList");
-// export const getTrackDetails = createAction();
+const musicURL =
+  "https://api.napster.com/v2.1/tracks/top?apikey=ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm";
 
+export const getTrackDetails = createAction();
+export const getInfo = createAction("info");
+export const getString = createAction("string");
+// export const getTest = createAction("getTest", id => ({
+//   id: 2
+// }));
 
-let authorImg;
-export const getTrackDetails = createAction('SET_AUTHOR',( id )=>({id:5}) );
-// console.log(getTrackDetails(1));
+export const getMusicList = createAction("GET_MUSIC_SUCCESS");
 
-// export function getTrackDetails(authorImg) {
-//   //   console.log(authorImg.author);
-//   return {
-//     type: "SET_AUTHOR",
-//     payload: authorImg
-//   };
-// }
+export function getTrackList() {
+  return dispatch => {
+    axios.get(musicURL).then(res => {
+    //   return dispatch(getMusicList(res.data));
+      return dispatch({
+        type: "GET_MUSIC_SUCCESS",
+        payload:res.data
+        },
+        
+    );
+    });
+  };
+}
