@@ -1,16 +1,13 @@
 import { createReducer } from "redux-act";
 import { getMusicList } from "../action/action";
 
-const initialState = {
-  music: []
+const defaultState = {
+  trackList: []
 };
 
-export const reducerList = createReducer({}, initialState);
+export const reducerList = createReducer({}, defaultState);
 
-reducerList.on(getMusicList, (state, payload) =>
-  // console.log(payload.tracks),
-  ({
-    ...state,
-    music: payload.tracks
-  })
-);
+reducerList.on(getMusicList, (state, payload) => ({
+  ...state,
+  trackList: payload.tracks
+}));

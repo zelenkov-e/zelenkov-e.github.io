@@ -9,15 +9,3 @@ describe("ComponentTrackList", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
-// describe("ComponentTrackList", () => {
-//   it(" render my component", () => {
-//     const wrapper = mount(
-//       <ComponentTrackList store={counterStore} name="ComponentTrackList">
-//         <AuthorImg />
-//       </ComponentTrackList>
-//     );
-//     // const wrapper = shallow(<ComponentShallow />);
-//     expect(wrapper.props().name()).toMatchSnapshot();
-//   });
-// });

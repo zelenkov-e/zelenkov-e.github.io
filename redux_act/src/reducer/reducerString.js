@@ -1,5 +1,6 @@
 import { createReducer } from "redux-act";
 import { getString } from "../action/action";
+import { getMusicActive } from "../action/action";
 
 export const defaultState = {
   string: []
@@ -7,11 +8,7 @@ export const defaultState = {
 
 export const reducerString = createReducer({}, defaultState);
 
-reducerString.on(getString, (state, payload) =>
-  // console.log(payload),
-  ({
-    ...state,
-    string: payload.author
-    // author: payload
-  })
-);
+reducerString.on(getMusicActive, (state, payload) => ({
+  ...state,
+  string: payload.tracks
+}));

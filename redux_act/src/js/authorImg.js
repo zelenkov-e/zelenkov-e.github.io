@@ -1,14 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-// import InfoComponent from "./infoComponent";
-// import { getInfo } from "../action/action";
-
-// import * as pageActions from "../action/action";
-// import { getStateProps } from "../selectors/selectors";
-// const Details = styled.details`
-//   background: gainsboro;
-// `;
+import { getInfo } from "../action/action";
 
 const DETAILS = styled.div`
   width: 268px;
@@ -30,53 +23,35 @@ const MARQUEE = styled.marquee`
 
 class AuthorImg extends React.Component {
   render() {
-    // const { elementString } = this.props;
-    const { elementAuthor } = this.props;
-    // console.log(this.props.elementTrackList);
+    const { elementString } = this.props;
+    const { elementActiveTrack } = this.props;
+    return elementActiveTrack.activeTrack.map(trackList => {
+      if (!trackList.previewURL) {
+        return <p>select another track ..</p>;
+      }
 
-    // if (!this.props.elementAuthor.audio) {
-    //   return <p>select track..</p>;
-    // }
-    // return elementAuthor.author.map(trackList => {
-    return (
-      <DETAILS>
-        {/* <h3>{trackList.previewURL}</h3> */}
-        <h3>{elementAuthor.author}</h3>
-        {/* {elementString.map(string => {
-            return <MARQUEE key={tstring.id}>{string.author}</MARQUEE>;
-            //   console.log(this.props.elementTrackList.author);
-          })} */}
-
-        {/* <MARQUEE>{this.props.elementString.string}</MARQUEE> */}
-
-        {/* <IMAGE src={this.props.elementAuthor.author} /> */}
-        {/* <AUDIO src={this.props.elementAuthor.author} controls /> */}
-        {/* <img src={this.props.elementAuthorImg.audioURL} /> */}
-        {/* <button */}
-        {/* onClick={this.props.selectInfo()} */}
-        {/* > */}
-        {/* info */}
-        {/* </button> */}
-        {/* <h3>information</h3> */}
-        {/* <InfoComponent /> */}
-      </DETAILS>
-    );
-    // });
+      return (
+        <React.Fragment key={trackList.id}>
+          <DETAILS>
+            <p>{trackList.artistName}</p>
+            {elementString.string.map(string => {
+              return (
+                <MARQUEE key={string.id}>
+                  {string.artistName} "{string.name}"
+                </MARQUEE>
+              );
+            })}
+            <AUDIO key={trackList.id} src={trackList.previewURL} controls />
+          </DETAILS>
+        </React.Fragment>
+      );
+    });
   }
 }
 
 const mapStateProps = state => ({
-  elementAuthor: state.reducerActiveAuthor
-  // elementString: state.reducerString
+  elementActiveTrack: state.reducerActiveAuthor,
+  elementString: state.reducerString
 });
-
-// const matchDispatchToProps = dispatch => ({
-//   selectInfo() {
-//     dispatch(getInfo());
-//     // console.log("hi");
-//   }
-// });
-
-// export default connect(mapStateProps, matchDispatchToProps)(AuthorImg);
 
 export default connect(mapStateProps)(AuthorImg);
