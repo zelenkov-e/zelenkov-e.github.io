@@ -1,40 +1,17 @@
-class SimpleDate {
-    constructor (year, month, day) {
-      this.year = year;
-      this.month = month;
-      this.day = day;
-    }
-    setAge(age){
-         this.age = age;
-    }
-    getAge(){
-        return this.age
-    }
+let obj = { name: "zhenya", sername: "zelenkov" };
 
-    toString(){
-        return (`${this.day}/${this.month}/${this.year}/my age ${this.age}`)
-    }
-
-  }
-
-const today = new SimpleDate(2017, 1, 28)
-today.setAge(30)
-// console.log(today.getAge())
-// console.log(today.toString())
-// console.log(today.getYear())
-
-
-
-class showDotDate extends SimpleDate{
-    constructor(year, month, day){
-        super(year, month, day)
-    }
-    // toString(){
-    //     return (`${this.day}.${this.month}.${this.year}.my age ${this.age}`)
-    // }
-    
+var arr = [];
+for (var key in obj) {
+  arr = arr.concat(obj[key].split());
 }
-const dotToday = new showDotDate(2017, 1, 28)
-console.log(dotToday.setAge())
-// console.log(dotToday.toString())
- 
+console.log(arr);
+
+let obj1 = { name1: "zhenya1", sername1: "zelenkov1" };
+
+// var arr = [];
+// for (var key1 in obj1) {
+console.log(Object.keys(obj1));
+
+//   arr = arr.concat(obj[key].split());
+// }
+// console.log(arr);
