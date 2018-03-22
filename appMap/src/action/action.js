@@ -6,7 +6,7 @@ import { createAction } from "redux-act";
 
 // export const getMusicList = createAction("GET_MUSIC_LIST");
 // export const getMusicActive = createAction("GET_MUSIC_ACTIVE");
-
+export const increment = createAction("hello!");
 // export function getTrackList() {
 //   return dispatch => {
 //     axios.get(musicURL).then(res => {

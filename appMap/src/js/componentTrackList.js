@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 // import AuthorImg from "./authorImg";
 // import styled from "styled-components";
 // import { getTrackList } from "../action/action";
+import * as pageActions from "../action/action";
+import { bindActionCreators } from "redux";
 // import { getTrackActive } from "../action/action";
 
 class ComponentTrackList extends React.Component {
@@ -13,9 +15,10 @@ class ComponentTrackList extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <li>{this.props.elementTrackList.trackList}</li>
+          <button onClick={this.props.actions.increment}>button</button>
+          <hr />
+          <li>{this.props.elementTrackList}</li>
         </div>
-        <hr />
       </React.Fragment>
     );
   }
@@ -32,11 +35,12 @@ const mapStateProps = state => ({
 // const matchDispatchToProps = dispatch => ({
 //   showActionsList() {
 //     dispatch(getTrackList());
-//   },
-//   selectTrackActive(id) {
-//     dispatch(getTrackActive(id));
 //   }
 // });
 
-// export default connect(mapStateProps, matchDispatchToProps)(ComponentTrackList);
-export default connect(mapStateProps)(ComponentTrackList);
+const matchDispatchToProps = dispatch => ({
+  actions: bindActionCreators(pageActions, dispatch)
+});
+
+export default connect(mapStateProps, matchDispatchToProps)(ComponentTrackList);
+// export default connect(mapStateProps)(ComponentTrackList);
