@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ComponentTrackList from "./js/componentTrackList";
+import ComponentButton from "./js/componentButton";
 // import AuthorImg from "./js/authorImg";
 import { Provider } from "react-redux";
 import { counterStore } from "./store/counterStore";
@@ -20,7 +20,7 @@ ReactDOM.render(
   <Provider store={counterStore}>
     {/* // <Router history={newHistory}> */}
     <div>
-      <ComponentTrackList />
+      <ComponentButton />
       {/* <Nav /> */}
 
       {/* <AuthorImg /> */}

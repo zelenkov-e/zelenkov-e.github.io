@@ -1,13 +1,15 @@
 import React from "react";
+import ComponentApp from "./componentApp";
 import { connect } from "react-redux";
 // import AuthorImg from "./authorImg";
 // import styled from "styled-components";
 // import { getTrackList } from "../action/action";
 import * as pageActions from "../action/action";
+// import { actionCreator } from "../action/action";
 import { bindActionCreators } from "redux";
 // import { getTrackActive } from "../action/action";
 
-class ComponentTrackList extends React.Component {
+class ComponentButton extends React.Component {
   // componentDidMount() {
   //   this.props.showActionsList();
   // }
@@ -15,26 +17,37 @@ class ComponentTrackList extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <button onClick={this.props.actions.increment}>button</button>
+          <button
+          // onClick={this.props.actions.actionCreator()}
+          // onClick={this.props.showActionsList()}
+          >
+            button
+          </button>
           <hr />
-          <li>{this.props.elementTrackList}</li>
+          <p>{this.props.elementApp.elemState}</p>
         </div>
       </React.Fragment>
     );
   }
 
   render() {
-    return <ul>{this.showList()}</ul>;
+    return (
+      <div>
+        <div>{this.showList()}</div>
+        {/* <hr /> */}
+        {/* <ComponentApp /> */}
+      </div>
+    );
   }
 }
 
-const mapStateProps = state => ({
-  elementTrackList: state.reducerTrackList
+const mapStateToProps = state => ({
+  elementApp: state.reducerState
 });
 
 // const matchDispatchToProps = dispatch => ({
 //   showActionsList() {
-//     dispatch(getTrackList());
+//     dispatch(actionCreator());
 //   }
 // });
 
@@ -42,5 +55,7 @@ const matchDispatchToProps = dispatch => ({
   actions: bindActionCreators(pageActions, dispatch)
 });
 
-export default connect(mapStateProps, matchDispatchToProps)(ComponentTrackList);
+export default connect(mapStateToProps, matchDispatchToProps)(ComponentButton);
+// export default connect(matchDispatchToProps)(ComponentButton);
 // export default connect(mapStateProps)(ComponentTrackList);
+// export default ComponentButton;
