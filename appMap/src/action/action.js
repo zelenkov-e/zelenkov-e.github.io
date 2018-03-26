@@ -1,8 +1,5 @@
 import { createAction } from "redux-act";
 
-// const classApp = () ?  :  ;
-// var containerApp = "containerApp";
-
 // export const actionCreator = createAction("hi", () => ({
 //   id: "on"
 //   //   idDelete: "off"
@@ -12,19 +9,15 @@ import { createAction } from "redux-act";
 //   idDelete: "off"
 // }));
 
-export const actionCreator = phone => {
+export const actionCreator = () => {
   return {
     type: "ELEM_SHOW",
     payloadShow: "on"
   };
 };
-export const actionCreatorDelete = phone => {
+export const actionCreatorDelete = () => {
   return {
     type: "ELEM_DELET",
     payloadDelete: "off"
   };
-  // {
-  //   type: "ELEM_DELET",
-  //   payloadDelete: "off"
-  // }
 };

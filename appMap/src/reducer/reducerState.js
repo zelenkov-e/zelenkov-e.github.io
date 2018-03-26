@@ -8,14 +8,10 @@ const defaultState = {
 
 // export const reducerState = createReducer({}, defaultState);
 
-// reducerState.on(actionCreator, (state, payload) => ({
+// reducerState.on(actionCreator,actionCreatorDelete (state, payloadShow,payloadDelete) => ({
 //   ...state,
 //   elemState: payload.id
 // }));
-
-// const defaultState = {
-//   elemState: [] //нач состояние
-// };
 
 export const reducerState = function(state = defaultState, action) {
   switch (action.type) {
