@@ -18,13 +18,13 @@ class ComponentButton extends React.Component {
       <React.Fragment>
         <div>
           <button
-          // onClick={this.props.actions.actionCreator()}
-          // onClick={this.props.showActionsList()}
+            onClick={this.props.actions.actionCreator()}
+            // onClick={this.props.showActionsList()}
           >
             button
           </button>
-          <hr />
-          <p>{this.props.elementApp.elemState}</p>
+          {/* <hr /> */}
+          {/* <p>{this.props.elementApp}</p> */}
         </div>
       </React.Fragment>
     );
@@ -34,16 +34,16 @@ class ComponentButton extends React.Component {
     return (
       <div>
         <div>{this.showList()}</div>
-        {/* <hr /> */}
-        {/* <ComponentApp /> */}
+        <hr />
+        <ComponentApp />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  elementApp: state.reducerState
-});
+// const mapStateToProps = state => ({
+//   elementApp: state.reducerState
+// });
 
 // const matchDispatchToProps = dispatch => ({
 //   showActionsList() {
@@ -55,7 +55,7 @@ const matchDispatchToProps = dispatch => ({
   actions: bindActionCreators(pageActions, dispatch)
 });
 
-export default connect(mapStateToProps, matchDispatchToProps)(ComponentButton);
-// export default connect(matchDispatchToProps)(ComponentButton);
+// export default connect(mapStateToProps, matchDispatchToProps)(ComponentButton);
+export default connect(matchDispatchToProps)(ComponentButton);
 // export default connect(mapStateProps)(ComponentTrackList);
 // export default ComponentButton;
