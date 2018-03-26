@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 
 class ComponentApp extends React.Component {
   render() {
-    // return <p>{this.props.elementApp.elemState}</p>;
-    return <p>{this.props.elementApp}</p>;
+    const classApp = this.props.elementApp.elemState;
+
+    return <div className={classApp} />;
   }
 }
 const mapStateToProps = state => ({

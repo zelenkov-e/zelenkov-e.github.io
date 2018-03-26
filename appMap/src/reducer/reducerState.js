@@ -1,21 +1,28 @@
 import { createReducer } from "redux-act";
 import { actionCreator } from "../action/action";
 
-// import{GET_MUSIC_SUCCESS} from "../selectors/selectors"
+const defaultState = {
+  // elemState: 0
+  elemState: []
+};
+
+// export const reducerState = createReducer({}, defaultState);
+
+// reducerState.on(actionCreator, (state, payload) => ({
+//   ...state,
+//   elemState: payload.id
+// }));
 
 // const defaultState = {
-//   elemState: 0
+//   elemState: [] //нач состояние
 // };
 
-// export const reducerState = createReducer(
-//   {
-//     [actionCreator]: (state, payload) => state + payload
-//   },
-//   defaultState
-// );
-export const reducerState = createReducer(function(on, off) {
-  on(actionCreator, state => state + 1);
-  // on(add, (state, payload) => state + payload);
-  // 'off' remove support for a specific action
-  // See 'Adding and removing actions' section
-}, 0);
+export const reducerState = function(state = defaultState, action) {
+  switch (action.type) {
+    case "ELEM_SHOW":
+      return Object.assign({}, state, { elemState: action.payloadShow });
+    case "ELEM_DELET":
+      return Object.assign({}, state, { elemState: action.payloadDelete });
+  }
+  return state;
+};
