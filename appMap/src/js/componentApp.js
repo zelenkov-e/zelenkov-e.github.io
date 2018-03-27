@@ -13,12 +13,30 @@ const CONTAINEROFF = styled.div`
   display: none;
 `;
 
-const BUTTONS = styled.div`
-  margin: 15px;
-`;
 const INPUT = styled.input`
   width: 150px;
   margin: 15px;
+`;
+const BUTTONS = styled.div`
+  margin: 15px;
+`;
+const BUTTON = styled.button`
+  width: 50px;
+`;
+const BUTTONRED = BUTTON.extend`
+  background-color: red;
+  color: white;
+  border: 2px solid;
+`;
+const BUTTONBLUE = BUTTON.extend`
+  background-color: blue;
+  color: white;
+  border: 2px solid;
+`;
+const BUTTONGREEN = BUTTON.extend`
+  background-color: green;
+  color: white;
+  border: 2px solid;
 `;
 
 class ComponentApp extends React.Component {
@@ -36,20 +54,21 @@ class ComponentApp extends React.Component {
         <form
           onSubmit={e => {
             e.preventDefault();
-            this.props.showActionsList(e);
+            this.props.showInputValue(e);
           }}
         >
           <INPUT placeholder="Text search" />
           <INPUT type="submit" value="Go" />
+          <INPUT type="submit" value="clear" />
         </form>
 
         {/* <button onClick={() => this.props.showActionsList()}>show</button> */}
 
-        {/* <BUTTONS>
-          <button>red</button>
-          <button>blue</button>
-          <button>green</button>
-        </BUTTONS> */}
+        <BUTTONS>
+          <BUTTONRED>red</BUTTONRED>
+          <BUTTONBLUE>blue</BUTTONBLUE>
+          <BUTTONGREEN>green</BUTTONGREEN>
+        </BUTTONS>
         {/* <DETAILS> */}
         <ComponentDataInput />
         {/* </DETAILS> */}
@@ -62,7 +81,7 @@ const mapStateToProps = state => ({
 });
 
 const matchDispatchToProps = dispatch => ({
-  showActionsList(evt) {
+  showInputValue(evt) {
     dispatch(actionCreatorInput(evt.target.querySelector("input").value));
   }
 });
