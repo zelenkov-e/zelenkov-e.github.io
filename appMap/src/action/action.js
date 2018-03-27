@@ -1,4 +1,5 @@
 import { createAction } from "redux-act";
+import React from "react";
 
 // export const actionCreator = createAction("hi", () => ({
 //   id: "on"
@@ -21,3 +22,13 @@ export const actionCreatorDelete = () => {
     payloadDelete: "off"
   };
 };
+// export const actionCreatorInput = () => {
+//   return {
+//     type: "ELEM_DELET",
+//     payloadInput: 1
+//   };
+// };var val = e.target.value;;
+// export const actionCreatorInput = createAction("hi", () => ({
+//   id: 1
+// }));
+export const actionCreatorInput = createAction();

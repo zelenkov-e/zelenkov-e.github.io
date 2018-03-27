@@ -1,32 +1,69 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import ComponentDataInput from "./componentDataInput";
+import { actionCreatorInput } from "../action/action";
 
-const DETAILS = styled.div`
-  width: 150px;
-  height: 10px;
+const CONTAINERON = styled.div`
+  width: 200px;
+  height: 400px;
   border: 1px solid;
+`;
+const CONTAINEROFF = styled.div`
+  display: none;
+`;
+
+const BUTTONS = styled.div`
+  margin: 15px;
+`;
+const INPUT = styled.input`
+  width: 150px;
+  margin: 15px;
 `;
 
 class ComponentApp extends React.Component {
   render() {
-    const classApp = this.props.elementApp.elemState;
-    // if (classApp) {
-    //   return <p>click on the show..</p>;
-    // }
+    // actionData - data from paylod action.js
+    const actionData = this.props.elementApp.elemState;
+
+    let CONTAINER =
+      actionData === "on"
+        ? (CONTAINER = CONTAINERON)
+        : (CONTAINER = CONTAINEROFF);
+
     return (
-      <div className={classApp}>
-        <DETAILS />
-        <div>
+      <CONTAINER>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            this.props.showActionsList(e);
+          }}
+        >
+          <INPUT placeholder="Text search" />
+          <INPUT type="submit" value="Go" />
+        </form>
+
+        {/* <button onClick={() => this.props.showActionsList()}>show</button> */}
+
+        {/* <BUTTONS>
           <button>red</button>
           <button>blue</button>
           <button>green</button>
-        </div>
-      </div>
+        </BUTTONS> */}
+        {/* <DETAILS> */}
+        <ComponentDataInput />
+        {/* </DETAILS> */}
+      </CONTAINER>
     );
   }
 }
 const mapStateToProps = state => ({
   elementApp: state.reducerState
 });
-export default connect(mapStateToProps)(ComponentApp);
+
+const matchDispatchToProps = dispatch => ({
+  showActionsList(evt) {
+    dispatch(actionCreatorInput(evt.target.querySelector("input").value));
+  }
+});
+export default connect(mapStateToProps, matchDispatchToProps)(ComponentApp);
