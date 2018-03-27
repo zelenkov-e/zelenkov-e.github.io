@@ -59,7 +59,11 @@ class ComponentApp extends React.Component {
         >
           <INPUT placeholder="Text search" />
           <INPUT type="submit" value="Go" />
-          <INPUT type="submit" value="clear" />
+          <INPUT
+            type="submit"
+            value="clear"
+            onClick={this.props.clearInputValue}
+          />
         </form>
 
         {/* <button onClick={() => this.props.showActionsList()}>show</button> */}
@@ -83,6 +87,11 @@ const mapStateToProps = state => ({
 const matchDispatchToProps = dispatch => ({
   showInputValue(evt) {
     dispatch(actionCreatorInput(evt.target.querySelector("input").value));
+    console.log(evt.target.querySelector("input").value);
+  },
+  clearInputValue(e) {
+    dispatch(actionCreatorInput());
+    console.log(e.target.querySelector("input").value);
   }
 });
 export default connect(mapStateToProps, matchDispatchToProps)(ComponentApp);
