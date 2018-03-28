@@ -34,14 +34,16 @@ const BUTTONCLEAR = styled.button`
 `;
 
 class ComponentApp extends React.Component {
-  state = {
-    activeColor: "#000"
-  };
+  constructor(props) {
+    super(props);
+    this.state = { activeColor: "#000" };
+    this.setColor = this.setColor.bind(this);
+  }
 
   setColor = event => {
     const color = event.target.getAttribute("color");
     console.log(color);
-    this.setState({ activeColor });
+    this.setState({ activeColor: color });
   };
 
   render() {

@@ -29,9 +29,7 @@ class ComponentDataInput extends React.Component {
 
     return (
       <DETAILS>
-        <p style={{ color: activeColor }}>
-          {this.props.elementDataInput.elemState}
-        </p>
+        <p style={{ activeColor }}>{this.props.elementDataInput.elemState}</p>
       </DETAILS>
     );
   }
