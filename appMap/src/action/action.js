@@ -24,8 +24,8 @@ export const actionCreatorDelete = () => {
 };
 // export const actionCreatorInput = () => {
 //   return {
-//     type: "ELEM_INPUT_SHOW",
-//     payloadInputShow: []
+//     type: "ELEM_INPUT",
+//     payloadInputShow
 //   };
 // };
 // export const actionCreatorInput = () => {

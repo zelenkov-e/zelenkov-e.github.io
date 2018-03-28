@@ -1,8 +1,10 @@
+//view data from onClick button 'show'or 'deleate'
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import ComponentDataInput from "./componentDataInput";
 import { actionCreatorInput } from "../action/action";
+import { actionCreatorRepaint } from "../action/action";
 
 const CONTAINERON = styled.div`
   width: 200px;
@@ -22,20 +24,8 @@ const BUTTONS = styled.div`
 `;
 const BUTTON = styled.button`
   width: 50px;
-`;
-const BUTTONRED = BUTTON.extend`
-  background-color: red;
-  color: white;
-  border: 2px solid;
-`;
-const BUTTONBLUE = BUTTON.extend`
-  background-color: blue;
-  color: white;
-  border: 2px solid;
-`;
-const BUTTONGREEN = BUTTON.extend`
-  background-color: green;
-  color: white;
+  background-color: ${({ color }) => color};
+  color: #fff
   border: 2px solid;
 `;
 const BUTTONCLEAR = styled.button`
@@ -44,6 +34,16 @@ const BUTTONCLEAR = styled.button`
 `;
 
 class ComponentApp extends React.Component {
+  state = {
+    activeColor: "#000"
+  };
+
+  setColor = event => {
+    const color = event.target.getAttribute("color");
+    console.log(color);
+    this.setState({ activeColor });
+  };
+
   render() {
     // actionData - data from paylod action.js
     const actionData = this.props.elementApp.elemState;
@@ -71,11 +71,17 @@ class ComponentApp extends React.Component {
         </BUTTONCLEAR>
         {/* /onclick button set color view in in  ComponentDataInput/ */}
         <BUTTONS>
-          <BUTTONRED>red</BUTTONRED>
-          <BUTTONBLUE>blue</BUTTONBLUE>
-          <BUTTONGREEN>green</BUTTONGREEN>
+          <BUTTON color="red" onClick={this.setColor}>
+            red
+          </BUTTON>
+          <BUTTON color="blue" onClick={this.setColor}>
+            blue
+          </BUTTON>
+          <BUTTON color="green" onClick={this.setColor}>
+            green
+          </BUTTON>
         </BUTTONS>
-        <ComponentDataInput />
+        <ComponentDataInput activeColor={this.state.activeColor} />
       </CONTAINER>
     );
   }
@@ -86,12 +92,16 @@ const mapStateToProps = state => ({
 
 const matchDispatchToProps = dispatch => ({
   showInputValue(e) {
-    dispatch(actionCreatorInput(e.target.querySelector("input").value));
     // e.target.querySelector("input").value -  get value from input;
+    dispatch(actionCreatorInput(e.target.querySelector("input").value));
   },
   clearInputValue() {
-    dispatch(actionCreatorInput());
     // call actionCreatorInput() - set state - '  ', in payload - value - ' '
+    dispatch(actionCreatorInput());
+  },
+  repaintShowInput() {
+    //
+    dispatch(actionCreatorRepaint());
   }
 });
 export default connect(mapStateToProps, matchDispatchToProps)(ComponentApp);
