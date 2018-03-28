@@ -6,12 +6,9 @@ const defaultState = {
   elemState: []
 };
 
-// export const reducerDeleteApp = createReducer({}, defaultState);
 export const reducerDataInput = createReducer({}, defaultState);
 
 reducerDataInput.on(actionCreatorInput, (state, payload) => ({
-  // reducerDataInput.on(state => ({
   ...state,
-  // elemState: payload.id
   elemState: payload
 }));

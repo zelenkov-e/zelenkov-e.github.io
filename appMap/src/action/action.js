@@ -24,6 +24,12 @@ export const actionCreatorDelete = () => {
 };
 // export const actionCreatorInput = () => {
 //   return {
+//     type: "ELEM_INPUT_SHOW",
+//     payloadInputShow: []
+//   };
+// };
+// export const actionCreatorInput = () => {
+//   return {
 //     type: "ELEM_DELET",
 //     payloadInput: 1
 //   };

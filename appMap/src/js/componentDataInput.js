@@ -8,7 +8,7 @@ const DETAILS = styled.div`
   margin: 15px;
   border: 1px solid;
 `;
-
+//view data from input
 class ComponentDataInput extends React.Component {
   render() {
     return (
@@ -20,6 +20,7 @@ class ComponentDataInput extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  //   elementDataInput: state.reducerDataInput
   elementDataInput: state.reducerDataInput
 });
 

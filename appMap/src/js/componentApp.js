@@ -38,6 +38,10 @@ const BUTTONGREEN = BUTTON.extend`
   color: white;
   border: 2px solid;
 `;
+const BUTTONCLEAR = styled.button`
+  width: 150px;
+  margin: 15px;
+`;
 
 class ComponentApp extends React.Component {
   render() {
@@ -52,30 +56,26 @@ class ComponentApp extends React.Component {
     return (
       <CONTAINER>
         <form
+          //onSubmit - send data from input in  ComponentDataInput
           onSubmit={e => {
             e.preventDefault();
             this.props.showInputValue(e);
           }}
         >
           <INPUT placeholder="Text search" />
-          <INPUT type="submit" value="Go" />
-          <INPUT
-            type="submit"
-            value="clear"
-            onClick={this.props.clearInputValue}
-          />
+          <INPUT type="submit" value="show" />
         </form>
 
-        {/* <button onClick={() => this.props.showActionsList()}>show</button> */}
-
+        <BUTTONCLEAR onClick={() => this.props.clearInputValue()}>
+          clear
+        </BUTTONCLEAR>
+        {/* /onclick button set color view in in  ComponentDataInput/ */}
         <BUTTONS>
           <BUTTONRED>red</BUTTONRED>
           <BUTTONBLUE>blue</BUTTONBLUE>
           <BUTTONGREEN>green</BUTTONGREEN>
         </BUTTONS>
-        {/* <DETAILS> */}
         <ComponentDataInput />
-        {/* </DETAILS> */}
       </CONTAINER>
     );
   }
@@ -85,13 +85,13 @@ const mapStateToProps = state => ({
 });
 
 const matchDispatchToProps = dispatch => ({
-  showInputValue(evt) {
-    dispatch(actionCreatorInput(evt.target.querySelector("input").value));
-    console.log(evt.target.querySelector("input").value);
+  showInputValue(e) {
+    dispatch(actionCreatorInput(e.target.querySelector("input").value));
+    // e.target.querySelector("input").value -  get value from input;
   },
-  clearInputValue(e) {
+  clearInputValue() {
     dispatch(actionCreatorInput());
-    console.log(e.target.querySelector("input").value);
+    // call actionCreatorInput() - set state - '  ', in payload - value - ' '
   }
 });
 export default connect(mapStateToProps, matchDispatchToProps)(ComponentApp);

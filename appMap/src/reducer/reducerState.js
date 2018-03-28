@@ -19,6 +19,8 @@ export const reducerState = function(state = defaultState, action) {
       return Object.assign({}, state, { elemState: action.payloadShow });
     case "ELEM_DELET":
       return Object.assign({}, state, { elemState: action.payloadDelete });
+    // case "ELEM_INPUT_SHOW":
+    //   return Object.assign({}, state, { elemState: action.payloadInputShow });
   }
   return state;
 };
