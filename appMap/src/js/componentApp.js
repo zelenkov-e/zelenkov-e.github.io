@@ -36,13 +36,14 @@ const BUTTONCLEAR = styled.button`
 class ComponentApp extends React.Component {
   constructor(props) {
     super(props);
+    //change color value from input,first state
     this.state = { activeColor: "#000" };
     this.setColor = this.setColor.bind(this);
   }
 
   setColor = event => {
     const color = event.target.getAttribute("color");
-    console.log(color);
+    //first state
     this.setState({ activeColor: color });
   };
 
@@ -64,14 +65,14 @@ class ComponentApp extends React.Component {
             this.props.showInputValue(e);
           }}
         >
-          <INPUT placeholder="Text search" />
+          <INPUT placeholder="Text " />
           <INPUT type="submit" value="show" />
         </form>
 
         <BUTTONCLEAR onClick={() => this.props.clearInputValue()}>
           clear
         </BUTTONCLEAR>
-        {/* /onclick button set color view in in  ComponentDataInput/ */}
+        {/* /onclick button Attribute "color" transmit  in styled-component ,background-color:"color"/ */}
         <BUTTONS>
           <BUTTON color="red" onClick={this.setColor}>
             red
@@ -100,10 +101,10 @@ const matchDispatchToProps = dispatch => ({
   clearInputValue() {
     // call actionCreatorInput() - set state - '  ', in payload - value - ' '
     dispatch(actionCreatorInput());
-  },
-  repaintShowInput() {
-    //
-    dispatch(actionCreatorRepaint());
   }
+  // repaintShowInput() {
+  //   //
+  //   dispatch(actionCreatorRepaint());
+  // }
 });
 export default connect(mapStateToProps, matchDispatchToProps)(ComponentApp);

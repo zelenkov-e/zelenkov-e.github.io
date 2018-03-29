@@ -19,17 +19,15 @@ const COLORGREEN = styled.button`
   color: green;
 `;
 
-// let REPAINTDATAINPUT = styled.p`
-//   color: ${this.props.elemRepaintInput.elemState};
-// `;
-
 class ComponentDataInput extends React.Component {
   render() {
     const { activeColor } = this.props;
 
     return (
       <DETAILS>
-        <p style={{ activeColor }}>{this.props.elementDataInput.elemState}</p>
+        <p style={{ color: activeColor }}>
+          {this.props.elementDataInput.elemState}
+        </p>
       </DETAILS>
     );
   }

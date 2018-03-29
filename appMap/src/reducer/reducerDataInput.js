@@ -2,7 +2,6 @@ import { createReducer } from "redux-act";
 import { actionCreatorInput } from "../action/action";
 
 const defaultState = {
-  // elemState: 0
   elemState: []
 };
 

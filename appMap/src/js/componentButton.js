@@ -2,8 +2,7 @@ import React from "react";
 import ComponentApp from "./componentApp";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { actionCreator } from "../action/action";
-import { actionCreatorDelete } from "../action/action";
+import { actionCreatorShow, actionCreatorDelete } from "../action/action";
 
 class ComponentButton extends React.Component {
   showList() {
@@ -30,7 +29,7 @@ class ComponentButton extends React.Component {
 
 const matchDispatchToProps = dispatch => ({
   showActionsList() {
-    dispatch(actionCreator());
+    dispatch(actionCreatorShow());
   },
   deleteActionsList() {
     dispatch(actionCreatorDelete());
