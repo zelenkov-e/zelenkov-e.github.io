@@ -10,31 +10,36 @@
     <title>home</title>
 </head>
 <style>
-    body {
-        background-color: antiquewhite;
+    .formMassege {
+        width: 200px;
+        border: 1px solid;
+    }
+
+    input {
+        margin: 10px;
     }
 </style>
 
 <body>
     <h1>home</h1>
     <hr />
-
-    <form method='POST' action="/">
-        <br>name:
-        <input type="text" name="name">
-        </br>
-        <br>email:
-        <input type="text" name="email">
-        </br>
-        <br>phone:
-        <input type="text" name="phone">
-        </br>
-        <br>message:
-        <input type="text" name="message">
-        </br>
-        <input type="submit">
-    </form>
-
+    <div class='formMassege'>
+        <form method='POST' action="/">
+            <br>name:
+            <input type="text" name="name">
+            </br>
+            <br>email:
+            <input type="text" name="email">
+            </br>
+            <br>phone:
+            <input type="text" name="phone">
+            </br>
+            <br>message:
+            <input type="text" name="message">
+            </br>
+            <input type="submit">
+        </form>
+    </div>
 </body>
 
 </html>
