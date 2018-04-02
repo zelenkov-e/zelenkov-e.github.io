@@ -3,12 +3,13 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import ComponentDataInput from "./componentDataInput";
+import ComponentFormSend from "./componentFormSend";
 import { actionCreatorInput } from "../action/action";
 import { actionCreatorRepaint } from "../action/action";
 
 const CONTAINERON = styled.div`
   width: 200px;
-  height: 400px;
+  height: 640px;
   border: 1px solid;
 `;
 const CONTAINEROFF = styled.div`
@@ -85,6 +86,7 @@ class ComponentApp extends React.Component {
           </BUTTON>
         </BUTTONS>
         <ComponentDataInput activeColor={this.state.activeColor} />
+        <ComponentFormSend />
       </CONTAINER>
     );
   }
