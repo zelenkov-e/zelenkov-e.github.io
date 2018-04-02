@@ -40,7 +40,8 @@ app.post("/", function(req, res) {
   // setup email data with unicode symbols
   let mailOptions = {
     from: "zelenkovzhenya@gmail.com", // sender address
-    to: "zelenkov5111917@yandex.ru", // list of receivers
+    // to: "zelenkov5111917@yandex.ru", // list of receivers
+    to: `${req.body.email}`, // list of receivers
     subject: "Node contact request", // Subject line
     text: "Hello world?", // plain text body
     //transmit ottput - where are our methods  req.body
