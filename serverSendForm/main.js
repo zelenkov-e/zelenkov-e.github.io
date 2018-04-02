@@ -14,41 +14,29 @@ app.get("/news", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-  // create perems 'output'
-  //req.body - use method bodyParser
-  const output = `
-  <p>You have a new contact request</p>
-  <h3>Contact details</h3>
-  <ul>  
-    <li>name:${req.body.name}</li>
-    <li>name:${req.body.email}</li>
-    <li>name:${req.body.phone}</li>
-  <ul>
-  <h3>Message</h3>
-  <p>${req.body.message}</p>
-    `;
-  //nodemailer
+  var name = req.body.name;
+  var email = req.body.email;
+  var message = req.body.message;
+  var content = `name: ${name} \n email: ${email} \n message: ${content} `;
+
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      //email from
       user: "zelenkovzhenya@gmail.com",
       pass: "20101986"
     }
   });
 
-  // setup email data with unicode symbols
   let mailOptions = {
-    from: "zelenkovzhenya@gmail.com", // sender address
-    // to: "zelenkov5111917@yandex.ru", // list of receivers
-    to: `${req.body.email}`, // list of receivers
-    subject: "Node contact request", // Subject line
-    text: "Hello world?", // plain text body
-    //transmit ottput - where are our methods  req.body
-    html: output // html body
+    from: "zelenkovzhenya@gmail.com",
+
+    to: email,
+    subject: "Node contact request",
+    text: "Hello world?",
+
+    html: content
   };
 
-  // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
@@ -57,7 +45,7 @@ app.post("/", function(req, res) {
     }
   });
 });
-//our PORT
+
 app.listen(3000, function() {
   console.log("listen port 3000");
 });
