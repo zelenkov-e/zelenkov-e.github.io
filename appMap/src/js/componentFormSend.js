@@ -15,50 +15,20 @@ class ComponentFormSend extends React.Component {
     const message = document.getElementById("message").value;
 
     let data = new FormData();
-
     data.append("name", name);
     data.append("email", email);
     data.append("message", message);
 
-    //     axios({
-    //       method: "POST",
-    //       url: "http://localhost:3000/"
-    //       //   data: {
-    //       //     name: name,
-    //       //     email: email,
-    //       //     messsage: message
-    //       //   }
-    //     }).then(response => {
-    //       //   if (response.data.msg === "success") {
-    //       // console.log("Message Sent.");
-    //       // this.resetForm();
-    //       //   } else if (response.data.msg === "fail") {
-    //       console.log("Message failed to send.");
-    //       //   }
-    //     });
-    //   }
-
-    let request = new XMLHttpRequest();
-    request.open("POST", "/");
-    request.send(data);
-
-    // const config = { headers: { "Content-Type": "multipart/form-data" } };
-    // axios
-    //   .post("/", data, config)
-    //   .then(response => console.log(response))
-    //   .catch(errors => console.log(errors));
-    //     axios
-    //       .post("/", {
-    //         name,
-    //         email,
-    //         message
-    //       })
-    //       .then(res => {
-    //         console.log(res);
-    //       })
-    //       .catch(error => {
-    //         console.log(error);
-    //       });
+    axios
+      .post("/", {
+        name,
+        email,
+        message
+      })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => console.log(error.response));
   }
 
   render() {

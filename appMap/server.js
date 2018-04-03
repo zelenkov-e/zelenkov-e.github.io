@@ -5,13 +5,15 @@ const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
 const config = require("./webpack.config.js");
 const nodemailer = require("nodemailer");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 const app = express(),
   DIST_DIR = path.join(__dirname, "dist"),
   PORT = 3000,
   compiler = webpack(config);
-// app.use(bodyParser());
+
+app.use(bodyParser.json());
+
 app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath
@@ -54,7 +56,6 @@ app.post("/", function(req, res) {
     text: "Hello world?",
 
     html: content
-    // html: "hello"
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
