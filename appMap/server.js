@@ -33,21 +33,11 @@ app.get("*", (req, res, next) => {
   });
 });
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization, access-control-allow-origin, profilerefid(whatever header you need)"
-  );
-  next();
-});
-
 app.post("/", function(req, res) {
-  // var name = req.body.name;
-  // var email = req.body.email;
-  // var message = req.body.message;
-  // var content = `name: ${name} \n email: ${email} \n message: ${content} `;
+  var name = req.body.name;
+  var email = req.body.email;
+  var message = req.body.message;
+  var content = `name: ${name} \n email: ${email} \n message: ${content} `;
 
   let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -63,20 +53,16 @@ app.post("/", function(req, res) {
     subject: "contact request",
     text: "Hello world?",
 
-    // html: content
-    html: "hello"
+    html: content
+    // html: "hello"
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
-    // if (err) {
-    //   res.json({
-    //     msg: "fail"
-    //   });
-    // } else {
-    //   res.json({
-    //     msg: "success"
-    //   });
-    // }
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
   });
 });
 

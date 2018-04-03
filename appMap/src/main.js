@@ -11,11 +11,6 @@ import { counterStore } from "./store/counterStore";
 // import createBrowserHistory from "history/createBrowserHistory";
 // const newHistory = createBrowserHistory();
 
-// export const counterStore = createStore(
-//   rootReducer,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
-
 ReactDOM.render(
   <Provider store={counterStore}>
     {/* // <Router history={newHistory}> */}

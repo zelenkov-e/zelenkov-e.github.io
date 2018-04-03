@@ -10,9 +10,16 @@ const INPUT = styled.input`
 class ComponentFormSend extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
-    // const name = document.getElementById("name").value;
-    // const email = document.getElementById("email").value;
-    // const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    let data = new FormData();
+
+    data.append("name", name);
+    data.append("email", email);
+    data.append("message", message);
+
     //     axios({
     //       method: "POST",
     //       url: "http://localhost:3000/"
@@ -31,26 +38,27 @@ class ComponentFormSend extends React.Component {
     //     });
     //   }
 
-    // axios
-    //   .post("/", { name, email, message })
-    //   .then(res => {
-    //     console.log(response);
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   });
+    let request = new XMLHttpRequest();
+    request.open("POST", "/");
+    request.send(data);
 
-    axios
-      .post(
-        "/"
-        //   { name, email, message }
-      )
-      .then(res => {
-        console.log(res);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    // const config = { headers: { "Content-Type": "multipart/form-data" } };
+    // axios
+    //   .post("/", data, config)
+    //   .then(response => console.log(response))
+    //   .catch(errors => console.log(errors));
+    //     axios
+    //       .post("/", {
+    //         name,
+    //         email,
+    //         message
+    //       })
+    //       .then(res => {
+    //         console.log(res);
+    //       })
+    //       .catch(error => {
+    //         console.log(error);
+    //       });
   }
 
   render() {
