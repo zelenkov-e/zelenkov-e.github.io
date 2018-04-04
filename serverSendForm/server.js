@@ -29,11 +29,9 @@ app.post("/", function(req, res) {
 
   let mailOptions = {
     from: "zelenkovzhenya@gmail.com",
-
     to: email,
     subject: "Node contact request",
     text: "Hello world?",
-
     html: content
   };
 
