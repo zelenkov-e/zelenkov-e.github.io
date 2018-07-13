@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import styled from "styled-components";
 
-// import CounterElement from "./countElement";
-import { selectPhone } from "../action/action";
+import * as pageActions from "../action/action";
+
 import CounterElement from "./countElement";
 
 const H2 = styled.h2`
@@ -15,17 +15,15 @@ class List extends React.Component {
   showList() {
     return this.props.phones.map(phone => {
       return (
-        <li onClick={() => this.props.select(phone)} key={phone.id}>
+        <li
+          onClick={() => this.props.pageActions.selectPhone(phone)}
+          key={phone.id}
+        >
           {phone.model}
         </li>
       );
     });
   }
-
-  // changeColor(event) {
-  // console.log("color");
-  // this.props.color;
-  // }
 
   render() {
     return (
@@ -33,9 +31,7 @@ class List extends React.Component {
         <H2 colorTitle={this.props.colorTitle}>phone:</H2>
         <ol>{this.showList()}</ol>
         <hr />
-        <CounterElement
-        // onClick={this.changeColor}
-        />
+        <CounterElement onClick={() => this.props.pageActions.selectColor()} />
       </div>
     );
   }
@@ -44,12 +40,14 @@ class List extends React.Component {
 let mapStateProps = state => {
   return {
     phones: state.phones,
-    colorTitle: state.colorTitle
+    colorTitle: state.colorChange
   };
 };
 
 let matchDispatchToProps = dispatch => {
-  return bindActionCreators({ select: selectPhone }, dispatch);
+  return {
+    pageActions: bindActionCreators(pageActions, dispatch)
+  };
 };
 
 export default connect(
