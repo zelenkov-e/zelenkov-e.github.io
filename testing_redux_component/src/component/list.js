@@ -7,7 +7,11 @@ import * as pageActions from "../action/action";
 
 import CounterElement from "./countElement";
 
-const H2 = styled.h2`
+// const H2 = styled.h2`
+//   color: ${props => (props.colorTitle ? "red" : "black")};
+// `;
+
+const Li = styled.li`
   color: ${props => (props.colorTitle ? "red" : "black")};
 `;
 
@@ -15,12 +19,13 @@ class List extends React.Component {
   showList() {
     return this.props.phones.map(phone => {
       return (
-        <li
+        <Li
+          colorTitle={this.props.colorTitle}
           onClick={() => this.props.pageActions.selectPhone(phone)}
           key={phone.id}
         >
           {phone.model}
-        </li>
+        </Li>
       );
     });
   }
@@ -28,10 +33,12 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <H2 colorTitle={this.props.colorTitle}>phone:</H2>
+        <h2>phone:</h2>
         <ol>{this.showList()}</ol>
-        <hr />
+
+        {/* <hr /> */}
         <CounterElement onClick={() => this.props.pageActions.selectColor()} />
+        <h1>{this.props.count}</h1>
       </div>
     );
   }
@@ -40,7 +47,8 @@ class List extends React.Component {
 let mapStateProps = state => {
   return {
     phones: state.phones,
-    colorTitle: state.colorChange
+    colorTitle: state.colorChange,
+    count: state.countElement
   };
 };
 
