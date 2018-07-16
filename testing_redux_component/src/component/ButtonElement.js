@@ -23,6 +23,9 @@ class ButtonElement extends React.Component {
   }
 }
 
+//ОБЯЗАТЕЛЬНО ДЛЯ КАЖДОГО КОМПОНЕНТА СОСТОЯНИЕ !!!
+//  ЕСЛИ МЫ ПРОСТО ПЕРЕДАЕМ КНОПКУ -  И НЕ МЕНЯЕМ СОСТОЯНИЕ - У НЕЕ ВСЕ РАВНО ДОЛЖЕН БЫТЬ STATE
+// - ИНАЧЕ МЫ НЕ СМОЖЕМ НАВЕСИТЬ ДЕЦ=ЙСТВИЕ НА ЭЬУ КНОПКУ>
 let mapStateProps = state => {
   return {
     button: state.button
