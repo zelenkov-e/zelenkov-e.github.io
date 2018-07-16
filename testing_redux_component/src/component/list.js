@@ -7,7 +7,7 @@ import * as pageActions from "../action/action";
 
 import CounterElement from "./countElement";
 
-const H2 = styled.h2`
+const H4 = styled.h4`
   color: ${props => (props.colorTitle ? "red" : "black")};
 `;
 
@@ -28,10 +28,10 @@ class List extends React.Component {
   render() {
     return (
       <div>
-        <H2 colorTitle={this.props.colorTitle}>phone:</H2>
-        <ol>{this.showList()}</ol>
-        <hr />
         <CounterElement onClick={() => this.props.pageActions.selectColor()} />
+        <H4 colorTitle={this.props.colorTitle}>phone:</H4>
+        <p> choose element from list ..</p>
+        <ol>{this.showList()}</ol>
       </div>
     );
   }

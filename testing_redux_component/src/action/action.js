@@ -11,3 +11,11 @@ export const selectColor = () => {
     payload: true
   };
 };
+
+// let one = 1;
+export const selectCount = () => {
+  return {
+    type: "CHANGE_COUNT",
+    payload: 1
+  };
+};
