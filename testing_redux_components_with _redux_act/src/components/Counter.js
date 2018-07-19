@@ -6,18 +6,24 @@ import styled from "styled-components";
 import * as pageActions from "../action/action";
 import ButtonClear from "./ButtonClear";
 
-const P = styled.p`
-  display: ${props => (props.isVisible ? "block" : "none")};
+const Container = styled.div`
+  width: 200px;
+  border: 1px solid;
+  display: ${props => (!props.isVisible ? "block" : "none")};
+`;
+
+const H1 = styled.h1`
+  color: pink;
 `;
 
 class Counter extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <h3>counter</h3>
-        <P isVisible={this.props.colorTitle}>{this.props.counter}</P>
-        <ButtonClear onClick={() => this.props.pageActions.clear()} />
-      </div>
+        <H1 isVisible={this.props.clearCount}>{this.props.counter}</H1>
+        {/* <ButtonClear onClick={() => this.props.pageActions.clear()} /> */}
+      </Container>
     );
   }
 }
@@ -25,17 +31,17 @@ class Counter extends React.Component {
 let mapStateProps = state => {
   return {
     counter: state.counterReducer,
-    colorTitle: state.colorTitle
+    clearCount: state.clearTitle
   };
 };
 
-let mapDispatchToProps = dispatch => {
-  return {
-    pageActions: bindActionCreators(pageActions, dispatch)
-  };
-};
+// let mapDispatchToProps = dispatch => {
+//   return {
+//     pageActions: bindActionCreators(pageActions, dispatch)
+//   };
+// };
 
 export default connect(
-  mapStateProps,
-  mapDispatchToProps
+  mapStateProps
+  // mapDispatchToProps
 )(Counter);

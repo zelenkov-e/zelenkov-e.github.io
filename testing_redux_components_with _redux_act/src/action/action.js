@@ -2,4 +2,4 @@ import { createAction } from "redux-act";
 
 export const increment = createAction("increment");
 export const decrement = createAction("decrement");
-export const clear = createAction("clear");
+export const clearCount = createAction("clear");
