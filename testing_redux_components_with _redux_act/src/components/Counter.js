@@ -7,9 +7,8 @@ import * as pageActions from "../action/action";
 import ButtonClear from "./ButtonClear";
 
 const Container = styled.div`
-  width: 200px;
-  border: 1px solid;
-  display: ${props => (!props.isVisible ? "block" : "none")};
+  display: ${props => (props.isVisible ? "block" : "none")};
+  display: ${props => (props.showCount ? "block" : "none")};
 `;
 
 const H1 = styled.h1`
@@ -19,10 +18,11 @@ const H1 = styled.h1`
 class Counter extends React.Component {
   render() {
     return (
-      <Container>
-        <h3>counter</h3>
-        <H1 isVisible={this.props.clearCount}>{this.props.counter}</H1>
-        {/* <ButtonClear onClick={() => this.props.pageActions.clear()} /> */}
+      <Container
+        isVisible={this.props.clearCount}
+        showCount={this.props.showCount}
+      >
+        <H1>{this.props.counter}</H1>
       </Container>
     );
   }
@@ -31,17 +31,9 @@ class Counter extends React.Component {
 let mapStateProps = state => {
   return {
     counter: state.counterReducer,
-    clearCount: state.clearTitle
+    clearCount: state.clearTitle,
+    showCount: state.showTitle
   };
 };
 
-// let mapDispatchToProps = dispatch => {
-//   return {
-//     pageActions: bindActionCreators(pageActions, dispatch)
-//   };
-// };
-
-export default connect(
-  mapStateProps
-  // mapDispatchToProps
-)(Counter);
+export default connect(mapStateProps)(Counter);

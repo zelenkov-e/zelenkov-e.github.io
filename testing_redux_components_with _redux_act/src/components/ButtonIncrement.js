@@ -10,11 +10,9 @@ class Button extends React.Component {
   render() {
     return (
       <Container>
-        <h3>button</h3>
-        {/* <button onClick={this.props.increment}>+</button>
-        <button onClick={this.props.decrement}>-</button> */}
-        <button onClick={this.props.pageActions.increment}>+</button>
-        <button onClick={this.props.pageActions.decrement}>-</button>
+        <button onClick={this.props.increment}>
+          {this.props.nameIcrementButton}
+        </button>
       </Container>
     );
   }

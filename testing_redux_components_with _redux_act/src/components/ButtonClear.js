@@ -2,20 +2,26 @@ import React from "react";
 import { connect } from "react-redux";
 import * as pageActions from "../action/action";
 import { bindActionCreators } from "redux";
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 50px;
+`;
 
 class ButtonClear extends React.Component {
   render() {
     return (
-      <button onClick={() => this.props.pageActions.clearCount()}>
-        clear count
-      </button>
+      <Container>
+        <button onClick={() => this.props.pageActions.clear()}>clear</button>
+        <button onClick={() => this.props.pageActions.show()}>show</button>
+      </Container>
     );
   }
 }
 
 let mapStateProps = state => {
   return {
-    button: state.buttonReducer
+    button: state.buttonClearReducer
   };
 };
 
