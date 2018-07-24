@@ -5,16 +5,15 @@ import { bindActionCreators } from "redux";
 
 import Counter from "./Counter";
 import { Button } from "./Button";
-import ButtonClear from "./ButtonClear";
 import { SelectMenu } from "./SelectMenu";
-import { OptionElement } from "./OptionElement";
+import OptionElement from "./OptionElement";
+// import { ButtonChangeColor } from "./ButtonChangeColor";
 import { OPTIONELEMENTS } from "../cosnstants/cosnstants";
 
 const Content = props => {
   return (
     <div>
-      <h1>redux_act</h1>
-      <Counter />
+      <Counter counterName="Counter" />
       <Button
         buttonName={props.buttonHide}
         changeState={() => props.pageActions.increment()}
@@ -32,15 +31,13 @@ const Content = props => {
         changeState={() => props.pageActions.show()}
       />
       <hr />
-      <OptionElement
-        colorElement={props.colorElement}
-        optionElement={OPTIONELEMENTS}
+      <OptionElement listName="List" colorStateElement={props.colorElement} />
+      <Button
+        changeState={() => props.pageActions.changeColor()}
+        buttonName="changeColorList"
       />
-      <SelectMenu
-        // optionElemnt={this.props.optionElemnt}
-        optionElement={OPTIONELEMENTS}
-        selectMenuName="SelectMenu"
-      />
+      <hr />
+      <SelectMenu selectMenuNme="Select Menu" selectElement={OPTIONELEMENTS} />
     </div>
   );
 };
@@ -52,8 +49,6 @@ let mapStateProps = state => {
     buttonLow: state.buttonReducer.buttonLow,
     buttonClear: state.buttonReducer.buttonDel,
     buttonShow: state.buttonReducer.buttonShow
-    // optionElement: state.optionElementReducer.color,
-    // colorElement: state.optionElementReducer
   };
 };
 

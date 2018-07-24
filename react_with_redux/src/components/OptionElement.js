@@ -1,18 +1,31 @@
 import React from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
 
 const Li = styled.li`
-  color: ${props => (props.colorElement ? "red" : "black")};
+  color: ${props => (props.colorStateElement ? "red" : "black")};
 `;
 
-export const OptionElement = props => {
+const OptionElement = props => {
   return (
-    <ul>
-      {props.optionElement.map((item, props) => (
-        <Li key={item.toString()} colorElement={props.colorElement}>
-          {item}
-        </Li>
-      ))}
-    </ul>
+    <div>
+      <h2>{props.listName}</h2>
+      <ul>
+        {props.optionElement.map(item => (
+          <Li key={item.toString()} colorStateElement={props.colorElement}>
+            {item}
+          </Li>
+        ))}
+      </ul>
+    </div>
   );
 };
+
+let mapStateProps = state => {
+  return {
+    optionElement: state.optionElementReducer,
+    colorElement: state.colorElementReducer
+  };
+};
+
+export default connect(mapStateProps)(OptionElement);

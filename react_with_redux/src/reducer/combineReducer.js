@@ -4,7 +4,7 @@ import buttonReducer from "./buttonReducer";
 import contentReducer from "./contentReducer";
 import visibleButtonReducer from "./visibleButtonReducer";
 import optionElementReducer from "./optionElementReducer";
-// import optionElementReducerColor from "./optionElementReducerColor";
+import colorElementReducer from "./colorElementReducer";
 
 const rootReducer = combineReducers({
   counterReducer: CounterReducer,
@@ -12,8 +12,8 @@ const rootReducer = combineReducers({
   contentReducer: contentReducer,
   clearReducer: visibleButtonReducer,
   showReducer: visibleButtonReducer,
-  optionElementReducer: optionElementReducer
-  // optionElementReducerColor: optionElementReducerColor
+  optionElementReducer: optionElementReducer,
+  colorElementReducer: colorElementReducer
 });
 
 export default rootReducer;

@@ -4,7 +4,6 @@ import { bindActionCreators } from "redux";
 import styled from "styled-components";
 
 import * as pageActions from "../action/action";
-import ButtonClear from "./ButtonClear";
 
 const Container = styled.div`
   display: ${props => (props.isVisible ? "block" : "none")};
@@ -18,6 +17,7 @@ const H1 = styled.h1`
 const Counter = props => {
   return (
     <Container isVisible={props.clearCount} showCount={props.showCount}>
+      <h2>{props.counterName}</h2>
       <H1>{props.counter}</H1>
     </Container>
   );
