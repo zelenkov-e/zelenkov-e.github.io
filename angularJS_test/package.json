@@ -1,12 +1,11 @@
 {
-  "name": "server",
+  "name": "angular_test",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "dependencies": {
     "express": "^4.16.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "angular": "^1.6.2",
     "save": "^2.3.1"
   },
   "devDependencies": {
