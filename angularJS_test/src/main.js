@@ -2,13 +2,25 @@ import angular from 'angular';
 
 var myApp = angular.module('myApp', []);
 
-myApp.directive("myDirective",function(){
-  return{
-    restrict:"E",
-    template:'<h1>hello {{myCtrl.user}}</h1>',
-    controller: function(){
-         this.user = 'Ivan'
-    },
-    controllerAs:"myCtrl"
+myApp.controller("myController", function($scope){
+  $scope.user = {
+    name:''
+  },
+  $scope.showName = function(user){
+    user.name = 'ivan'
+    // console.log('hello')
+    // '<p>hello {{$scope.user}}</p>'
   }
 });
+
+// myApp.directive("myDirective",function(){
+//   return{
+//     restrict:"E",
+//     // ВОТ ТАК НЕ РАБОТАЕТ !!!!!!!!!!     
+//     // templateUrl:'template.html'
+//     template:`
+//     <p> send data : </p>
+//     <input type = 'text'>
+//     `
+//   }
+// });

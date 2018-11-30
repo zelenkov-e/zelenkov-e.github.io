@@ -7,8 +7,11 @@
     <title>angularjs_test</title>
   </head>
   <body>
-    <div isolate-scope-with-controller>
-      <my-directive></my-directive>
+    <div ng-controller="myController">
+      <!-- <my-directive></my-directive> -->
+      <input type = 'text'>
+      <button ng-click = "showName(user.name)">send</button>
+      <p>{{user.name}}</p>
     </div>
     <script src="bundle.js" charset="utf-8"></script>
   </body>
