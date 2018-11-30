@@ -1,7 +1,14 @@
 import angular from 'angular';
 
 var myApp = angular.module('myApp', []);
-myApp.controller('myController', function() {
-  this.message = 'myController';
-  this.text = 'Контроллер без $scope';
+
+myApp.directive("myDirective",function(){
+  return{
+    restrict:"E",
+    template:'<p>hello {{myCtrl.user}}</p>',
+    controller: function(){
+         this.user = 'Ivan'
+    },
+    controllerAs:"myCtrl"
+  }
 });
