@@ -1,7 +1,3 @@
-import angular from 'angular';
-
-const myApp = angular.module('myApp', []);
-
 myApp.directive('myDirective', function() {
   return {
     restrict: 'E',
@@ -18,4 +14,3 @@ myApp.directive('myDirective', function() {
     <button ng-click=showElement(name)>click</button>
     `,
   };
-});

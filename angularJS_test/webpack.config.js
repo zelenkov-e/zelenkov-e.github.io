@@ -25,7 +25,6 @@ module.exports = {
           presets: ['es2015'],
         },
       },
-      // {
       //   test: /\.html$/,
       //   loader: 'ngtemplate?relativeTo=' + path.resolve(__dirname, './myApp') + '/!html',
       // },
