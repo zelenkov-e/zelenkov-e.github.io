@@ -35,6 +35,7 @@ module.exports = {
       // { test: /[\/]angular\.js$/, loader: 'exports?angular' },
       // { test: /\.html$/, loaders: ['html'] },
       // { test: /\.html$/, loader: 'ng-cache-loader?prefix=[dir]/[dir]' },
+
       // {
       //   loader: 'angularjs-template-loader',
       //   options: {
@@ -42,6 +43,9 @@ module.exports = {
       //   },
       // },
     ],
+    node: {
+      fs: 'empty',
+    },
   },
 
   resolve: {
