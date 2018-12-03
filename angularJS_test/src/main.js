@@ -1,3 +1,7 @@
+import angular from 'angular';
+
+var myApp = angular.module('myApp', []);
+
 myApp.directive('myDirective', function() {
   return {
     restrict: 'E',
@@ -12,5 +16,6 @@ myApp.directive('myDirective', function() {
     <p>{{ text }}</p>
     <input type = 'text' ng-model='name'/>
     <button ng-click=showElement(name)>click</button>
-    `,
+    `
   };
+});
