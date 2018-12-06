@@ -4,34 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>angularjs_test</title>
+    <title>angularjs_with_factory</title>
   </head>
   <body>
-    <div class="fooBar">
-      <h1>using link in directive</h1>
-      <foo-bar></foo-bar>
-    </div>
+    <h1>angularjs_with_factory</h1>
     <hr />
-    <div class="formDirection">
-      <h1>using ng-click / don`t used controller</h1>
-      <form-directive></form-directive>
-    </div>
-    <hr />
-    <div class="formDirection">
-      <h1>using scope controller and scope directive</h1>
-      <div ng-controller="scopeCtrl">
-        this is ctrl - {{ name }} <scope-directive></scope-directive>
-      </div>
-    </div>
-    <hr />
-    <div>
-      <h1>calling between scope ctrl & scope directive</h1>
-      <div ng-controller="callCtrl">
-        name Ctrl{{ name }} color Ctrl{{ color }}
-        <call-directive name="{{name}}" color="color"></call-directive>
-      </div>
-    </div>
-
+    <div ng-controller="MyController">{{ message }}</div>
     <script src="bundle.js" charset="utf-8"></script>
   </body>
 </html>
