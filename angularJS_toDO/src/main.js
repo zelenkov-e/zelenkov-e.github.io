@@ -21,8 +21,14 @@ myApp.directive('listDirective', () => {
       scope.addElem = function(value) {
         scope.tasks.push(scope.value);
       };
-      scope.clearElem = function() {
+      scope.clearAll = function() {
         scope.tasks = [];
+      };
+      scope.deleteElem = function() {
+        scope.task.splice(this.$index, 1);
+      };
+      scope.getTotalTodos = function() {
+        return scope.tasks.length;
       };
     },
   };
