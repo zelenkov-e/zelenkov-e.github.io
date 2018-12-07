@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>angularjs_toDo</title>
+    <link rel="stylesheet" href="style/main.css" />
+
+    <style type="text/css">
+      .app {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #answerInput {
+        width: 257px;
+        height: 30px;
+      }
+
+      #list1,
+      #list2 {
+        width: 130px;
+        height: 30px;
+        border: 1px solid;
+        border-radius: 8px;
+        text-align: center;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section ng-controller="listController as listCtrl">
+      <h1>{{ listCtrl.title }}</h1>
+      <section list-directive></section>
+    </section>
+
+    <script src="bundle.js" charset="utf-8"></script>
+  </body>
+</html>

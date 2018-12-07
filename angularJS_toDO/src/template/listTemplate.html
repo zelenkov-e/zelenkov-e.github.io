@@ -1,0 +1,13 @@
+<div class="app">
+  <p id="list1" ng-click="addElem(value)">{{ lists.add }}</p>
+  <p id="list2" ng-click="clearElem()">{{ lists.delete }}</p>
+</div>
+<div>
+  <input id="answerInput" type="text" ng-model="value" />
+  <div class="aswer">
+    <hr />
+    <ul>
+      <li ng-repeat="title in tasks">{{ title }}</li>
+    </ul>
+  </div>
+</div>
