@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 var myApp = angular.module('myApp', []);
+// var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.directive('fooBar', () => {
   var phones = [
