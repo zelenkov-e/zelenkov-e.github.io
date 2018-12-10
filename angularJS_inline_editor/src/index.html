@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>angularjs_test</title>
+    <title>Inline Editor</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      p:before {
+        content: '✎';
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: normal;
+        vertical-align: text-bottom;
+      }
+    </style>
   </head>
   <body>
-    <div class="fooBar">
-      <h1>using link in directive</h1>
-      <foo-bar></foo-bar>
+    <div class="fooBar" ng-controller="inlineEditorController" ng-click="hideTooltip()">
+      <h1>Inline Editor</h1>
+      <!-- IF NG-SHOW  = TRUE - THAN SHOW THIS DIV -->
+      <div class="tooltip" ng-click="$event.stopPropagation()" ng-show="showtooltip">
+        <form ng-submit="toggleTooltip($event)"><input type="text" ng-model="value" /></form>
+      </div>
+      <p ng-click="toggleTooltip($event)">{{ value }}</p>
     </div>
-
     <script src="bundle.js" charset="utf-8"></script>
   </body>
 </html>
