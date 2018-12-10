@@ -25,6 +25,7 @@
         border: 1px solid;
         border-radius: 8px;
         text-align: center;
+        background-color: #ccc;
       }
       h1,
       span {
@@ -33,8 +34,8 @@
     </style>
   </head>
   <body>
-    <section ng-controller="listController as listCtrl">
-      <h1>{{ listCtrl.title }}</h1>
+    <section ng-controller="listController">
+      <h1>{{ title }}</h1>
       <section list-directive></section>
     </section>
 
