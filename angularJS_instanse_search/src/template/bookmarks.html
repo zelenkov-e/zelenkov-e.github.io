@@ -1,1 +1,6 @@
-<div ng-repeat="phone in phones"><!-- <p>{{ phone.name }}</p> --></div>
+<ul>
+  <li ng-repeat="item in items | searchString">
+    <a href="{{item.url}}"><img ng-src="{{item.image}}"/></a>
+    <p>{{ item.title }}</p>
+  </li>
+</ul>
