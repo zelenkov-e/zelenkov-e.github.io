@@ -34,27 +34,13 @@
       <div id="rocket"></div>
     </div>
   </div>
-
-  <!-- main js controller -->
-  <script>
-    $(function() {
-      var model1 = new RocketModel(); //Model - data
-
-      // View
-      var view = new RocketView({
-        model: model1,
-        el: '#rocket',
-      });
-    });
-  </script>
-
   <!-- template -->
   <script type="text/template" id="viewRocket">
     Name:
     <span class="name" contenteditable="true"><%- name %></span>
     <div class="form-horizontal">
         <button data-rel="-10" class="changeSize btn btn-small btn-primary">-</button>
-        <input class="size" type="number" value="<%- size %>" style="width: 40px;">
+        <input class="size" type="number" value="<%- size %>" style="width: 50px;">
         <button data-rel="10" class="changeSize btn btn-small btn-success">+</button>
         Remove:
         <button class="deleteRow btn btn-small btn-danger"><i class="icon-remove icon-white">X</i></button>
@@ -62,6 +48,7 @@
     Description:
     <span class="desc" contenteditable="true"><%- description %></span>
   </script>
+  <!-- template -->
   <script src="main.js"></script>
   <script src="RocketModel.js"></script>
   <script src="RocketView.js"></script>

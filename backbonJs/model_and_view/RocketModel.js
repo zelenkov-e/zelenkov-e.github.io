@@ -1,4 +1,4 @@
-var RocketModel = Backbone.Model.extends({
+var RocketModel = Backbone.Model.extend({
   defaults: {
     name: 'name',
     description: 'desc',
@@ -8,7 +8,6 @@ var RocketModel = Backbone.Model.extends({
   validate: function(attrs) {
     if (attrs.size > 200 || attrs.size < 1) {
       console.log('incorrect size');
-
       return 'incorrect size';
     }
   },
