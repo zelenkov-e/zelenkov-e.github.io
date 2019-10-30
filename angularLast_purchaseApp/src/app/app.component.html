@@ -1,13 +1,43 @@
+<div>
+  <h1>count: {{ count }}</h1>
+  <!-- Привязка к событию -->
+  <button (click)="increase()">+</button>
+  <button (click)="less($event)">-</button>
+</div>
+<hr />
+<div>
+  <h1>set styles</h1>
+  <div class="box" [class.isredbox]="isRed"></div>
+  <div class="box" [class.isredbox]="!isRed"></div>
+  <input type="checkbox" [(ngModel)]="isRed" />
+</div>
+<hr />
+<div>
+  <h1>ng-content</h1>
+  <p>from parentComponent</p>
+  <child-component>
+    <p>{{ name }}</p>
+  </child-component>
+</div>
+<hr />
+<div>
+  <h1>Transfer data to child component</h1>
+  <input-component [userName]="name"></input-component>
+</div>
+<hr />
+<div>
+  <event-component (onChanged)="onChanged($event)"></event-component>
+  <h2>count of clicks: {{ clicks }}</h2>
+</div>
+<hr />
+<!-- <div>
+  <p>data: {{ data }}</p>
+  <input type="text" [(ngModel)]="data" />
+</div> -->
 <div class="page-header">
   <!-- интерполяция -->
   <h1>{{ title }}</h1>
 </div>
-<div>
-  <h1>count: {{ count }}</h1>
-  <button (click)="increase()">+</button>
-  <button (click)="less()">-</button>
-</div>
-<hr />
 <div class="panel">
   <div class="form-inline">
     <div class="form-group">
@@ -43,6 +73,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of items">
+        <!-- items массив из  AppComponent -->
         <td>{{ item.purchase }}</td>
         <td>{{ item.price }}</td>
         <td><input type="checkbox" [(ngModel)]="item.done" /></td>
