@@ -17,14 +17,24 @@ class Item {
   templateUrl: "./app.component.html"
 })
 export class AppComponent {
-  name = "Yauheni";
-  age = 33;
+  //интерполяция
+  title = "toDoList";
+  count: number = 0;
   items: Item[] = [
-    { purchase: "Хлеб", done: false, price: 15.9 },
-    { purchase: "Масло", done: false, price: 60 },
-    { purchase: "Картофель", done: true, price: 22.6 },
-    { purchase: "Сыр", done: false, price: 310 }
+    { purchase: "Tomatos", done: false, price: 15.9 },
+    { purchase: "Cheese", done: false, price: 60 },
+    { purchase: "Potatoes", done: true, price: 22.6 },
+    { purchase: "Bread", done: false, price: 310 }
   ];
+
+  increase(): void {
+    this.count++;
+  }
+
+  less(): void {
+    this.count--;
+  }
+
   addItem(text: string, price: number): void {
     if (text == null || text.trim() == "" || price == null) return;
     this.items.push(new Item(text, price));
