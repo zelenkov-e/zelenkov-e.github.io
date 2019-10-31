@@ -19,8 +19,15 @@ class Item {
 })
 export class AppComponent {
   //интерполяция
-  title = "toDoList";
-  name = "Yauheni";
+  title = {
+    name: "Yauheni",
+    setStyle: "Set styles",
+    count: "Counter",
+    ngcontent: "Using ng-content",
+    transferDataFromChildren: "Transfer data to child component",
+    usingModules: "Using logic Child Module in Parent Module",
+    usingDirective: "Using directive [ngClass]"
+  };
   count: number = 0;
   clicks: number = 0;
   isRed = false;
@@ -28,13 +35,12 @@ export class AppComponent {
   increase(): void {
     this.count++;
   }
-
-  onChanged(grow: any): void {
-    grow == true ? this.clicks++ : this.clicks--;
-  }
-
   less($event: any): void {
     this.count--;
     console.log($event);
+  }
+
+  onChanged(grow: any): void {
+    grow == true ? this.clicks++ : this.clicks--;
   }
 }

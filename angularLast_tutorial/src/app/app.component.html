@@ -1,31 +1,41 @@
 <div>
-  <h1>count: {{ count }}</h1>
+  <h3>{{ title.count }}</h3>
+  <p>count: {{ count }}</p>
   <!-- Привязка к событию -->
   <button (click)="increase()">+</button>
   <button (click)="less($event)">-</button>
 </div>
 <hr />
 <div>
-  <h1>set styles</h1>
+  <h3>{{ title.setStyle }}</h3>
   <div class="box" [class.isredbox]="isRed"></div>
   <div class="box" [class.isredbox]="!isRed"></div>
   <input type="checkbox" [(ngModel)]="isRed" />
 </div>
 <hr />
 <div>
-  <h1>ng-content</h1>
+  <h3>{{ title.ngcontent }}</h3>
   <p>from parentComponent</p>
   <child-component>
-    <p>{{ name }}</p>
+    <p>{{ title.name }}</p>
   </child-component>
 </div>
 <hr />
 <div>
-  <h1>Transfer data to child component</h1>
-  <input-component [userName]="name"></input-component>
+  <h3>{{ title.transferDataFromChildren }}</h3>
+  <input-component [userName]="title.name"></input-component>
 </div>
 <hr />
 <div>
   <event-component (onChanged)="onChanged($event)"></event-component>
-  <h2>count of clicks: {{ clicks }}</h2>
+  <p>count of clicks: {{ clicks }}</p>
+</div>
+<hr />
+<div>
+  <h3>{{ title.usingModules }}</h3>
+  <data-comp></data-comp>
+</div>
+<div>
+  <h3>{{ title.usingDirective }}</h3>
+  <directive-component></directive-component>
 </div>

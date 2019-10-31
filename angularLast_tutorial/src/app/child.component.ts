@@ -16,6 +16,5 @@ import { Component } from "@angular/core";
   ]
 })
 export class ChildComponent {
-  greeting = "Hello ! This is ChildComponent";
   name = "Zeliankou";
 }

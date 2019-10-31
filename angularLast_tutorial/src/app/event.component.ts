@@ -3,11 +3,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 @Component({
   selector: "event-component",
   template: `
-    <h1>
-      <h1>
-        <p>{{ title }}</p>
-      </h1>
-    </h1>
+    <h3>{{ title }}</h3>
     <button (click)="change(true)">+</button>
     <button (click)="change(flse)">-</button>
   `
