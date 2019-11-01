@@ -8,16 +8,19 @@ import { InputComponent } from "./input.component";
 import { EventComponent } from "./event.component";
 import { DirectiveComponent } from "./directive.component";
 import { PhoneComponent } from "./phone.component";
+import { HttpClientModule } from "@angular/common/http";
+import { HttpComponent } from "./http.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, DataModule],
+  imports: [BrowserModule, FormsModule, DataModule, HttpClientModule],
   declarations: [
     AppComponent,
     ChildComponent,
     InputComponent,
     EventComponent,
     DirectiveComponent,
-    PhoneComponent
+    PhoneComponent,
+    HttpComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,10 +1,12 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Optional } from "@angular/core";
 import { logService } from "./log.servise";
 
 @Injectable()
 export class DataService {
   private data: string[] = ["Apple iPhone XR", "Samsung Galaxy S9", "Nokia 9"];
 
+  //added optional logService and delete from component
+  // constructor(@Optional() private logService: logService) {}
   constructor(private logService: logService) {}
 
   getData(): string[] {

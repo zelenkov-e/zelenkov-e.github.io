@@ -16,6 +16,7 @@ import { logService } from "./service/log.servise";
     </ul>
   `,
   providers: [DataService, logService]
+  // providers: [DataService]
 })
 export class PhoneComponent {
   message = "add smth.";
