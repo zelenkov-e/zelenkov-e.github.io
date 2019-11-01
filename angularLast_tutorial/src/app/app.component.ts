@@ -26,7 +26,8 @@ export class AppComponent {
     ngcontent: "Using ng-content",
     transferDataFromChildren: "Transfer data to child component",
     usingModules: "Using logic Child Module in Parent Module",
-    usingDirective: "Using directive [ngClass]"
+    usingDirective: "Using directive [ngClass]",
+    usingService: "Using Service"
   };
   count: number = 0;
   clicks: number = 0;
