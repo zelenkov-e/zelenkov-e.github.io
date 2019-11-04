@@ -10,6 +10,7 @@ import { DirectiveComponent } from "./directive.component";
 import { PhoneComponent } from "./phone.component";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpComponent } from "./http.component";
+import { FactorialComponent } from "./factorial.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, DataModule, HttpClientModule],
@@ -20,7 +21,8 @@ import { HttpComponent } from "./http.component";
     EventComponent,
     DirectiveComponent,
     PhoneComponent,
-    HttpComponent
+    HttpComponent,
+    FactorialComponent
   ],
   bootstrap: [AppComponent]
 })

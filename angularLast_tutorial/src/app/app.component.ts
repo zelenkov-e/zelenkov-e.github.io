@@ -28,7 +28,8 @@ export class AppComponent {
     usingModules: "Using logic Child Module in Parent Module",
     usingDirective: "Using directive [ngClass]",
     usingService: "Using Service",
-    usungHttpInService: "Using Http in Service"
+    usungHttpInService: "Using Http in Service",
+    getRequest: "Get request"
   };
   count: number = 0;
   clicks: number = 0;
