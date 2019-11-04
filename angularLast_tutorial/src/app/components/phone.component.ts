@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { DataService } from "./service/data.service";
-import { logService } from "./service/log.servise";
+import { DataService } from "../service/data.service";
+import { logService } from "../service/log.servise";
 
 @Component({
   selector: "phone-component",

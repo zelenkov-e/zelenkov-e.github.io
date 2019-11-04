@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { HttpService } from "./service/http.service";
-import { User } from "./user";
+import { HttpService } from "../service/http.service";
+import { User } from "../user";
 
 @Component({
   selector: "http-componet",
