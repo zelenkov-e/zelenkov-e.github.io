@@ -16,9 +16,12 @@
 <div>
   <h3>{{ title.ngcontent }}</h3>
   <p>from parentComponent</p>
-  <child-component>
+  <h3>{{ title.usingVariableOfTemplate }}</h3>
+  <child-component #counter>
     <p>{{ title.name }}</p>
   </child-component>
+  <button (click)="counter.increment()">+</button>
+  <button (click)="counter.decrement()">-</button>
 </div>
 <hr />
 <div>
@@ -52,4 +55,11 @@
 <div>
   <h3>{{ title.getRequest }}</h3>
   <factorial-component></factorial-component>
+</div>
+<hr />
+<div>
+  <h1>Video Tutorial</h1>
+  <small-component>
+    <p #p>Title</p>
+  </small-component>
 </div>

@@ -5,9 +5,18 @@ import { FactorialService } from "../service/factorial.service";
   selector: "factorial-component",
   template: `
     <p>{{ title }}</p>
+    <p>factorial : {{ factorial }}</p>
+    <h2>set number</h2>
     <input type="text" [(ngModel)]="num" />
     <button (click)="submit(num)">send</button>
   `,
+  styles: [
+    `
+      h2 {
+        color: red;
+      }
+    `
+  ],
   providers: [FactorialService]
 })
 export class FactorialComponent {

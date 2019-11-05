@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
     <ng-content></ng-content>
     <p>from childComponent</p>
     <p>{{ name }}</p>
+    <p>{{ counter }}</p>
   `,
   styles: [
     `
@@ -17,4 +18,12 @@ import { Component } from "@angular/core";
 })
 export class ChildComponent {
   name = "Zeliankou";
+  counter: number = 0;
+
+  increment() {
+    this.counter++;
+  }
+  decrement() {
+    this.counter--;
+  }
 }

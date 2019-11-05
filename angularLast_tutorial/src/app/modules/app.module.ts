@@ -11,6 +11,7 @@ import { PhoneComponent } from "../components/phone.component";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpComponent } from "../components/http.component";
 import { FactorialComponent } from "../components/factorial.component";
+import { SmallComponent } from "../components/small.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, DataModule, HttpClientModule],
@@ -22,7 +23,8 @@ import { FactorialComponent } from "../components/factorial.component";
     DirectiveComponent,
     PhoneComponent,
     HttpComponent,
-    FactorialComponent
+    FactorialComponent,
+    SmallComponent
   ],
   bootstrap: [AppComponent]
 })

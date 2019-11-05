@@ -29,7 +29,8 @@ export class AppComponent {
     usingDirective: "Using directive [ngClass]",
     usingService: "Using Service",
     usungHttpInService: "Using Http in Service",
-    getRequest: "Get request"
+    getRequest: "Get request",
+    usingVariableOfTemplate: "Using Variable Of Template"
   };
   count: number = 0;
   clicks: number = 0;
