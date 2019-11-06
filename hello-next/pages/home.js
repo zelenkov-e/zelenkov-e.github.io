@@ -1,7 +1,9 @@
+import Layout from '../comps/MyLayout';
+
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <p>This is Home page</p>
-    </div>
+    </Layout>
   );
 }
