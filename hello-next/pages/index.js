@@ -8,6 +8,7 @@ const Index = props => (
     <ul>
       {props.shows.map(show => (
         <li key={show.id}>
+          {/* using href="/p/[id] -  how dinamic link  */}
           <Link href="/p/[id]" as={`/p/${show.id}`}>
             <a>{show.name}</a>
           </Link>
