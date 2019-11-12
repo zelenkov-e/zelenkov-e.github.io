@@ -1,24 +1,12 @@
 import Layout from "../comps/MyLayout";
-
-const Title = () => (
-  <div>
-    <h1>This is child component</h1>
-    <style jsx>
-      {`
-        h1 {
-          color: red;
-        }
-      `}
-    </style>
-  </div>
-);
+import Title from "../comps/Titles";
 
 export default function Blog() {
   return (
     <Layout>
       <p>This is my blog</p>
       <Title />
-      <style jsx>
+      <style jsx global>
         {`
           p {
             color: red;
