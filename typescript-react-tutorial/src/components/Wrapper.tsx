@@ -4,6 +4,7 @@ import { Hello } from "../components/Hello";
 import { Counter } from "../components/Counter";
 import { Logo } from "./Logo";
 import UserDescription from "./UserDescription";
+import PokemonSearch from "./PokemonSearch";
 
 export const Wrapper = () => (
   <div>
@@ -16,5 +17,7 @@ export const Wrapper = () => (
     />
     <Hello compiler="Typescript" framework="react" />
     <Counter />
+    <hr />
+    <PokemonSearch title="PokemonSearch App" />
   </div>
 );
