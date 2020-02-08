@@ -1,14 +1,24 @@
-body{
-  text-align: center;
+body h3{
+  color: red;
+}
+body h4,h3,ul,.control{
+ text-align: center;
 }
 
-h3{
-  color:red;
+body ul{
+  list-style-type: none;
+} 
+li:nth-child(2){
+  border: 1px solid;
+  width: 54px;
+  border-radius: 5px;
+  background-color: orange;
+} 
+#content{
+  width: 250px;
+  margin: 0 auto;
 }
-
-img{
- border: 1px solid;
- border-radius: 10px; 
+li img{
+  border: 1px solid;
+  border-radius: 5px;
 }
-
-

@@ -1,5 +1,5 @@
 {
-      "name": "redux-project",
+      "name": "weather",
       "version": "1.0.0",
       "description": "",
       "main": "index.js",
@@ -12,10 +12,6 @@
             "axios": "^0.17.1",
             "react": "^16.0.0",
             "react-dom": "^16.0.0",
-            "react-redux": "^5.0.6",
-            "redux": "^3.7.2",
-            "redux-logger": "^3.0.6",
-            "redux-thunk": "^2.2.0",
             "save": "^2.3.1"
       },
       "devDependencies": {
