@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="css/font.css"> -->
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>home</title>
-</head>
-<style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
     .formMassege {
-        width: 200px;
-        border: 1px solid;
+      width: 200px;
+      border: 1px solid;
     }
 
     input {
-        margin: 10px;
+      margin: 10px;
     }
-</style>
+  </style>
 
-<body>
-    <h1>home</h1>
-    <hr />
-    <div class='formMassege'>
+  <body>
+    <!-- <div class='formMassege'>
         <form method='POST' action="/">
             <br>name:
             <input type="text" name="name">
@@ -39,7 +40,59 @@
             </br>
             <input type="submit">
         </form>
+    </div> -->
+    <div class="col-md-4 mb-5">
+      <form method="POST" action="/">
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">имя</label> -->
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Ваше имя"
+          />
+        </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">почта</label> -->
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Ваша почта"
+          />
+        </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">телефон</label> -->
+          <input
+            type="text"
+            name="phone"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Ваш телефон"
+          />
+        </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">Сообщение</label> -->
+          <input
+            type="text"
+            name="message"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Ваше сообщение"
+          />
+        </div>
+        <div class="form-group form-check">
+          <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" /> -->
+          <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+        </div>
+        <button type="submit" class="btn btn-primary">отправить</button>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
