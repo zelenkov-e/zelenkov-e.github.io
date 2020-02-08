@@ -13,8 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
+    "markdown-to-jsx": "^6.10.3",
     "next": "9.1.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-markdown": "^4.2.2"
   }
 }
