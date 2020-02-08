@@ -15,5 +15,8 @@
     "url": "https://github.com/zelenkov-e/zelenkov-e.github.io/issues"
   },
   "homepage": "https://github.com/zelenkov-e/zelenkov-e.github.io#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
 }
