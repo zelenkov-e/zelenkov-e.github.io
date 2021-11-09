@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from "react-router-dom"
 import { useHttp } from '../hook/http.hook'
 
 export const UsersPage = () => {
+    const history = useHistory()
     const { request } = useHttp()
     const [users, setUsers] = useState([])
 
-
-    const getUsersHendler = async () => {
+    const getUsers = async () => {
         try {
             const data = await request('/api/users/getUsers')
-            console.log(data)
             setUsers(data.users)
         } catch (e) { }
     }
 
     useEffect(() => {
-        getUsersHendler()
+        getUsers()
     }, [])
 
     return (
@@ -30,11 +30,10 @@ export const UsersPage = () => {
                             <span className="title">User</span>
                             <p>id: {user._id}</p>
                             <p>email: {user.email}</p>
-                            <a href="#!" className="secondary-content">
-                                <i className="material-icons">details</i>
+                            <a className="secondary-content" onClick={() => history.push(`/users/${user._id}`)}>
+                                <i className="material-icons" >details</i>
                             </a>
                         </li>
-
                     )
                 })}
             </ul>
