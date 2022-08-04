@@ -92,3 +92,5 @@ function sendFile(filePath, res) {
     file.destroy();
   });
 }
+
+module.exports = server;
