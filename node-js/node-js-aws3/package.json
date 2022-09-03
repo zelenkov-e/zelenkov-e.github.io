@@ -1,0 +1,29 @@
+{
+    "name": "shop-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "nodemon server.js"
+    },
+    "author": "Umang",
+    "license": "ISC",
+    "dependencies": {
+      "aws-sdk": "^2.945.0",
+      "bcrypt": "^5.0.1",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5",
+      "config": "^3.3.6",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.12.3",
+      "multer": "^1.4.2",
+      "nodemailer": "^6.7.3",
+      "nodemon": "^2.0.6",
+      "uuid": "^3.3.2"
+    },
+    "engines": {
+      "node": "14.13.0"
+    }
+  }
