@@ -1,5 +1,8 @@
 {
     "port": 5000,
-    "mongoUri": "mongodb+srv://zelenkov:User12345@cluster0.ez58z.mongodb.net/app?retryWrites=true&w=majority"
+    "mongoUri": "mongodb+srv://zelenkov:User12345@cluster0.nomvxai.mongodb.net/?retryWrites=true&w=majority",
+    "database": "GRID-FS-STORAGE",
+    "imgBucket": "photos",
+    "url": "mongodb://localhost:27017/"
 }
 
