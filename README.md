@@ -1,7 +1,9 @@
-# zelenkov-e.github.io in this repo  you can see simple applications on Vanila js and Reactjs
+# zelenkov-e.github.io a repository of guides for using the frameworks
 
-if you want watch my last code  https://codesandbox.io/u/zelenkov-e/sandboxes
+ 
+contact: https://www.linkedin.com/in/yauheni-zeliankou-745019132/
+         zelenkovzhenya@gmail.com
 
-
-if you want watch my resume on Russian and run all application  https://zelenkov-e.github.io/index.html
-
+code:    https://codesandbox.io/u/zelenkov-e/sandboxes
+         https://.codewars.com/users/e_zelenkov
+         https://github.com/zelenkov-e/bolt-app
