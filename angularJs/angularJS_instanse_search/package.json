@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "angular": "^1.6.2",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "ng-cache-loader": "0.0.26",
     "save": "^2.3.1"
   },
