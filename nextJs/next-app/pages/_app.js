@@ -1,7 +1,11 @@
+import Layout from "../components/layout/layout";
 
 function MyApp({ Component, pageProps }) {
     return (
-        <Component {...pageProps} />
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+
     );
 }
 
