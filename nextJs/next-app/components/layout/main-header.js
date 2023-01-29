@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import classes from './main-header.module.css'
 
 
 function MainHeader() {
-    return <header>
-        <div>
+    return <header className={classes.header}>
+        <div className={classes.logo}>
             <Link href='/'>Home</Link>
         </div>
-        <nav>
+        <nav className={classes.navigation}>
             <ul>
-                <li><Link href='/works'>all works</Link></li>
+                <li><Link href='/events'>events</Link></li>
             </ul>
         </nav>
     </header>
