@@ -1,4 +1,7 @@
 {
     "port": 3000,
-    "mongoUri": "mongodb+srv://zelenkov:User12345@cluster0.ez58z.mongodb.net/app?retryWrites=true&w=majority"
+    "mongoUri": "mongodb+srv://zelenkov:User12345@cluster0.ez58z.mongodb.net/app?retryWrites=true&w=majority",
+    "cloudeName": "dsri5wjih",
+    "apiKey": "181841729526254",
+    "apiSecret": "zjqwuxOZn45mCplFRoN9Aucm0fM"
 }

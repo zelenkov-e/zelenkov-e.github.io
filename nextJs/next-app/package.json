@@ -9,9 +9,10 @@
         "export": "next export"
     },
     "dependencies": {
+        "config": "^3.3.6",
+        "formidable": "^2.1.1",
         "gray-matter": "^4.0.2",
         "mongodb": "^3.6.4",
-        "config": "^3.3.6",
         "next": "10.0.6",
         "react": "17.0.1",
         "react-dom": "17.0.1",
