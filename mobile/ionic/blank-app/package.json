@@ -70,7 +70,9 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "4.7.0"
+    "@capacitor/cli": "4.7.0",
+    "@types/node-sass": "^4.11.3",
+    "node-sass": "^7.0.3"
   },
   "description": "An Ionic project"
 }
