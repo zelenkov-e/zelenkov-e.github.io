@@ -44,7 +44,7 @@ const LoginForm: React.FC<LoginFormProps> = () => {
                         onIonInput={handleChange}
                     ></IonInput>
                 </IonItem>
-                <IonButton type="submit" expand="block" color="danger">Einloggen</IonButton>
+                <IonButton type="submit" title="login" expand="block" color="danger">Einloggen</IonButton>
             </form>
         </div>
     );
