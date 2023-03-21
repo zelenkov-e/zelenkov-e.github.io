@@ -4,27 +4,35 @@ import { addOutline, closeOutline } from 'ionicons/icons';
 import './styles.scss';
 
 interface UploadFileInputProps {
-    file: File | null,
+    action: string,
+    file: any,
     openFileDialog: () => void,
     addImage: (e: React.SyntheticEvent) => void,
     removeFile: () => void
 }
 
 const UploadFileInput = (props: UploadFileInputProps) => {
-    const { file, openFileDialog, addImage, removeFile } = props
+    const { action, file, openFileDialog, addImage, removeFile } = props
     return (
         <div className='uploadfile'>
             <div className='uploadfile-buttonbar'>
-                <input type="file" id="upload-file-input" className='uploadfile-input' onChange={addImage} />
+                {action === 'add file' &&
+                    <input
+                        type="file"
+                        id='upload-file-input'
+                        className='uploadfile-input'
+                        onChange={addImage}
+                    />}
                 <IonButton onClick={openFileDialog}>
                     <IonIcon icon={addOutline} />
-                    Durchsuchen
+                    {action}
                 </IonButton>
             </div>
             {file &&
                 <div className='uploadfile-content'>
-                    <div>{file.name}</div>
-                    <div>{`${file.size} Mb`}</div>
+                    <div className='uploadfile-content__file'>
+                        {action === 'add file' ? <div>{file.name}</div> : <img src={file} alt='img' />}
+                    </div>
                     <IonButton onClick={removeFile}>
                         <IonIcon icon={closeOutline} />
                     </IonButton>
