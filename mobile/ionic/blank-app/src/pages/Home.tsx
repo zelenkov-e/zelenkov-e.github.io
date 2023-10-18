@@ -1,15 +1,15 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { useHistory } from "react-router-dom";
+import ExploreContainer from "../components/ExploreContainer";
 
 const Home: React.FC = () => {
+  const history = useHistory();
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Navigation</IonTitle>
-        </IonToolbar>
+        <IonButton onClick={() => history.push("/scanner")}>GO to Scanner </IonButton>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Blank</IonTitle>
