@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>set data</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <p>MVD GOV</p>
+    <form id="captcha-form">
+      <input type="text" id="vin-input" placeholder="vin" />
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <form id="vin-form">
+      <input type="text" id="captcha-input" placeholder="captcha" />
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+    <script type="module">
+      let CAPTCHAID;
+      let VIN;
+      let captchFormRef = document.querySelector("#captcha-form");
+      let formGovRef = document.querySelector("#vin-form");
+
+      const getGovInfo = async (data) => {
+        const API_URL = "https://mvd.gov.by/api/online-service/6";
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json;" },
+            body: JSON.stringify(data),
+          });
+          return response.json();
+        } catch (err) {
+          console.log("Error: ", err);
+        }
+      };
+
+      const getGovForm = async (e) => {
+        e.preventDefault();
+
+        const input = document.getElementById("captcha-input");
+        const captchaText = input.value;
+
+        // console.log("captchaId", captchaId);
+        // console.log("captchaText", captchaText);
+
+        const DATA = {
+          captcha: captchaText, //  use captcha solver
+          captchaId: CAPTCHAID, //captchaId
+          id: 6,
+          params: [{ key: "vin", defaultValue: "", value: VIN }, { key: "rnum" }, { key: "lang", value: "ru" }, { key: "descr" }],
+        };
+        const result = await getGovInfo(DATA);
+
+        console.log("result", result);
+      };
+
+      const getCaptcha = async () => {
+        const unique = new Date().getTime();
+        const captchUrl = `https://mvd.gov.by/api/captcha/main?unique=${unique}`;
+
+        try {
+          const response = await fetch(captchUrl);
+          return response.json();
+        } catch (e) {
+          console.log("Error: ", e);
+        }
+      };
+
+      const svgUrlToPng = (svgUrl, callback) => {
+        const svgImage = document.createElement("img");
+        // imgPreview.style.position = 'absolute';
+        // imgPreview.style.top = '-9999px';
+        document.body.appendChild(svgImage);
+        svgImage.onload = function () {
+          const canvas = document.createElement("canvas");
+          canvas.width = svgImage.clientWidth;
+          canvas.height = svgImage.clientHeight;
+          const canvasCtx = canvas.getContext("2d");
+          canvasCtx.drawImage(svgImage, 0, 0);
+          const imgData = canvas.toDataURL("image/png");
+          callback(imgData);
+          // document.body.removeChild(imgPreview);
+        };
+        svgImage.src = svgUrl;
+      };
+
+      const getSvgUrl = (svg) => {
+        return URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
+      };
+
+      const svgToPng = (svg, callback) => {
+        const url = getSvgUrl(svg);
+        // console.log("svgToPng", svg);
+        svgUrlToPng(url, (imgData) => {
+          callback(imgData);
+          URL.revokeObjectURL(url);
+        });
+      };
+
+      const convertFile = (svg) => {
+        svgToPng(svg, (imgData) => {
+          const pngImage = document.createElement("img");
+          document.body.appendChild(pngImage);
+          pngImage.src = imgData;
+        });
+      };
+
+      const submitForm = async (e) => {
+        e.preventDefault();
+
+        // console.log("input", input.value);
+        const input = document.getElementById("vin-input");
+        const vin = input.value;
+
+        if (vin.length > 0) {
+          const { data, id } = await getCaptcha();
+          CAPTCHAID = id;
+          VIN = vin;
+          // console.log("capchaId", id);
+
+          convertFile(data);
+          // const DATA = {
+          //   // captcha: "sPW1", //  use captcha solver
+          //   captcha: captchaText, //  use captcha solver
+          //   captchaId: id, //captchaId
+          //   id: 6,
+          //   params: [{ key: "vin", defaultValue: "", value: vin }, { key: "rnum" }, { key: "lang", value: "ru" }, { key: "descr" }],
+          // };
+          // getGovInfo(DATA);
+
+          // console.log("data", data);
+        } else {
+          alert("fill fom please ..");
+        }
+
+        // // const exmp_captcha = { data: "svg", id: "789484baf8c74e167cfa865506dd2e30d3c09d4d"};
+        // const captchaText = getCaptchaText(data);
+      };
+
+      captchFormRef.addEventListener("submit", submitForm, false);
+      formGovRef.addEventListener("submit", getGovForm, false);
+    </script>
+  </body>
+</html>
