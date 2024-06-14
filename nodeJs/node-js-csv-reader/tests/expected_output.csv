@@ -1,0 +1,2 @@
+Version;StockName_1;SupplierOfferId;EAN;ManufacturerTyreId;Manufacturer ;TyreDesc;PP_1;RP;StockQty_1;Season;RadiusInch;Width;AspectRatio;LoadIndex_1;SpeedIndex_1;EnergyClass;WetGripClass;RollingNoiseClass;RollingNoise_dB;MS_Mark;3PMSF_Mark;WeightKg;EPREL_URL;EPREL_ID;TyreImageURL_1
+1;MAIN;013006;4968814934736;R3153;Yokohama;185/60 HR13 TL 80H  YOKO A008;77,66;0,00;20;S;13;185;60;80;H;C;C;B;69;;false;6;https://eprel.ec.europa.eu/qr/631575;631575;https://www.etyre.net/preview/t3/yo-a008.jpg
