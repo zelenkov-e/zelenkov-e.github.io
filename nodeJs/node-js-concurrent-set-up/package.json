@@ -1,0 +1,14 @@
+{
+  "name": "node-js-concurrent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm run start --prefix server",
+    "client": "npm run start --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
