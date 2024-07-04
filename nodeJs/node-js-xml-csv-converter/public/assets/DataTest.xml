@@ -1,0 +1,14 @@
+const xml = `
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample ts="1501597136964" lb="req_10">
+  <responseData class="java.lang.String">1501597138973</responseData>
+</httpSample>
+<httpSample ts="1501597136964" lb="req_10">
+  <responseData class="java.lang.String">1501597139525</responseData>
+</httpSample>
+<httpSample ts="1501597136964" lb="req_10">
+  <responseData class="java.lang.String">1501597139716</responseData>
+</httpSample>
+</testResults>
+`
