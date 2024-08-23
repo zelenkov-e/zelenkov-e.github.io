@@ -1,37 +1,31 @@
 interface IConversionInfo {
   info: string;
   conversionTimeMs: number;
+  allRecords: number;
+  validRecords: number;
+  invalidRecords: number;
 }
 
-interface IOffer {
+export interface IOffer {
   supplierId: string;
   dataFileName: string;
-  dataUrl: string;
-  dataFileSize: string;
+  dataLength: number;
   dataUpdatedAt: string;
   conversionInfo: IConversionInfo;
+  dataUrl?: string;
 }
 
 export class Offer implements IOffer {
   supplierId: string;
   dataFileName: string;
-  dataUrl: string;
-  dataFileSize: string;
+  dataLength: number;
   dataUpdatedAt: string;
   conversionInfo: IConversionInfo;
 
-  constructor(
-    supplierId: string,
-    dataFileName: string,
-    dataUrl: string,
-    dataFileSize: string,
-    dataUpdatedAt: string,
-    conversionInfo: IConversionInfo
-  ) {
+  constructor(supplierId: string, dataFileName: string, dataLength: number, dataUpdatedAt: string, conversionInfo: IConversionInfo) {
     this.supplierId = supplierId;
     this.dataFileName = dataFileName;
-    this.dataUrl = dataUrl;
-    this.dataFileSize = dataFileSize;
+    this.dataLength = dataLength;
     this.dataUpdatedAt = dataUpdatedAt;
     this.conversionInfo = conversionInfo;
   }

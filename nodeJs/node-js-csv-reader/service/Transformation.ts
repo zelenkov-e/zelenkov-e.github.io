@@ -1,9 +1,8 @@
-import { removedColumns, mappings, defaults } from "./Mapping";
+// import { removedColumns, mappings, defaults } from "./Mapping";
 
-export const cleanRow = (row: Record<string, any>): any => {
-  removedColumns.forEach((item) => delete row[item]);
+export const cleanRow = (row: Record<string, any>, Mapping: any): any => {
+  Mapping.removedColumns.forEach((item: any) => delete row[item]);
 
-  // Remove the row if the "sysnr" field is empty
   if ("sysnr" in row && row["sysnr"] === "") {
     return null;
   }
@@ -11,19 +10,13 @@ export const cleanRow = (row: Record<string, any>): any => {
   return row;
 };
 
-export const transformRow = (row: Record<string, any>): Record<string, any> => {
-  //   const { defaults, ...fieldMappings } = mappings;
-
+export const transformRow = (row: Record<string, any>, Mapping: any): Record<string, any> => {
   // Apply default values
-  Object.entries(defaults).forEach(([key, value]) => {
+  Object.entries(Mapping.defaults).forEach(([key, value]) => {
     row[key] = value;
   });
-  //   // Apply default values
-  //   for (const [key, value] of Object.entries(defaults)) {
-  //     row[key] = value;
-  //   }
 
-  for (const [key, value] of Object.entries(mappings)) {
+  for (const [key, value] of Object.entries(Mapping.mappings)) {
     if (row[key] !== undefined) {
       const [newKey, transformFn, secondKey, secondTransformFn] = value as any;
       row[newKey] = transformFn ? transformFn(row[key], row) : row[key];

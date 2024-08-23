@@ -61,3 +61,12 @@ export const matchFileName = (file: string) => {
 
   return res ? res[0] : "";
 };
+
+export const validateString = (s: string) => (/[0-9A-Za-z]/.test(s) ? s : "");
+
+export const getFormattedDateAndTime = () => {
+  const now = new Date();
+  const datePart = now.toISOString().substring(0, 10);
+  const timePart = now.toISOString().substring(11, 19).replace(/:/g, "-");
+  return `${datePart}_${timePart}`;
+};
