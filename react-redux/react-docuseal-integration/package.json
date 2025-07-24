@@ -1,0 +1,10 @@
+{
+  "name": "docuseal-integration",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run --prefix client dev\" \"npm run --prefix server dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
